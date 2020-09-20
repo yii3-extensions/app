@@ -104,7 +104,7 @@ jobs:
         uses: codecov/codecov-action@v1.0.12
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-          file: app/tests/_output/coverage.xml
+          file: tests/_output/coverage.xml
           flags: unittests
           name: codecov-app
           fail_ci_if_error: true
