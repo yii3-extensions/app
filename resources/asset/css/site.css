@@ -1,0 +1,23 @@
+.hero-footer {
+    padding: 1rem 1.5rem 1rem !important;
+}
+
+.navbar-item:hover {
+    background-color: transparent !important;
+}
+
+.select select::-moz-placeholder, .textarea::-moz-placeholder, .input::-moz-placeholder {
+    color: hsl(0, 0%, 40%) !important;
+}
+
+.select select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .input::-webkit-input-placeholder {
+    color: hsl(0, 0%, 40%) !important;
+}
+
+.select select:-moz-placeholder, .textarea:-moz-placeholder, .input:-moz-placeholder {
+    color: hsl(0, 0%, 40%) !important;
+}
+
+.select select:-ms-input-placeholder, .textarea:-ms-input-placeholder, .input:-ms-input-placeholder {
+    color: hsl(0, 0%, 40%) !important;
+}
