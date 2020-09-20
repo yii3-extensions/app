@@ -8,7 +8,7 @@ jobs:
   tests:
     name: PHP ${{ matrix.php-version }}-${{ matrix.os }}
     env:
-      extensions: curl, mbstring, dom, intl, json, libxml, xml, xmlwriter
+      extensions: curl, mbstring, dom, intl, fileinfo, json, libxml, xml, xmlwriter
       key: cache-v1
 
     runs-on: ${{ matrix.os }}
@@ -48,7 +48,7 @@ jobs:
           extensions: ${{ env.extensions }}
           ini-values: date.timezone='UTC'
           coverage: pcov
-          tools: composer:v2
+          tools: composer:v2, pecl
 
       - name: Determine composer cache directory on Linux
         if: matrix.os == 'ubuntu-latest'
