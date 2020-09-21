@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace Yii\Component;
 
-use Yii\Params;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
+use Yii\Params;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\View\Theme;
 use Yiisoft\View\WebView;
 
-final class View
-{
-    public function buildWebViewConfig(ContainerInterface $container): WebView
-    {
-        $defaultParameters = [];
-        $params = new Params();
+$params = new Params();
 
+return [
+    WebView::class => static function (ContainerInterface $container) use ($params) {
+        $defaultParameters = [];
         $aliases = $container->get(Aliases::class);
 
         $webView = new WebView(
@@ -36,4 +34,4 @@ final class View
 
         return $webView;
     }
-}
+];

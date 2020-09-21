@@ -8,14 +8,24 @@ use Psr\Container\ContainerInterface;
 use Yii\Routes;
 use Yiisoft\DataResponse\Middleware\FormatDataResponse;
 use Yiisoft\Router\Group;
+use Yiisoft\Router\Dispatcher;
+use Yiisoft\Router\DispatcherInterface;
 use Yiisoft\Router\RouteCollection;
 use Yiisoft\Router\RouteCollectorInterface;
+use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Router\UrlMatcherInterface;
+use Yiisoft\Router\FastRoute\UrlGenerator;
 use Yiisoft\Router\FastRoute\UrlMatcher;
 
-final class Router
-{
-    public function buildRoutesConfig(ContainerInterface $container): UrlMatcher
-    {
+return [
+    /** component router */
+    DispatcherInterface::class => Dispatcher::class,
+
+    RouteCollectorInterface::class => Group::create(),
+
+    UrlGeneratorInterface::class => UrlGenerator::class,
+
+    UrlMatcherInterface::class => static function (ContainerInterface $container) {
         $routes = new Routes();
 
         $collector = $container->get(RouteCollectorInterface::class);
@@ -27,4 +37,4 @@ final class Router
 
         return new UrlMatcher(new RouteCollection($collector));
     }
-}
+];

@@ -12,7 +12,15 @@ final class Web
     {
         return array_merge(
             require(__DIR__ . '/Component/Main.php'),
-            require(__DIR__ . '/Component/Helpers.php'),
+            require(__DIR__ . '/Component/Aliases.php'),
+            require(__DIR__ . '/Component/Parameters.php'),
+            require(__DIR__ . '/Component/YiiWeb.php'),
+            require(__DIR__ . '/Component/Router.php'),
+            require(__DIR__ . '/Component/LogTargetFile.php'),
+            require(__DIR__ . '/Component/Assets.php'),
+            require(__DIR__ . '/Component/View.php'),
+            require(__DIR__ . '/Component/Mailer.php'),
+            require(__DIR__ . '/Component/Validator.php'),
             require(__DIR__ . '/Component/Psr17.php'),
             require(__DIR__ . '/Component/DataResponse.php'),
             require(__DIR__ . '/Component/Session.php'),
