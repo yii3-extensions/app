@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Yii;
 
 use Psr\Log\LogLevel;
-
 use Yiisoft\Assets\AssetManager;
 
 use function dirname;
@@ -133,7 +132,7 @@ final class Params
     public function getViewDefaultParameters(): array
     {
         return [
-            'assetManager' => AssetManager::class,
+            'assetManager' => AssetManager::class
         ];
     }
 }

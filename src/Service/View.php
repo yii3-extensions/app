@@ -19,9 +19,9 @@ final class View implements ViewContextInterface
 {
     protected Aliases $aliases;
     protected DataResponseFactoryInterface $responseFactory;
-    private CsrfToken $csrfToken;
+    private CsrfToken $csrf;
     private Flash $flash;
-    private Parameters $parameters;
+    private Parameters $app;
     private UrlGeneratorInterface $url;
     private UrlMatcherInterface $urlMatcher;
     private string $viewPath;
@@ -29,18 +29,18 @@ final class View implements ViewContextInterface
 
     public function __construct(
         Aliases $aliases,
-        CsrfToken $csrfToken,
-        Flash $flash,
+        CsrfToken $csrf,
         DataResponseFactoryInterface $responseFactory,
-        Parameters $parameters,
+        Flash $flash,
+        Parameters $app,
         UrlGeneratorInterface $url,
         UrlMatcherInterface $urlMatcher,
         WebView $webView
     ) {
         $this->aliases = $aliases;
-        $this->csrfToken = $csrfToken;
+        $this->app = $app;
+        $this->csrf = $csrf;
         $this->flash = $flash;
-        $this->parameters = $parameters;
         $this->responseFactory = $responseFactory;
         $this->url = $url;
         $this->urlMatcher = $urlMatcher;
@@ -49,27 +49,21 @@ final class View implements ViewContextInterface
 
     public function renderWithLayout(string $view, array $parameters = []): ResponseInterface
     {
-         $csrf = $this->csrfToken->getValue();
-         $content = $this->webView->render(
+        $parameters = array_merge(
+            $parameters,
+            [
+                'app' => $this->app,
+                'csrf' => $this->csrf->getValue(),
+                'url' => $this->url,
+                'urlMatcher' => $this->urlMatcher
+            ]
+        );
+
+        $content = $this->webView->render(
             '//layout/main',
             array_merge(
                 [
-                    'app' => $this->parameters,
-                    'csrf' => $csrf,
-                    'content' => $this->webView->render(
-                        $view,
-                        array_merge(
-                            $parameters,
-                            [
-                                'app' => $this->parameters,
-                                'csrf' => $csrf,
-                                'url' => $this->url
-                            ]
-                        ),
-                        $this
-                    ),
-                    'url' => $this->url,
-                    'urlMatcher' => $this->urlMatcher
+                    'content' => $this->webView->render($view, $parameters, $this),
                 ],
                 $parameters
             ),
