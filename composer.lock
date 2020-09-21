@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d96cb7a107ce80ff33cc2e6b5df5e1d",
+    "content-hash": "76e129b3e79ec60575d8396b5d88195d",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -3291,12 +3291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/arrays.git",
-                "reference": "19feba4043f75072aacaee14cdefbb3d599042b2"
+                "reference": "2f3175ec23e2bbe4f755537a98b3e2c7f1a20d64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/arrays/zipball/19feba4043f75072aacaee14cdefbb3d599042b2",
-                "reference": "19feba4043f75072aacaee14cdefbb3d599042b2",
+                "url": "https://api.github.com/repos/yiisoft/arrays/zipball/2f3175ec23e2bbe4f755537a98b3e2c7f1a20d64",
+                "reference": "2f3175ec23e2bbe4f755537a98b3e2c7f1a20d64",
                 "shasum": ""
             },
             "require": {
@@ -3347,7 +3347,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-09-19T12:41:11+00:00"
+            "time": "2020-09-21T11:06:07+00:00"
         },
         {
             "name": "yiisoft/assets",
@@ -4630,13 +4630,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/i18n-translator.git",
-                "reference": "c8756f5ba66939b020e4ce5b6421ce444ca21dba"
+                "url": "https://github.com/yiisoft/translator.git",
+                "reference": "41cebc5519a2f2374db95c7024f8cdfd86ade105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/i18n-translator/zipball/c8756f5ba66939b020e4ce5b6421ce444ca21dba",
-                "reference": "c8756f5ba66939b020e4ce5b6421ce444ca21dba",
+                "url": "https://api.github.com/repos/yiisoft/translator/zipball/41cebc5519a2f2374db95c7024f8cdfd86ade105",
+                "reference": "41cebc5519a2f2374db95c7024f8cdfd86ade105",
                 "shasum": ""
             },
             "require": {
@@ -4658,14 +4658,14 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Yiisoft\\I18n\\Translator\\": "src"
+                    "Yiisoft\\Translator\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "Yii i18n translator",
+            "description": "Yii message translator",
             "homepage": "https://www.yiiframework.com/",
             "keywords": [
                 "i18n",
@@ -4675,8 +4675,8 @@
             "support": {
                 "forum": "https://www.yiiframework.com/forum/",
                 "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/i18n-translator/issues?state=open",
-                "source": "https://github.com/yiisoft/i18n-translator",
+                "issues": "https://github.com/yiisoft/translator/issues?state=open",
+                "source": "https://github.com/yiisoft/translator",
                 "wiki": "https://www.yiiframework.com/wiki/"
             },
             "funding": [
@@ -4689,7 +4689,8 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-08-09T18:31:36+00:00"
+            "abandoned": "yiisoft/translator",
+            "time": "2020-09-21T09:01:14+00:00"
         },
         {
             "name": "yiisoft/injector",
@@ -5369,12 +5370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/router-fastroute.git",
-                "reference": "d87ae7f063b723afad8104b99635522223b3d33a"
+                "reference": "b3bc11d2490185ab30aba0eab49c172311d9b69b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/router-fastroute/zipball/d87ae7f063b723afad8104b99635522223b3d33a",
-                "reference": "d87ae7f063b723afad8104b99635522223b3d33a",
+                "url": "https://api.github.com/repos/yiisoft/router-fastroute/zipball/b3bc11d2490185ab30aba0eab49c172311d9b69b",
+                "reference": "b3bc11d2490185ab30aba0eab49c172311d9b69b",
                 "shasum": ""
             },
             "require": {
@@ -5429,7 +5430,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-09-19T18:28:55+00:00"
+            "time": "2020-09-20T18:27:35+00:00"
         },
         {
             "name": "yiisoft/security",
