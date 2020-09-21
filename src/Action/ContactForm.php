@@ -9,12 +9,16 @@ use App\Service\Mailer;
 use App\Service\View;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Yiisoft\DataResponse\DataResponseFactoryInterface;
+use Yiisoft\Router\UrlGeneratorInterface;
 
 final class ContactForm
 {
     public function contact(
         Contact $form,
+        DataResponseFactoryInterface $responseFactory,
         Mailer $mailer,
+        UrlGeneratorInterface $url,
         ServerRequestInterface $request,
         View $view
     ): ResponseInterface {
@@ -40,7 +44,12 @@ final class ContactForm
                 'Thanks to contact us, we\'ll get in touch with you as soon as possible.'
             );
 
-            return $view->redirect('index');
+            return $responseFactory
+                ->createResponse(302)
+                ->withHeader(
+                    'Location',
+                    $url->generate('index')
+                );
         }
 
         return $view->renderWithLayout(

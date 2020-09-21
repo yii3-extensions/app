@@ -94,16 +94,6 @@ final class View implements ViewContextInterface
         return $this->aliases->get($this->viewPath);
     }
 
-    public function redirect(string $url): DataResponse
-    {
-        return $this->responseFactory
-            ->createResponse(302)
-            ->withHeader(
-                'Location',
-                $this->url->generate($url)
-            );
-    }
-
     public function viewPath(string $viewPath): void
     {
         $this->viewPath = $viewPath;
