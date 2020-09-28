@@ -20,7 +20,7 @@
 
 Yii application template for Yii 3 is best for rapidly creating projects.
 
-### Directory structure
+## Directory structure
 
       config/             contains application configurations
       resources/layout    contains layout files for the web application
@@ -33,11 +33,11 @@ Yii application template for Yii 3 is best for rapidly creating projects.
           Service         contains web services
           Widget          continas widgets for web application
 
-### Requirements
+## Requirements
 
 The minimum requirement by this project template that your Web server supports PHP 7.4.0.
 
-### Installation
+## Installation
 
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
@@ -51,23 +51,29 @@ composer create-project --prefer-dist --stability dev yii-extension/app <your pr
 Now you should be able to access the application through the following URL, assuming `app` is the directory
 directly under the `public` root.
 
-### Configuring your application
+## Configuring your application
 
 The application is fully configurable through parameters. [Application settings](docs/CONFIG.md)
 
-### Using PHP built-in server
+## Using PHP built-in server
 
 ~~~
 php -S 127.0.0.1:8080 -t public
 ~~~
 
-### Wait till it is up, then open the following URL in your browser
+## Wait till it is up, then open the following URL in your browser
 
 ~~~
 http://localhost:8080
 ~~~
 
-### Codeception testing
+## Run command console
+
+~~~
+./yii
+~~~
+
+## Codeception testing
 
 The package is tested with [Codeception](https://github.com/Codeception/Codeception). To run tests:
 
@@ -76,10 +82,10 @@ php -S 127.0.0.1:8080 -t public > yii.log 2>&1 &
 vendor/bin/codecept run
 ~~~
 
-### Static analysis
+## Static analysis
 
 The code is statically analyzed with [Phan](https://github.com/phan/phan/wiki). To run static analysis:
 
 ```php
-./vendor/bin/phan
+./vendor/bin/psalm
 ```
