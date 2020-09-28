@@ -6,11 +6,11 @@
     <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/yii-extension/app/v/stable.png)](https://packagist.org/packages/yii-extension/app)
-[![Total Downloads](https://poser.pugx.org/yii-extension/app/downloads.png)](https://packagist.org/packages/yii-extension/app)
+[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/app)](https://packagist.org/packages/yii-extension/app)
 [![ci](https://github.com/yii-extension/app/workflows/ci/badge.svg)](https://github.com/yii-extension/app/actions)
 [![codecov](https://codecov.io/gh/yii-extension/app/branch/master/graph/badge.svg)](https://codecov.io/gh/yii-extension/app)
-
+[![static analysis](https://github.com/yii-extension/app/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/app/actions?query=workflow%3A%22static+analysis%22)
+[![type-coverage](https://shepherd.dev/github/yii-extension/app/coverage.svg)](https://shepherd.dev/github/yii-extension/app)
 
 <p align="center">
     <a href="https://github.com/yii-extension/app" target="_blank">
