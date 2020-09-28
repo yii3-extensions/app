@@ -14,7 +14,7 @@ final class Routes
     public function getRoutes(): array
     {
         return [
-            Route::get('/', [index::class, 'index'])->name('index'),
+            Route::get('/', [Index::class, 'index'])->name('index'),
             Route::get('/about', [About::class, 'about'])->name('about'),
             Route::methods(['GET', 'POST'], '/contact', [ContactForm::class, 'contact'])->name('contact')
         ];

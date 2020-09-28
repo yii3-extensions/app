@@ -7,6 +7,10 @@ namespace Yii\Component;
 use Psr\Container\ContainerInterface;
 use Yii\Params;
 use Yiisoft\Csrf\CsrfMiddleware;
+use Yiisoft\Router\MiddlewareFactory;
+use Yiisoft\Router\MiddlewareFactoryInterface;
+use Yiisoft\Router\MiddlewareStack;
+use Yiisoft\Router\MiddlewareStackInterface;
 use Yiisoft\Router\Middleware\Router;
 use Yiisoft\Session\SessionMiddleware;
 use Yiisoft\Yii\Web\MiddlewareDispatcher;
@@ -18,6 +22,10 @@ $params = new Params();
 
 return [
     /** component middleware dispatcher - error exception yii-web */
+    MiddlewareStackInterface::class => MiddlewareStack::class,
+
+    MiddlewareFactoryInterface::class => MiddlewareFactory::class,
+
     MiddlewareDispatcher::class => static fn (ContainerInterface $container) => (new MiddlewareDispatcher($container))
         ->addMiddleware($container->get(Router::class))
         ->addMiddleware($container->get(SessionMiddleware::class))

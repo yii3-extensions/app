@@ -10,9 +10,14 @@ use Yiisoft\Session\Session as YiiSession;
 use Yiisoft\Session\SessionInterface;
 
 return [
-    SessionInterface::class => static fn () => new YiiSession(
-        ['cookie_secure' => 0],
-        null
-    ),
+    /** component session */
+    SessionInterface::class => [
+        '__class' => YiiSession::class,
+        '__construct()' => [
+            ['cookie_secure' => 0],
+            null
+        ]
+    ],
+
     CsrfTokenStorageInterface::class => SessionCsrfTokenStorage::class,
 ];

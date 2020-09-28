@@ -37,6 +37,12 @@ final class Parameters
         $this->parameters = $data;
     }
 
+    /**
+     * @param string $key
+     * @param null $default
+     *
+     * @return mixed
+     */
     public function get(string $key, $default = null)
     {
         return ArrayHelper::getValueByPath($this->parameters, $key, $default);

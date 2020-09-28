@@ -15,6 +15,7 @@ use Yiisoft\View\WebView;
 $params = new Params();
 
 return [
+    /** component webview */
     WebView::class => static function (ContainerInterface $container) use ($params) {
         $defaultParameters = [];
         $aliases = $container->get(Aliases::class);

@@ -22,7 +22,8 @@ final class Params
             '@resources' => '@root/resources',
             '@runtime' => '@root/runtime',
             '@vendor' => '@root/vendor',
-            '@views' => '@root/resources/views'
+            '@views' => '@root/resources/views',
+            '@yiisoft/yii/db/migration' => '@vendor/yii-db-migration'
         ];
     }
 
@@ -75,9 +76,19 @@ final class Params
         ];
     }
 
+    public function getCachePath(): string
+    {
+        return dirname(__DIR__) . '/runtime/cache';
+    }
+
     public function getComposerView(): string
     {
-        return '@mail';
+        return dirname(__DIR__) . '/resources/mail';
+    }
+
+    public function getSqliteDsn(): string
+    {
+        return 'sqlite:' . dirname(__DIR__) . '/Data/Runtime/yiitest.sq3';
     }
 
     public function getEventListeners(): array
@@ -87,7 +98,7 @@ final class Params
 
     public function getFileMailerStorage(): string
     {
-        return '@runtime/mail';
+        return dirname(__DIR__) . '/runtime/mail';
     }
 
     public function getFileRotatorMaxFiles(): int
@@ -115,7 +126,7 @@ final class Params
 
     public function getLogFile(): string
     {
-        return '@runtime/logs/app.log';
+        return dirname(__DIR__) . '/runtime/logs/app.log';
     }
 
     public function getLogLevels(): array

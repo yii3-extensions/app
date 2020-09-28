@@ -31,8 +31,7 @@ return [
         $collector = $container->get(RouteCollectorInterface::class);
 
         $collector->addGroup(
-            Group::create(null, $routes->getRoutes())
-                ->addMiddleware(FormatDataResponse::class)
+            Group::create(null, $routes->getRoutes())->addMiddleware(FormatDataResponse::class)
         );
 
         return new UrlMatcher(new RouteCollection($collector));

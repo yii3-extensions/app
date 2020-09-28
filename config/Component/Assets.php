@@ -12,20 +12,28 @@ use Yiisoft\Assets\AssetConverterInterface;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Assets\AssetPublisher;
 use Yiisoft\Assets\AssetPublisherInterface;
+use Yiisoft\Factory\Definitions\Reference;
 
 return [
     /** component assets */
-    AssetConverterInterface::class => static fn (ContainerInterface $container) => new AssetConverter(
-        $container->get(Aliases::class),
-        $container->get(LoggerInterface::class)
-    ),
+    AssetConverterInterface::class => [
+        '__class' => AssetConverter::class,
+        '__construct()' => [
+            Reference::to(Aliases::class),
+            Reference::to(LoggerInterface::class)
+        ]
+    ],
 
-    AssetPublisherInterface::class => static fn (ContainerInterface $container) => new AssetPublisher(
-        $container->get(Aliases::class)
-    ),
+    AssetPublisherInterface::class => [
+        '__class' => AssetPublisher::class,
+        '__construct()' => [
+            Reference::to(Aliases::class)
+        ]
+    ],
 
     AssetManager::class => static function (ContainerInterface $container) {
         $assetManager = new AssetManager($container->get(LoggerInterface::class));
+
         $assetManager->setConverter($container->get(AssetConverterInterface::class));
         $assetManager->setPublisher($container->get(AssetPublisherInterface::class));
 

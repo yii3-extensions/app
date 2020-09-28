@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+use Yii\Console;
+use Yii\ParamsConsole;
+use Yiisoft\Di\Container;
+
+$autoload = __DIR__ . '/vendor/autoload.php';
+
+if (!is_file($autoload)) {
+    die('You need to set up the project dependencies using Composer');
+}
+
+require_once $autoload;
+
+$params = new ParamsConsole();
+
+$console = new Console();
+
+$container = new Container($console->buildConfig());
+
+$loader = new ContainerCommandLoader(
+    $container,
+    $params->getConsoleCommands()
+);
+
+$app = new Application();
+
+$app->setCommandLoader($loader);
+
+$app -> run();

@@ -13,6 +13,7 @@ use Psr\Http\Message\UploadedFileFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 
 return [
+    /** component PSR-17 */
     RequestFactoryInterface::class => Psr17Factory::class,
     ServerRequestFactoryInterface::class => Psr17Factory::class,
     ResponseFactoryInterface::class => Psr17Factory::class,

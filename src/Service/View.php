@@ -7,7 +7,6 @@ namespace App\Service;
 use Psr\Http\Message\ResponseInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Csrf\CsrfToken;
-use Yiisoft\DataResponse\DataResponse;
 use Yiisoft\DataResponse\DataResponseFactoryInterface;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Router\UrlMatcherInterface;
@@ -24,7 +23,7 @@ final class View implements ViewContextInterface
     private Parameters $app;
     private UrlGeneratorInterface $url;
     private UrlMatcherInterface $urlMatcher;
-    private string $viewPath;
+    private ?string $viewPath = null;
     private WebView $webView;
 
     public function __construct(
@@ -87,7 +86,7 @@ final class View implements ViewContextInterface
 
     public function getViewPath(): string
     {
-        if (!isset($this->viewPath)) {
+        if ($this->viewPath === null) {
             $this->viewPath = $this->webView->getBasePath();
         }
 

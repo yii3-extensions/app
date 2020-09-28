@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Yii\Component;
 
 use Swift_Transport;
-use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Yii\Params;
-use Yiisoft\Aliases\Aliases;
+use Yiisoft\Factory\Definitions\Reference;
 use Yiisoft\Mailer\Composer;
 use Yiisoft\Mailer\FileMailer;
 use Yiisoft\Mailer\MailerInterface;
@@ -23,29 +22,44 @@ $params = new Params();
 
 return [
     /** component mailer */
-    Composer::class => static fn (ContainerInterface $container) => new Composer(
-        $container->get(WebView::class),
-        $container->get(Aliases::class)->get($params->getComposerView())
-    ),
+    Composer::class => [
+        '__class' => Composer::class,
+        '__construct()' => [
+            Reference::to(WebView::class),
+            $params->getComposerView()
+        ]
+    ],
 
-    MessageFactory::class => static fn () => new MessageFactory(Message::class),
+    MessageFactory::class => [
+        '__class' => MessageFactory::class,
+        '__construct()' => [
+            Message::class
+        ]
+    ],
+
     MessageFactoryInterface::class => MessageFactory::class,
 
-    Mailer::class => static fn (ContainerInterface $container) => new Mailer(
-        $container->get(MessageFactoryInterface::class),
-        $container->get(Composer::class),
-        $container->get(EventDispatcherInterface::class),
-        $container->get(LoggerInterface::class),
-        $container->get(Swift_Transport::class)
-    ),
+    Mailer::class => [
+        '__class' => Mailer::class,
+        '__construct()' => [
+            Reference::to(MessageFactoryInterface::class),
+            Reference::to(Composer::class),
+            Reference::to(EventDispatcherInterface::class),
+            Reference::to(LoggerInterface::class),
+            Reference::to(Swift_Transport::class)
+        ]
+    ],
 
-    FileMailer::class => static fn (ContainerInterface $container) => new FileMailer(
-        $container->get(MessageFactoryInterface::class),
-        $container->get(Composer::class),
-        $container->get(EventDispatcherInterface::class),
-        $container->get(LoggerInterface::class),
-        $container->get(Aliases::class)->get($params->getFileMailerStorage())
-    ),
+    FileMailer::class => [
+        '__class' => FileMailer::class,
+        '__construct()' => [
+            Reference::to(MessageFactoryInterface::class),
+            Reference::to(Composer::class),
+            Reference::to(EventDispatcherInterface::class),
+            Reference::to(LoggerInterface::class),
+            $params->getFileMailerStorage()
+        ]
+    ],
 
-    MailerInterface::class => static fn (ContainerInterface $container) => $container->get(FileMailer::class)
+    MailerInterface::class => FileMailer::class
 ];
