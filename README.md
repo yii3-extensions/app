@@ -53,7 +53,7 @@ directly under the `public` root.
 
 ## Configuring your application
 
-The application is fully configurable through parameters. [Application settings](docs/CONFIG.md)
+All the configuration is in the `config directory` of the `application`.
 
 ## Using PHP built-in server
 
@@ -84,7 +84,7 @@ vendor/bin/codecept run
 
 ## Static analysis
 
-The code is statically analyzed with [Phan](https://github.com/phan/phan/wiki). To run static analysis:
+The code is statically analyzed with [Psalm](https://psalm.dev/docs). To run static analysis:
 
 ```php
 ./vendor/bin/psalm
