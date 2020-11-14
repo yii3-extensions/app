@@ -19,18 +19,15 @@ return [
     FileRotatorInterface::class => [
         '__class' => FileRotator::class,
         '__construct()' => [
-            $params->getFileRotatorMaxFileSize(),
-            $params->getFileRotatorMaxFiles(),
-            null,
-            null
+            'maxFileSize' => $params->getFileRotatorMaxFileSize(),
+            'maxFiles' => $params->getFileRotatorMaxFiles()
         ]
     ],
 
     FileTarget::class => [
         '__class' => FileTarget::class,
         '__construct()' => [
-            $params->getLogFile(),
-            Reference::to(FileRotatorInterface::class)
+            'logFile' => $params->getLogFile(),
         ],
         'setLevels()' => [$params->getLogLevels()]
     ],

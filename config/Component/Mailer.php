@@ -39,25 +39,10 @@ return [
 
     MessageFactoryInterface::class => MessageFactory::class,
 
-    Mailer::class => [
-        '__class' => Mailer::class,
-        '__construct()' => [
-            Reference::to(MessageFactoryInterface::class),
-            Reference::to(Composer::class),
-            Reference::to(EventDispatcherInterface::class),
-            Reference::to(LoggerInterface::class),
-            Reference::to(Swift_Transport::class)
-        ]
-    ],
-
     FileMailer::class => [
         '__class' => FileMailer::class,
         '__construct()' => [
-            Reference::to(MessageFactoryInterface::class),
-            Reference::to(Composer::class),
-            Reference::to(EventDispatcherInterface::class),
-            Reference::to(LoggerInterface::class),
-            $params->getFileMailerStorage()
+            'path' => $params->getFileMailerStorage()
         ]
     ],
 

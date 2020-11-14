@@ -16,27 +16,13 @@ use Yiisoft\Factory\Definitions\Reference;
 
 return [
     /** component assets */
-    AssetConverterInterface::class => [
-        '__class' => AssetConverter::class,
-        '__construct()' => [
-            Reference::to(Aliases::class),
-            Reference::to(LoggerInterface::class)
-        ]
-    ],
+    AssetConverterInterface::class  => AssetConverter::class,
 
-    AssetPublisherInterface::class => [
-        '__class' => AssetPublisher::class,
-        '__construct()' => [
-            Reference::to(Aliases::class)
-        ]
-    ],
+    AssetPublisherInterface::class => AssetPublisher::class,
 
-    AssetManager::class => static function (ContainerInterface $container) {
-        $assetManager = new AssetManager($container->get(LoggerInterface::class));
-
-        $assetManager->setConverter($container->get(AssetConverterInterface::class));
-        $assetManager->setPublisher($container->get(AssetPublisherInterface::class));
-
-        return $assetManager;
-    }
+    AssetManager::class => [
+        '__class' => AssetManager::class,
+        'setConverter()' => [Reference::to(AssetConverterInterface::class)],
+        'setPublisher()' => [Reference::to(AssetPublisherInterface::class)]
+    ]
 ];

@@ -19,6 +19,7 @@
         "yiisoft/csrf": "^3.0@dev",
         "yiisoft/di": "^3.0@dev",
         "yiisoft/data-response": "^3.0@dev",
+        "yiisoft/error-handler": "^3.0@dev",
         "yiisoft/form": "^1.0@dev",
         "yiisoft/log": "^3.0@dev",
         "yiisoft/log-target-file": "^3.0@dev",
@@ -55,6 +56,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
+        },
+        "installer-types": [
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "./node_modules/{$name}": [
+                "type:npm-asset"
+            ]
         }
     },
     "config": {
@@ -62,5 +71,11 @@
     },
     "bin": [
         "bin/yii"
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
     ]
 }

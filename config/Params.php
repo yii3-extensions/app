@@ -119,8 +119,7 @@ final class Params
                 'error',
                 'exception',
                 'previousException'
-            ],
-            'path' => dirname(__DIR__) . '/vendor/yiisoft/yii-web/src/ErrorHandler/templates',
+            ]
         ];
     }
 

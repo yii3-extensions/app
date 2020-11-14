@@ -2,38 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Yii\Component;
-
-use Psr\Container\ContainerInterface;
 use Yii\Routes;
 use Yiisoft\DataResponse\Middleware\FormatDataResponse;
 use Yiisoft\Router\Group;
-use Yiisoft\Router\Dispatcher;
-use Yiisoft\Router\DispatcherInterface;
 use Yiisoft\Router\RouteCollection;
 use Yiisoft\Router\RouteCollectorInterface;
+use Yiisoft\Router\RouteCollectionInterface;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Router\UrlMatcherInterface;
 use Yiisoft\Router\FastRoute\UrlGenerator;
 use Yiisoft\Router\FastRoute\UrlMatcher;
 
-return [
-    /** component router */
-    DispatcherInterface::class => Dispatcher::class,
+/** @var array $params */
 
-    RouteCollectorInterface::class => Group::create(),
+return [
+    UrlMatcherInterface::class => UrlMatcher::class,
 
     UrlGeneratorInterface::class => UrlGenerator::class,
 
-    UrlMatcherInterface::class => static function (ContainerInterface $container) {
-        $routes = new Routes();
+    RouteCollectorInterface::class => Group::create(),
 
-        $collector = $container->get(RouteCollectorInterface::class);
+    RouteCollectionInterface::class => static function (RouteCollectorInterface $collector) {
+        $routes = new Routes();
 
         $collector->addGroup(
             Group::create(null, $routes->getRoutes())->addMiddleware(FormatDataResponse::class)
         );
 
-        return new UrlMatcher(new RouteCollection($collector));
+        return new RouteCollection($collector);
     }
 ];
