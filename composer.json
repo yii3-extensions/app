@@ -62,9 +62,7 @@
         },
         "config-plugin-output-dir": "runtime/build/config",
         "config-plugin": {
-            "params": [
-                "config/params.php"
-            ],
+            "params": "config/params.php",
             "common": [
                 "config/common/*.php"
             ],
@@ -78,9 +76,7 @@
             ],
             "events": "config/events.php",
             "providers": "config/providers.php",
-            "routes": [
-                "config/routes.php"
-            ]
+            "routes": "config/routes.php"
         },
         "installer-types": [
             "npm-asset"
