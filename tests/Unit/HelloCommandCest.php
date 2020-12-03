@@ -9,34 +9,34 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
 use Symfony\Component\Console\Tester\CommandTester;
 use App\Tests\UnitTester;
-use Yii\Console;
-use Yii\ParamsConsole;
+use Yiisoft\Composer\Config\Builder;
 use Yiisoft\Di\Container;
 
-final class HellowCommandCest
+final class HelloCommandCest
 {
     private ContainerInterface $container;
 
     public function _before(UnitTester $I): void
     {
-        $params = new Console();
-
-        $this->container = new Container($params->buildConfig());
+        $this->container = new Container(
+            require Builder::path('console'),
+            require Builder::path('providers'),
+        );
     }
 
     public function testExecute(UnitTester $I): void
     {
         $app = new Application();
-        $params = new ParamsConsole();
+        $params = require Builder::path('params');
 
         $loader = new ContainerCommandLoader(
             $this->container,
-            $params->getConsoleCommands()
+            $params['yiisoft/yii-console']['commands']
         );
 
         $app->setCommandLoader($loader);
 
-        $command = $app->find('hellow');
+        $command = $app->find('hello');
 
         $commandCreate = new CommandTester($command);
 
@@ -46,6 +46,6 @@ final class HellowCommandCest
 
         $output = $commandCreate->getDisplay(true);
 
-        $I->assertStringContainsString('Hellow Command', $output);
+        $I->assertStringContainsString('Hello Command', $output);
     }
 }

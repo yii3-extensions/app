@@ -8,7 +8,8 @@ declare(strict_types=1);
 
 $this->params['breadcrumbs'] = '/';
 
-$this->setTitle($app->get('app.name'));
+$this->setTitle('My Project');
+
 ?>
 
 <h1 class="title">Hello World</h1>

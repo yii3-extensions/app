@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Yii\Component;
-
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
@@ -12,8 +10,9 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UploadedFileFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 
+/** @var array $params */
+
 return [
-    /** component PSR-17 */
     RequestFactoryInterface::class => Psr17Factory::class,
     ServerRequestFactoryInterface::class => Psr17Factory::class,
     ResponseFactoryInterface::class => Psr17Factory::class,

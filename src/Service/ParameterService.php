@@ -7,7 +7,7 @@ namespace App\Service;
 use Yiisoft\Arrays\ArrayHelper;
 
 /**
- * Parameters provides a way to get application parameters defined in config/params.php
+ * ParameterService provides a way to get application Parameter defined in config/params.php
  *
  * In order to use in a handler or any other place supporting auto-wired injection:
  *
@@ -21,14 +21,14 @@ use Yiisoft\Arrays\ArrayHelper;
  * ```
  *
  * ```php
- * public function actionIndex(Parameters $parameters)
+ * public function actionIndex(ParameterService $ParameterService)
  * {
- *     $adminEmail = $parameters->get('admin.email', 'admin@example.com');
- *     // return demo@example.com or admin@example.com if search key not exists in parameters
+ *     $adminEmail = $ParameterService->get('admin.email', 'admin@example.com');
+ *     // return demo@example.com or admin@example.com if search key not exists in ParameterService
  * }
  * ```
  */
-final class Parameters
+final class ParameterService
 {
     private array $parameters;
 
@@ -37,12 +37,6 @@ final class Parameters
         $this->parameters = $data;
     }
 
-    /**
-     * @param string $key
-     * @param null $default
-     *
-     * @return mixed
-     */
     public function get(string $key, $default = null)
     {
         return ArrayHelper::getValueByPath($this->parameters, $key, $default);

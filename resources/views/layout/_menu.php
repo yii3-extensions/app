@@ -13,8 +13,8 @@ use Yiisoft\Yii\Bulma\NavBar;
 use Yiisoft\Html\Html;
 
 if (isset($identity) && $identity->getId() !== null) {
-    if ($app->get('app.nav.logged') !== []) {
-        $menuItems = $app->get('app.nav.logged');
+    if ($app->get('nav.logged') !== []) {
+        $menuItems = $app->get('nav.logged');
     }
 
     $label = '';
@@ -30,11 +30,11 @@ if (isset($identity) && $identity->getId() !== null) {
         }
     }
 } else {
-    $menuItems =  $app->get('app.nav.guest');
+    $menuItems =  $app->get('nav.guest');
 }
 ?>
 
-<?= NavBar::begin($app->get('app.navBar.config'))->start() ?>
+<?= NavBar::widget($app->get('navBar.config'))->begin() ?>
 
     <?= Nav::widget()
         ->currentPath($url->generate($urlMatcher->getCurrentRoute()->getName()))

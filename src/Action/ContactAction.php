@@ -4,23 +4,23 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Form\Contact;
-use App\Service\Mailer;
-use App\Service\View;
+use App\Form\ContactForm;
+use App\Service\MailerService;
+use App\Service\ViewService;
+use App\Service\WebControllerService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Yiisoft\DataResponse\DataResponseFactoryInterface;
 use Yiisoft\Router\UrlGeneratorInterface;
 
-final class ContactForm
+final class ContactAction
 {
     public function contact(
-        Contact $form,
-        DataResponseFactoryInterface $responseFactory,
-        Mailer $mailer,
+        ContactForm $form,
+        MailerService $mailer,
         UrlGeneratorInterface $url,
         ServerRequestInterface $request,
-        View $view
+        ViewService $view,
+        WebControllerService $webController
     ): ResponseInterface {
         $body = $request->getParsedBody();
         $method = $request->getMethod();
@@ -38,25 +38,23 @@ final class ContactForm
                 $request->getUploadedFiles()
             );
 
-            $view->addFlash(
-                'is-success',
-                'System mailer notification.',
-                'Thanks to contact us, we\'ll get in touch with you as soon as possible.'
-            );
-
-            return $responseFactory
-                ->createResponse(302)
-                ->withHeader(
-                    'Location',
-                    $url->generate('index')
-                );
+            return
+                $webController
+                    ->withFlash(
+                        'is-success',
+                        'System mailer notification.',
+                        'Thanks to contact us, we\'ll get in touch with you as soon as possible.'
+                    )
+                    ->redirectResponse('index');
         }
 
-        return $view->renderWithLayout(
-            'contact/contact',
-            [
-                'form' => $form
-            ]
-        );
+        return
+            $view->renderWithLayout(
+                'contact/contact',
+                [
+                    'action' => $url->generate('contact'),
+                    'form' => $form,
+                ]
+            );
     }
 }

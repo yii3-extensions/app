@@ -8,7 +8,7 @@ use Yiisoft\Form\FormModel;
 use Yiisoft\Validator\Rule\Email;
 use Yiisoft\Validator\Rule\Required;
 
-final class Contact extends FormModel
+final class ContactForm extends FormModel
 {
     private string $username = '';
     private string $email = '';

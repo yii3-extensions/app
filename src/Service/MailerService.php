@@ -4,24 +4,24 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Throwable;
+use Exception;
 use Psr\Log\LoggerInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Mailer\Composer;
 use Yiisoft\Mailer\MailerInterface;
 use Yiisoft\Mailer\MessageInterface;
 
-final class Mailer
+final class MailerService
 {
     private Aliases $aliases;
-    private Parameters $app;
+    private ParameterService $app;
     private Composer $composer;
     private LoggerInterface $logger;
     private MailerInterface $mailer;
 
     public function __construct(
         Aliases $aliases,
-        Parameters $app,
+        ParameterService $app,
         Composer $composer,
         LoggerInterface $logger,
         MailerInterface $mailer
@@ -77,7 +77,7 @@ final class Mailer
         try {
             $this->mailer->send($message);
             $result = true;
-        } catch (Throwable $e) {
+        } catch (Exception $e) {
             $this->logger->error($e->getMessage());
         }
 

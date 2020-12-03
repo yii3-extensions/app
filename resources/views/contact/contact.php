@@ -27,8 +27,8 @@ $fieldConfig = [
         Please fill out the following to Contact.
     </p>
 
-    <?= Form::begin()
-        ->action($url->generate('contact'))
+    <?= Form::widget()
+        ->action($action)
         ->options(
             [
                 'id' => 'form-contact',
@@ -36,7 +36,7 @@ $fieldConfig = [
                 'enctype' => 'multipart/form-data',
             ]
         )
-        ->start() ?>
+        ->begin() ?>
 
         <?= Field::Widget($fieldConfig)->config($form, 'username') ?>
         <?= Field::Widget($fieldConfig)->config($form, 'email') ?>

@@ -1,0 +1,75 @@
+on:
+  - pull_request
+  - push
+
+name: build
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php-version }}-${{ matrix.os }}
+
+    env:
+      key: cache-v1
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        php-version:
+          - "7.4"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install PHP with extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          ini-values: date.timezone='UTC'
+          coverage: pcov
+          tools: composer:v2
+
+      - name: Determine composer cache directory on Linux
+        if: matrix.os == 'ubuntu-latest'
+        run: echo "::set-env name=COMPOSER_CACHE_DIR::$(composer config cache-dir)"
+
+      - name: Determine composer cache directory on Windows
+        if: matrix.os == 'windows-latest'
+        run: ECHO "::set-env name=COMPOSER_CACHE_DIR::~\AppData\Local\Composer"
+
+      - name: Cache dependencies installed with composer
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: php${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('**/composer.json') }}
+          restore-keys: |
+            php${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-
+
+      - name: Install template yiisoft/app with composer create project php 7.4
+        if: matrix.php == '7.4'
+        run: composer create-project --prefer-dist --no-interaction --no-progress --stability=dev yii-extension/app app --ansi
+
+      - name: Install template yiisoft/app with composer create project php 8.0
+        if: matrix.php == '8.0'
+        run: composer create-project --prefer-dist --no-interaction --no-progress --ignore-platform-reqs --stability=dev yii-extension/app app --ansi
+
+      - name: Run tests with codeception
+        run: |
+          cd app
+          php -S 127.0.0.1:8080 -t public > ./runtime/yii.log 2>&1 &
+          vendor/bin/codecept run --coverage --coverage-xml
+
+      - name: Upload coverage to codecov on Linux php 7.4
+        if: matrix.os == 'ubuntu-latest' && matrix.php-version == '7.4'
+        uses: codecov/codecov-action@v1.0.12
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: tests/_output/coverage.xml
+          flags: unittests
+          name: codecov-app
+          fail_ci_if_error: true

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Yii\Routes;
+use Yiisoft\Composer\Config\Builder;
 use Yiisoft\DataResponse\Middleware\FormatDataResponse;
 use Yiisoft\Router\Group;
 use Yiisoft\Router\RouteCollection;
@@ -23,10 +23,9 @@ return [
     RouteCollectorInterface::class => Group::create(),
 
     RouteCollectionInterface::class => static function (RouteCollectorInterface $collector) {
-        $routes = new Routes();
-
         $collector->addGroup(
-            Group::create(null, $routes->getRoutes())->addMiddleware(FormatDataResponse::class)
+            Group::create(null, require Builder::path('routes'))
+                ->addMiddleware(FormatDataResponse::class)
         );
 
         return new RouteCollection($collector);

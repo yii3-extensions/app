@@ -17,6 +17,7 @@
         "yiisoft/cache": "^3.0@dev",
         "yiisoft/cache-file": "^3.0@dev",
         "yiisoft/csrf": "^3.0@dev",
+        "yiisoft/composer-config-plugin": "^1.0@dev",
         "yiisoft/di": "^3.0@dev",
         "yiisoft/data-response": "^3.0@dev",
         "yiisoft/error-handler": "^3.0@dev",
@@ -32,6 +33,7 @@
         "yiisoft/view": "^3.0@dev",
         "yiisoft/widget": "^3.0@dev",
         "yiisoft/yii-bulma": "^1.0@dev",
+        "yiisoft/yii-event": "^3.0@dev",
         "yiisoft/yii-web": "^3.0@dev"
     },
     "require-dev": {
@@ -57,6 +59,28 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
+        },
+        "config-plugin-output-dir": "runtime/build/config",
+        "config-plugin": {
+            "params": [
+                "config/params.php"
+            ],
+            "common": [
+                "config/common/*.php"
+            ],
+            "web": [
+                "$common",
+                "config/web/*.php"
+            ],
+            "console": [
+                "$common",
+                "config/console/*.php"
+            ],
+            "events": "config/events.php",
+            "providers": "config/providers.php",
+            "routes": [
+                "config/routes.php"
+            ]
         },
         "installer-types": [
             "npm-asset"
