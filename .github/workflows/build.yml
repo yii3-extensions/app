@@ -6,7 +6,7 @@ name: build
 
 jobs:
   tests:
-    name: PHP ${{ matrix.php-version }}-${{ matrix.os }}
+    name: PHP ${{ matrix.php }}-${{ matrix.os }}
 
     env:
       key: cache-v1
@@ -19,7 +19,7 @@ jobs:
           - Ubuntu-20.04
           - windows-latest
 
-        php-version:
+        php:
           - "7.4"
 
     steps:
@@ -29,13 +29,13 @@ jobs:
       - name: Install PHP with extensions
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: ${{ matrix.php }}
           ini-values: date.timezone='UTC'
           coverage: pcov
           tools: composer:v2
 
       - name: Determine composer cache directory on Linux
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'Ubuntu-20.04'
         run: echo "COMPOSER_CACHE_DIR=$(composer config cache-dir)" >> $GITHUB_ENV
 
       - name: Determine composer cache directory on Windows
@@ -65,7 +65,7 @@ jobs:
           vendor/bin/codecept run --coverage --coverage-xml
 
       - name: Upload coverage to codecov on Linux php 7.4
-        if: matrix.os == 'ubuntu-latest' && matrix.php-version == '7.4'
+        if: matrix.os == 'Ubuntu-20.04' && matrix.php == '7.4'
         uses: codecov/codecov-action@v1.0.12
         with:
           token: ${{secrets.CODECOV_TOKEN}}
