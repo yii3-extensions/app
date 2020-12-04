@@ -10,14 +10,12 @@ use App\Service\ViewService;
 use App\Service\WebControllerService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Yiisoft\Router\UrlGeneratorInterface;
 
 final class ContactAction
 {
     public function contact(
         ContactForm $form,
         MailerService $mailer,
-        UrlGeneratorInterface $url,
         ServerRequestInterface $request,
         ViewService $view,
         WebControllerService $webController
@@ -52,7 +50,6 @@ final class ContactAction
             $view->renderWithLayout(
                 'contact/contact',
                 [
-                    'action' => $url->generate('contact'),
                     'form' => $form,
                 ]
             );

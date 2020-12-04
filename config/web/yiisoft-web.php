@@ -21,7 +21,6 @@ return [
                         [
                             Router::class,
                             SessionMiddleware::class,
-                            CsrfMiddleware::class,
                             ErrorCatcher::class,
                         ]
                     );

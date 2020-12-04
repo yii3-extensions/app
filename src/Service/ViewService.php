@@ -6,47 +6,29 @@ namespace App\Service;
 
 use Psr\Http\Message\ResponseInterface;
 use Yiisoft\Aliases\Aliases;
-use Yiisoft\Assets\AssetManager;
 use Yiisoft\Csrf\CsrfToken;
 use Yiisoft\DataResponse\DataResponseFactoryInterface;
-use Yiisoft\Form\Widget\Field;
-use Yiisoft\Router\UrlGeneratorInterface;
-use Yiisoft\Router\UrlMatcherInterface;
 use Yiisoft\View\ViewContextInterface;
 use Yiisoft\View\WebView;
 
 final class ViewService implements ViewContextInterface
 {
     private Aliases $aliases;
-    private ParameterService $app;
-    private AssetManager $assetManager;
     private CsrfToken $csrf;
-    private Field $field;
     protected DataResponseFactoryInterface $responseFactory;
-    private UrlGeneratorInterface $url;
-    private UrlMatcherInterface $urlMatcher;
     private ?string $viewPath = null;
+    private array $viewParameters;
     private WebView $webView;
 
     public function __construct(
         Aliases $aliases,
-        ParameterService $app,
-        AssetManager $assetManager,
         CsrfToken $csrf,
-        Field $field,
         DataResponseFactoryInterface $responseFactory,
-        UrlMatcherInterface $urlMatcher,
-        UrlGeneratorInterface $url,
         WebView $webView
     ) {
         $this->aliases = $aliases;
-        $this->app = $app;
-        $this->assetManager = $assetManager;
         $this->csrf = $csrf;
-        $this->field = $field;
         $this->responseFactory = $responseFactory;
-        $this->url = $url;
-        $this->urlMatcher = $urlMatcher;
         $this->webView = $webView;
     }
 
@@ -61,11 +43,11 @@ final class ViewService implements ViewContextInterface
                 [
                     'content' => $this->webView->render(
                         $view,
-                        array_merge($viewParameters, $this->viewParameters()),
+                        array_merge($viewParameters, $this->viewParameters),
                         $this
                     )
                 ],
-                array_merge($layoutParameters, $this->layoutParameters())
+                $layoutParameters,
             ),
             $this
         );
@@ -89,23 +71,20 @@ final class ViewService implements ViewContextInterface
         return $this;
     }
 
-    private function layoutParameters(): array
+    public function defaultParameters(array $value): void
     {
-        return [
-            'app' => $this->app,
-            'assetManager' => $this->assetManager,
-            'csrf' => $this->csrf->getValue(),
-            'url' => $this->url,
-            'urlMatcher' => $this->urlMatcher
-        ];
+        $this->webView->setDefaultParameters(
+            array_merge(
+                [
+                    'csrf' => $this->csrf->getValue(),
+                ],
+                $value
+            )
+        );
     }
 
-    private function viewParameters(): array
+    public function viewParameters(array $value): void
     {
-        return [
-            'assetManager' => $this->assetManager,
-            'csrf' => $this->csrf->getValue(),
-            'field' => $this->field,
-        ];
+        $this->viewParameters = $value;
     }
 }

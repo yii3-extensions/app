@@ -28,7 +28,7 @@ $fieldConfig = [
     </p>
 
     <?= Form::widget()
-        ->action($action)
+        ->action($url->generate('contact'))
         ->options(
             [
                 'id' => 'form-contact',
