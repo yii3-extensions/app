@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - Ubuntu-20.04
+          - ubuntu-20.04
 
         php:
           - "7.4"
