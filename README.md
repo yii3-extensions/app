@@ -8,7 +8,8 @@
 
 [![Total Downloads](https://img.shields.io/packagist/dt/yii-extension/app)](https://packagist.org/packages/yii-extension/app)
 [![build](https://github.com/yii-extension/app/workflows/build/badge.svg)](https://github.com/yii-extension/app/actions)
-[![codecov](https://codecov.io/gh/yii-extension/app/branch/master/graph/badge.svg)](https://codecov.io/gh/yii-extension/app)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yii-extension/app/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/yii-extension/app/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app/?branch=master)
 [![static analysis](https://github.com/yii-extension/app/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/app/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yii-extension/app/coverage.svg)](https://shepherd.dev/github/yii-extension/app)
 
