@@ -6,17 +6,19 @@ namespace App\Tests\Acceptance;
 
 use App\Tests\AcceptanceTester;
 
-final class AboutPageCest
+final class PageAboutCest
 {
     public function _before(AcceptanceTester $I): void
     {
-        $I->wantTo('about page works.');
         $I->amOnPage('/about');
     }
 
-    public function testAboutPage(AcceptanceTester $I): void
+    /**
+     * @depends App\Tests\Acceptance\PageIndexCest:indexPage
+     */
+    public function aboutPage(AcceptanceTester $I): void
     {
-        $I->expectTo('see about page.');
+        $I->wantTo('see about page.');
         $I->see('This is the About page. You may modify the following file to customize its content.');
     }
 }

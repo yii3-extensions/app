@@ -6,7 +6,7 @@ namespace App\Tests\Acceptance;
 
 use App\Tests\AcceptanceTester;
 
-final class ContactPageCest
+final class PageContactCest
 {
     public function _before(AcceptanceTester $I)
     {
