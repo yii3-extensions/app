@@ -67,8 +67,10 @@ jobs:
 
       - name: Upload coverage to codecov on Linux php 7.4
         if: matrix.os == 'ubuntu-20.04' && matrix.php == '7.4'
-        uses: codecov/codecov-action@v1.0.12
+       uses: codecov/codecov-action@v1.0.12
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{secrets.CODECOV_TOKEN}}
           file: tests/_output/coverage.xml
+          flags: unittests
           name: codecov-app
+          fail_ci_if_error: true
