@@ -59,11 +59,11 @@ jobs:
         if: matrix.php == '8.0'
         run: composer create-project --prefer-dist --no-interaction --no-progress --ignore-platform-reqs --stability=dev yii-extension/app app --ansi
 
-      - name: Run tests with codeception
+      - name: Run tests with codeception with coverage
         run: |
           cd app
-          php -S 127.0.0.1:8080 -t public > ./runtime/yii.log 2>&1 &
-          vendor/bin/codecept run --coverage --coverage-xml
+          php -S 127.0.0.1:8080 -t public public/index-test.php > ./runtime/yii.log 2>&1 &
+          vendor/bin/codecept run --coverage-xml
 
       - name: Upload coverage to codecov on Linux php 7.4
         if: matrix.os == 'ubuntu-20.04' && matrix.php == '7.4'
