@@ -10,10 +10,6 @@ return [
         'emailFrom' => 'tester@example.com',
         'language' => 'en',
         'logo' => '/images/yii-logo.jpg',
-        'mailer' => [
-            'from' => 'tester@example.com'
-        ],
-        'name' => 'Web Application',
 
         /** config widget nav */
         'nav' => [
@@ -98,12 +94,6 @@ return [
 
     'yiisoft/view' => [
         'basePath' => '@views',
-        'defaultParameters' => [],
-        'theme' => [
-            'pathMap' => [],
-            'basePath' => '',
-            'baseUrl' => '',
-        ]
     ],
 
     'yiisoft/yii-console' => [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9e18ac135db78532a4222759c873fa2",
+    "content-hash": "e2d3406e908db7b84d392c53cffdcd1f",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -129,16 +129,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "cbee637510037f293e641857b2a6223d0ea8008d"
+                "reference": "62139b2806178adb979d76bd3437534a1a9fd490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/cbee637510037f293e641857b2a6223d0ea8008d",
-                "reference": "cbee637510037f293e641857b2a6223d0ea8008d",
+                "url": "https://api.github.com/repos/composer/composer/zipball/62139b2806178adb979d76bd3437534a1a9fd490",
+                "reference": "62139b2806178adb979d76bd3437534a1a9fd490",
                 "shasum": ""
             },
             "require": {
@@ -206,7 +206,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.0.7"
+                "source": "https://github.com/composer/composer/tree/2.0.8"
             },
             "funding": [
                 {
@@ -222,7 +222,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T16:31:06+00:00"
+            "time": "2020-12-03T16:20:39+00:00"
         },
         {
             "name": "composer/installers",
@@ -448,16 +448,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "6946f785871e2314c60b4524851f3702ea4f2223"
+                "reference": "de30328a7af8680efdc03e396aad24befd513200"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/6946f785871e2314c60b4524851f3702ea4f2223",
-                "reference": "6946f785871e2314c60b4524851f3702ea4f2223",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/de30328a7af8680efdc03e396aad24befd513200",
+                "reference": "de30328a7af8680efdc03e396aad24befd513200",
                 "shasum": ""
             },
             "require": {
@@ -469,7 +469,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-main": "1.x-dev"
                 }
             },
             "autoload": {
@@ -507,7 +507,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/spdx-licenses/issues",
-                "source": "https://github.com/composer/spdx-licenses/tree/1.5.4"
+                "source": "https://github.com/composer/spdx-licenses/tree/1.5.5"
             },
             "funding": [
                 {
@@ -523,7 +523,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-15T15:35:07+00:00"
+            "time": "2020-12-03T16:04:16+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -3367,6 +3367,62 @@
             "time": "2020-10-24T12:08:07+00:00"
         },
         {
+            "name": "yii-extension/mailer-service",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii-extension/mailer-service.git",
+                "reference": "43e12a24ce93ce9a336e7dcfaa8b1996938c94a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii-extension/mailer-service/zipball/43e12a24ce93ce9a336e7dcfaa8b1996938c94a1",
+                "reference": "43e12a24ce93ce9a336e7dcfaa8b1996938c94a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|8.0",
+                "yiisoft/aliases": "^1.1",
+                "yiisoft/mailer": "^3.0@dev",
+                "yiisoft/mailer-swiftmailer": "^3.0@dev"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.3.0",
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.6",
+                "vimeo/psalm": "^4.3",
+                "yiisoft/composer-config-plugin": "^1.0@dev",
+                "yiisoft/di": "^3.0@dev",
+                "yiisoft/event-dispatcher": "^3.0@dev",
+                "yiisoft/log": "^3.0@dev",
+                "yiisoft/log-target-file": "^3.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yii\\Extension\\Service\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Yii3 Mailer Services",
+            "keywords": [
+                "mailer",
+                "services",
+                "yii3"
+            ],
+            "support": {
+                "issues": "https://github.com/yii-extension/mailer-service/issues",
+                "source": "https://github.com/yii-extension/mailer-service/tree/master"
+            },
+            "time": "2020-12-05T14:43:56+00:00"
+        },
+        {
             "name": "yiisoft/aliases",
             "version": "1.1.1",
             "source": {
@@ -4823,18 +4879,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/log.git",
-                "reference": "985d1365973daf20a4d4a25c9fced95d0e5d0f48"
+                "reference": "74c6efe28a0444b2311de6138bcbe742f6c28b53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/log/zipball/985d1365973daf20a4d4a25c9fced95d0e5d0f48",
-                "reference": "985d1365973daf20a4d4a25c9fced95d0e5d0f48",
+                "url": "https://api.github.com/repos/yiisoft/log/zipball/74c6efe28a0444b2311de6138bcbe742f6c28b53",
+                "reference": "74c6efe28a0444b2311de6138bcbe742f6c28b53",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
                 "psr/log": "^1.1",
-                "yiisoft/arrays": "^3.0@dev",
                 "yiisoft/var-dumper": "^3.0@dev"
             },
             "provide": {
@@ -4844,7 +4899,7 @@
                 "phpunit/phpunit": "^9.4",
                 "roave/infection-static-analysis-plugin": "^1.6",
                 "spatie/phpunit-watcher": "^1.23",
-                "vimeo/psalm": "^4.2"
+                "vimeo/psalm": "^4.3"
             },
             "suggest": {
                 "yiisoft/log-target-db": "version ^3.0 for saving logs to the database",
@@ -4893,7 +4948,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:36:33+00:00"
+            "time": "2020-12-05T11:52:01+00:00"
         },
         {
             "name": "yiisoft/log-target-file",
@@ -4901,12 +4956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/log-target-file.git",
-                "reference": "85732ddf5f28d2f2d7750de29396d201a5d2107b"
+                "reference": "e9b6c82ea5c07241e5fcdfca1d95fb29a3fe07f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/log-target-file/zipball/85732ddf5f28d2f2d7750de29396d201a5d2107b",
-                "reference": "85732ddf5f28d2f2d7750de29396d201a5d2107b",
+                "url": "https://api.github.com/repos/yiisoft/log-target-file/zipball/e9b6c82ea5c07241e5fcdfca1d95fb29a3fe07f1",
+                "reference": "e9b6c82ea5c07241e5fcdfca1d95fb29a3fe07f1",
                 "shasum": ""
             },
             "require": {
@@ -4965,7 +5020,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:41:31+00:00"
+            "time": "2020-12-03T23:31:56+00:00"
         },
         {
             "name": "yiisoft/mailer",
@@ -5964,17 +6019,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/view.git",
-                "reference": "10b1d422afe199c214951ea845d4e4914c1d4e4b"
+                "reference": "5cd3f585c29cef066f381ac5b8036479a4e349bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/view/zipball/10b1d422afe199c214951ea845d4e4914c1d4e4b",
-                "reference": "10b1d422afe199c214951ea845d4e4914c1d4e4b",
+                "url": "https://api.github.com/repos/yiisoft/view/zipball/5cd3f585c29cef066f381ac5b8036479a4e349bf",
+                "reference": "5cd3f585c29cef066f381ac5b8036479a4e349bf",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "psr/container-implementation": "1.0.0",
                 "psr/event-dispatcher": "1.0.0",
                 "psr/event-dispatcher-implementation": "1.0.0",
                 "psr/log": "^1.1",
@@ -5986,7 +6040,6 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.4",
-                "psr/container": "1.0.0",
                 "roave/infection-static-analysis-plugin": "^1.5",
                 "spatie/phpunit-watcher": "^1.23",
                 "vimeo/psalm": "^4.2",
@@ -6038,7 +6091,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:43:55+00:00"
+            "time": "2020-12-04T18:28:15+00:00"
         },
         {
             "name": "yiisoft/widget",
@@ -6281,19 +6334,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-web.git",
-                "reference": "c703be9947e5312c94f613bc5578e10a3407bfe5"
+                "reference": "f08371b6a850ca00f508a97e9730d2e97ee2207a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/c703be9947e5312c94f613bc5578e10a3407bfe5",
-                "reference": "c703be9947e5312c94f613bc5578e10a3407bfe5",
+                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/f08371b6a850ca00f508a97e9730d2e97ee2207a",
+                "reference": "f08371b6a850ca00f508a97e9730d2e97ee2207a",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-json": "*",
                 "php": "^7.4|^8.0",
-                "psr/container": "1.0.0",
                 "psr/container-implementation": "1.0.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/http-factory": "^1.0",
@@ -6305,7 +6357,6 @@
                 "yiisoft/aliases": "^1.1.1",
                 "yiisoft/friendly-exception": "^1.0",
                 "yiisoft/http": "^1.0",
-                "yiisoft/injector": "^1.0",
                 "yiisoft/middleware-dispatcher": "^1.0@dev",
                 "yiisoft/network-utilities": "^3.0@dev",
                 "yiisoft/router": "^3.0@dev",
@@ -6320,11 +6371,8 @@
                 "roave/infection-static-analysis-plugin": "^1.6",
                 "spatie/phpunit-watcher": "^1.23",
                 "vimeo/psalm": "^4.2",
-                "yiisoft/cache": "^3.0@dev",
                 "yiisoft/composer-config-plugin": "^1.0@dev",
-                "yiisoft/di": "^3.0@dev",
-                "yiisoft/log": "^3.0@dev",
-                "yiisoft/router-fastroute": "^3.0@dev"
+                "yiisoft/di": "^3.0@dev"
             },
             "default-branch": true,
             "type": "library",
@@ -6370,7 +6418,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:43:52+00:00"
+            "time": "2020-12-03T22:33:24+00:00"
         }
     ],
     "packages-dev": [
@@ -7683,16 +7731,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.10.2",
+            "version": "v4.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "658f1be311a230e0907f5dfe0213742aff0596de"
+                "reference": "dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/658f1be311a230e0907f5dfe0213742aff0596de",
-                "reference": "658f1be311a230e0907f5dfe0213742aff0596de",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984",
+                "reference": "dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984",
                 "shasum": ""
             },
             "require": {
@@ -7733,9 +7781,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.3"
             },
-            "time": "2020-09-26T10:30:38+00:00"
+            "time": "2020-12-03T17:45:45+00:00"
         },
         {
             "name": "openlss/lib-array2xml",
@@ -8446,16 +8494,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.4.4",
+            "version": "9.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6535e637961f0829832621dc1b7308c2d24a799e"
+                "reference": "8e16c225d57c3d6808014df6b1dd7598d0a5bbbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6535e637961f0829832621dc1b7308c2d24a799e",
-                "reference": "6535e637961f0829832621dc1b7308c2d24a799e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8e16c225d57c3d6808014df6b1dd7598d0a5bbbe",
+                "reference": "8e16c225d57c3d6808014df6b1dd7598d0a5bbbe",
                 "shasum": ""
             },
             "require": {
@@ -8471,7 +8519,7 @@
                 "phar-io/version": "^3.0.2",
                 "php": ">=7.3",
                 "phpspec/prophecy": "^1.12.1",
-                "phpunit/php-code-coverage": "^9.2",
+                "phpunit/php-code-coverage": "^9.2.3",
                 "phpunit/php-file-iterator": "^3.0.5",
                 "phpunit/php-invoker": "^3.1.1",
                 "phpunit/php-text-template": "^2.0.3",
@@ -8502,7 +8550,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.4-dev"
+                    "dev-master": "9.5-dev"
                 }
             },
             "autoload": {
@@ -8533,7 +8581,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.4.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.0"
             },
             "funding": [
                 {
@@ -8545,7 +8593,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-01T04:58:47+00:00"
+            "time": "2020-12-04T05:05:53+00:00"
         },
         {
             "name": "psr/http-client",
@@ -10427,16 +10475,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "6f916553a8de3c5c2483162b6cc01b21b24e4d1d"
+                "reference": "2feba22a005a18bf31d4c7b9bdb9252c73897476"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/6f916553a8de3c5c2483162b6cc01b21b24e4d1d",
-                "reference": "6f916553a8de3c5c2483162b6cc01b21b24e4d1d",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/2feba22a005a18bf31d4c7b9bdb9252c73897476",
+                "reference": "2feba22a005a18bf31d4c7b9bdb9252c73897476",
                 "shasum": ""
             },
             "require": {
@@ -10526,9 +10574,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vimeo/psalm/issues",
-                "source": "https://github.com/vimeo/psalm/tree/4.3.0"
+                "source": "https://github.com/vimeo/psalm/tree/4.3.1"
             },
-            "time": "2020-12-02T22:13:45+00:00"
+            "time": "2020-12-03T16:44:10+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10637,6 +10685,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "yii-extension/mailer-service": 20,
         "yiisoft/assets": 20,
         "yiisoft/cache": 20,
         "yiisoft/cache-file": 20,

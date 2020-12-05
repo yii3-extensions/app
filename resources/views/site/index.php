@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 $this->params['breadcrumbs'] = '/';
 
-$this->setTitle('My Project');
+$this->setTitle($app->get('name'));
 
 ?>
 
