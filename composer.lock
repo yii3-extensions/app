@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6f5a3b4473fd01725a70a17b01e1b2e",
+    "content-hash": "e63e7b3a1868868ecf7d7a12ea900f31",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -3421,6 +3421,75 @@
                 "source": "https://github.com/yii-extension/mailer-service/tree/master"
             },
             "time": "2020-12-05T14:43:56+00:00"
+        },
+        {
+            "name": "yii-extension/view-service",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii-extension/view-service.git",
+                "reference": "c953c3eca7ab020d05b1915829b2b8be1d5e6d03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/c953c3eca7ab020d05b1915829b2b8be1d5e6d03",
+                "reference": "c953c3eca7ab020d05b1915829b2b8be1d5e6d03",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|8.0",
+                "yiisoft/aliases": "^1.1",
+                "yiisoft/csrf": "^3.0@dev",
+                "yiisoft/data-response": "^3.0@dev",
+                "yiisoft/router": "^3.0@dev",
+                "yiisoft/session": "^3.0@dev",
+                "yiisoft/view": "^3.0@dev",
+                "yiisoft/yii-bulma": "^1.0@dev"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.3.0",
+                "oomphinc/composer-installers-extender": "^2.0.0",
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.6",
+                "vimeo/psalm": "^4.3",
+                "yiisoft/composer-config-plugin": "^1.0@dev",
+                "yiisoft/di": "^3.0@dev",
+                "yiisoft/event-dispatcher": "^3.0@dev",
+                "yiisoft/log": "^3.0@dev",
+                "yiisoft/log-target-file": "^3.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "installer-types": [
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yii\\Extension\\Service\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Yii3 View Services",
+            "keywords": [
+                "services",
+                "view",
+                "yii3"
+            ],
+            "support": {
+                "issues": "https://github.com/yii-extension/view-service/issues",
+                "source": "https://github.com/yii-extension/view-service/tree/master"
+            },
+            "time": "2020-12-05T17:08:17+00:00"
         },
         {
             "name": "yiisoft/aliases",
@@ -10686,26 +10755,18 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "yii-extension/mailer-service": 20,
+        "yii-extension/view-service": 20,
         "yiisoft/assets": 20,
         "yiisoft/cache": 20,
         "yiisoft/cache-file": 20,
-        "yiisoft/csrf": 20,
         "yiisoft/composer-config-plugin": 20,
         "yiisoft/di": 20,
-        "yiisoft/data-response": 20,
         "yiisoft/error-handler": 20,
         "yiisoft/form": 20,
         "yiisoft/log": 20,
         "yiisoft/log-target-file": 20,
-        "yiisoft/mailer": 20,
-        "yiisoft/mailer-swiftmailer": 20,
         "yiisoft/profiler": 20,
-        "yiisoft/router": 20,
         "yiisoft/router-fastroute": 20,
-        "yiisoft/session": 20,
-        "yiisoft/view": 20,
-        "yiisoft/widget": 20,
-        "yiisoft/yii-bulma": 20,
         "yiisoft/yii-event": 20,
         "yiisoft/yii-web": 20,
         "roave/security-advisories": 20,
@@ -10715,7 +10776,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^7.4|8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

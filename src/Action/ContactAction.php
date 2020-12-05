@@ -6,11 +6,11 @@ namespace App\Action;
 
 use App\Form\ContactForm;
 use App\Service\ParameterService;
-use App\Service\ViewService;
-use App\Service\WebControllerService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Yii\Extension\Service\MailerService;
+use Yii\Extension\Service\UrlService;
+use Yii\Extension\Service\ViewService;
 
 final class ContactAction
 {
@@ -19,8 +19,8 @@ final class ContactAction
         ContactForm $form,
         MailerService $mailer,
         ServerRequestInterface $request,
-        ViewService $view,
-        WebControllerService $webController
+        UrlService $urlService,
+        ViewService $view
     ): ResponseInterface {
         $body = $request->getParsedBody();
         $method = $request->getMethod();
@@ -40,7 +40,7 @@ final class ContactAction
             );
 
             return
-                $webController
+                $urlService
                     ->withFlash(
                         'is-success',
                         'System mailer notification.',
@@ -50,11 +50,12 @@ final class ContactAction
         }
 
         return
-            $view->renderWithLayout(
-                'contact/contact',
-                [
-                    'form' => $form,
-                ]
-            );
+            $view
+                ->renderWithLayout(
+                    'contact/contact',
+                    [
+                        'form' => $form,
+                    ]
+                );
     }
 }

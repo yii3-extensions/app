@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Service\ParameterService;
-use App\Service\ViewService;
+use Yii\Extension\Service\ViewService;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Factory\Definitions\Reference;
 use Yiisoft\Form\Widget\Field;
