@@ -6,15 +6,15 @@
     <br>
 </p>
 
-[![Total Downloads](https://img.shields.io/packagist/dt/yii-extension/app)](https://packagist.org/packages/yii-extension/app)
-[![build](https://github.com/yii-extension/app/workflows/build/badge.svg)](https://github.com/yii-extension/app/actions)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yii-extension/app/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/yii-extension/app/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app/?branch=master)
-[![static analysis](https://github.com/yii-extension/app/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/app/actions?query=workflow%3A%22static+analysis%22)
-[![type-coverage](https://shepherd.dev/github/yii-extension/app/coverage.svg)](https://shepherd.dev/github/yii-extension/app)
+[![Total Downloads](https://img.shields.io/packagist/dt/yii-extension/app-bulma)](https://packagist.org/packages/yii-extension/app-bulma)
+[![build](https://github.com/yii-extension/app-bulma/workflows/build/badge.svg)](https://github.com/yii-extension/app-bulma/actions)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yii-extension/app-bulma/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app-bulma/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/yii-extension/app-bulma/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app-bulma/?branch=master)
+[![static analysis](https://github.com/yii-extension/app-bulma/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/app-bulma/actions?query=workflow%3A%22static+analysis%22)
+[![type-coverage](https://shepherd.dev/github/yii-extension/app-bulma/coverage.svg)](https://shepherd.dev/github/yii-extension/app-bulma)
 
 <p align="center">
-    <a href="https://github.com/yii-extension/app" target="_blank">
+    <a href="https://github.com/yii-extension/app-bulma" target="_blank">
         <img src="docs\images\home.png" >
     </a>
 </p>
@@ -46,7 +46,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ```shell
-composer create-project --prefer-dist --stability dev yii-extension/app-bulma <your project>
+composer create-project --prefer-dist --stability dev yii-extension/app-bulma-bulma <your project>
 ```
 
 Now you should be able to access the application through the following URL, assuming `app` is the directory
