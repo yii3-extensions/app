@@ -1,10 +1,11 @@
 {
-    "name": "yii-extension/app",
+    "name": "yii-extension/app-bulma",
     "type": "project",
-    "description": "Yii 3 application template",
+    "description": "Yii 3 application template with bulma css framework",
     "keywords": [
         "yii3",
-        "app"
+        "app",
+        "bulma"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,

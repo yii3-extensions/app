@@ -2,7 +2,7 @@
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://github.com/yiisoft.png" height="100px">
     </a>
-    <h1 align="center">Yii application template</h1>
+    <h1 align="center">Yii application template with bulma css framework</h1>
     <br>
 </p>
 
@@ -45,9 +45,9 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
 You can then install this project template using the following command:
 
-~~~
-composer create-project --prefer-dist --stability dev yii-extension/app <your project>
-~~~
+```shell
+composer create-project --prefer-dist --stability dev yii-extension/app-bulma <your project>
+```
 
 Now you should be able to access the application through the following URL, assuming `app` is the directory
 directly under the `public` root.
@@ -58,9 +58,9 @@ All the configuration is in the `config directory` of the `application`.
 
 ## Using PHP built-in server
 
-~~~
+```shell
 php -S 127.0.0.1:8080 -t public
-~~~
+```
 
 ## Wait till it is up, then open the following URL in your browser
 
@@ -70,23 +70,23 @@ http://localhost:8080
 
 ## Run command console
 
-~~~
+```shell
 ./yii
-~~~
+```
 
 ## Codeception testing
 
 The package is tested with [Codeception](https://github.com/Codeception/Codeception). To run tests:
 
-~~~
+```shell
 php -S 127.0.0.1:8080 -t public > yii.log 2>&1 &
 vendor/bin/codecept run
-~~~
+```
 
 ## Static analysis
 
 The code is statically analyzed with [Psalm](https://psalm.dev/docs). To run static analysis:
 
-```php
+```shell
 ./vendor/bin/psalm
 ```
