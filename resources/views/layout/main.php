@@ -10,7 +10,7 @@ declare(strict_types=1);
  */
 
 use App\Asset\AppAsset;
-use App\Widget\FlashMessage;
+use Yii\Extension\Widget\FlashMessage;
 
 $assetManager->register([
     AppAsset::class
