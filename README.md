@@ -34,10 +34,6 @@ Yii application template for Yii 3 is best for rapidly creating projects.
           Service         contains web services
           Widget          continas widgets for web application
 
-## Requirements
-
-The minimum requirement by this project template that your Web server supports PHP 7.4.0.
-
 ## Installation
 
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
