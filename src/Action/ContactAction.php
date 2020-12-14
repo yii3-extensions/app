@@ -42,7 +42,7 @@ final class ContactAction
             return
                 $urlService
                     ->withFlash(
-                        'is-success',
+                        'success',
                         'System mailer notification.',
                         'Thanks to contact us, we\'ll get in touch with you as soon as possible.'
                     )
