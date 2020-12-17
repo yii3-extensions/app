@@ -9,10 +9,8 @@ use Yii\Extension\Service\ViewService;
 
 final class IndexAction
 {
-    public function index(ViewService $view): ResponseInterface
+    public function index(ViewService $viewService): ResponseInterface
     {
-        return
-            $view
-                ->renderWithLayout('site/index');
+        return $viewService->render('site/index');
     }
 }

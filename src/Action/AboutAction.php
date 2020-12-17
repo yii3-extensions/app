@@ -9,10 +9,8 @@ use Yii\Extension\Service\ViewService;
 
 final class AboutAction
 {
-    public function about(ViewService $view): ResponseInterface
+    public function about(ViewService $viewService): ResponseInterface
     {
-        return
-            $view
-                ->renderWithLayout('site/about');
+        return $viewService->render('site/about');
     }
 }

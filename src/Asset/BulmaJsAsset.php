@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Asset;
 
 use Yiisoft\Assets\AssetBundle;
+use Yiisoft\Files\PathMatcher\PathMatcher;
 
 final class BulmaJsAsset extends AssetBundle
 {
@@ -18,11 +19,12 @@ final class BulmaJsAsset extends AssetBundle
         'navbar.js'
     ];
 
-    public array $publishOptions = [
-        'only' => [
-            'file.js',
-            'message.js',
-            'navbar.js'
-        ]
-    ];
+    public function __construct()
+    {
+        $pathMatcher = new PathMatcher();
+
+        $this->publishOptions = [
+            'filter' => $pathMatcher->only('file.js', 'message.js', 'navbar.js'),
+        ];
+    }
 }

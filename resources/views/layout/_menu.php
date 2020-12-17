@@ -12,32 +12,19 @@ use Yiisoft\Yii\Bulma\Nav;
 use Yiisoft\Yii\Bulma\NavBar;
 use Yiisoft\Html\Html;
 
-if (isset($identity) && $identity->getId() !== null) {
-    if ($app->get('nav.logged') !== []) {
-        $menuItems = $app->get('nav.logged');
-    }
+$menuItems =  $app->get('nav.guest');
+$currentUrl = '';
 
-    $label = '';
-
-    foreach ($menuItems as $key => $item) {
-        $label = strtr($item['label'], [
-            '{logo}' => Html::img($aliases->get('@web/images/icon-avatar.png')),
-            '{username}' => $identity->getIdentity()->username
-        ]);
-
-        if ($label !== '') {
-            $menuItems[$key]['label'] = $label;
-        }
-    }
-} else {
-    $menuItems =  $app->get('nav.guest');
+if ($urlMatcher->getCurrentRoute() !== null) {
+    $currentUrl = $url->generate($urlMatcher->getCurrentRoute()->getName());
 }
+
 ?>
 
 <?= NavBar::widget($app->get('navBar.config'))->begin() ?>
 
     <?= Nav::widget()
-        ->currentPath($url->generate($urlMatcher->getCurrentRoute()->getName()))
+        ->currentPath($currentUrl)
         ->items($menuItems)
     ?>
 

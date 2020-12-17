@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccb9606fe30327e180d5e58927072288",
+    "content-hash": "38534f196da6a9cde9a6cfaf6c2a1cbf",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -878,6 +878,18 @@
             "type": "npm-asset",
             "license": [
                 "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/fortawesome--fontawesome-free",
+            "version": "5.15.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
             ]
         },
         {
@@ -3381,12 +3393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/flash-message-bulma.git",
-                "reference": "62823dffd0450eda0296aede49ebcca3c188bacc"
+                "reference": "4256d8bb934aaa3382288a6a0d758785b9a87ab0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/flash-message-bulma/zipball/62823dffd0450eda0296aede49ebcca3c188bacc",
-                "reference": "62823dffd0450eda0296aede49ebcca3c188bacc",
+                "url": "https://api.github.com/repos/yii-extension/flash-message-bulma/zipball/4256d8bb934aaa3382288a6a0d758785b9a87ab0",
+                "reference": "4256d8bb934aaa3382288a6a0d758785b9a87ab0",
                 "shasum": ""
             },
             "require": {
@@ -3398,7 +3410,7 @@
                 "nyholm/psr7": "^1.3.0",
                 "oomphinc/composer-installers-extender": "^2.0.0",
                 "phpunit/phpunit": "^9.5",
-                "roave/infection-static-analysis-plugin": "^1.6",
+                "roave/infection-static-analysis-plugin": "^1.7",
                 "vimeo/psalm": "^4.3",
                 "yiisoft/di": "^3.0@dev"
             },
@@ -3434,7 +3446,69 @@
                 "issues": "https://github.com/yii-extension/flash-message-bulma/issues",
                 "source": "https://github.com/yii-extension/flash-message-bulma/tree/main"
             },
-            "time": "2020-12-13T13:57:08+00:00"
+            "time": "2020-12-14T15:17:51+00:00"
+        },
+        {
+            "name": "yii-extension/fontawesome",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii-extension/fontawesome.git",
+                "reference": "85f780d3c9358b2f59e52c6c6f674847b87d618c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii-extension/fontawesome/zipball/85f780d3c9358b2f59e52c6c6f674847b87d618c",
+                "reference": "85f780d3c9358b2f59e52c6c6f674847b87d618c",
+                "shasum": ""
+            },
+            "require": {
+                "npm-asset/fortawesome--fontawesome-free": "^5.15.1",
+                "oomphinc/composer-installers-extender": "^2.0.0",
+                "php": "^7.4|^8.0",
+                "yiisoft/assets": "@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.4",
+                "psr/log": "^1.1",
+                "vimeo/psalm": "^4.2",
+                "yiisoft/aliases": "^1.1",
+                "yiisoft/di": "@dev",
+                "yiisoft/files": "@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.0-dev"
+                },
+                "installer-types": [
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "./node_modules/{$name}": [
+                        "type:npm-asset"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yii\\Extension\\Fontawesome\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Assets Font Awesome Free",
+            "keywords": [
+                "assets",
+                "font awesome",
+                "free",
+                "yii3"
+            ],
+            "support": {
+                "issues": "https://github.com/yii-extension/fontawesome/issues",
+                "source": "https://github.com/yii-extension/fontawesome/tree/master"
+            },
+            "time": "2020-12-13T15:03:59+00:00"
         },
         {
             "name": "yii-extension/mailer-service",
@@ -3498,12 +3572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/view-service.git",
-                "reference": "8ac86db4c51e96d1ea50760d8958e77027e39e5d"
+                "reference": "0988afe53cd578e77d4b31979c49f5927b74fa7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/8ac86db4c51e96d1ea50760d8958e77027e39e5d",
-                "reference": "8ac86db4c51e96d1ea50760d8958e77027e39e5d",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/0988afe53cd578e77d4b31979c49f5927b74fa7e",
+                "reference": "0988afe53cd578e77d4b31979c49f5927b74fa7e",
                 "shasum": ""
             },
             "require": {
@@ -3549,7 +3623,7 @@
                 "issues": "https://github.com/yii-extension/view-service/issues",
                 "source": "https://github.com/yii-extension/view-service/tree/master"
             },
-            "time": "2020-12-13T14:03:23+00:00"
+            "time": "2020-12-17T15:25:37+00:00"
         },
         {
             "name": "yiisoft/aliases",
@@ -3685,12 +3759,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/assets.git",
-                "reference": "400214ca29ed02893cd54f72e6bd96b9fc8e2261"
+                "reference": "7235077ebb0798dc34ed0824f3a37e518728ff94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/assets/zipball/400214ca29ed02893cd54f72e6bd96b9fc8e2261",
-                "reference": "400214ca29ed02893cd54f72e6bd96b9fc8e2261",
+                "url": "https://api.github.com/repos/yiisoft/assets/zipball/7235077ebb0798dc34ed0824f3a37e518728ff94",
+                "reference": "7235077ebb0798dc34ed0824f3a37e518728ff94",
                 "shasum": ""
             },
             "require": {
@@ -3755,7 +3829,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-08T23:06:22+00:00"
+            "time": "2020-12-16T22:25:29+00:00"
         },
         {
             "name": "yiisoft/cache",
@@ -3763,12 +3837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/cache.git",
-                "reference": "ab102cc54985b257f1d69ec156559ec219741a64"
+                "reference": "c2b4c40f85a5b02c7c02c797d8be811d555af089"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/cache/zipball/ab102cc54985b257f1d69ec156559ec219741a64",
-                "reference": "ab102cc54985b257f1d69ec156559ec219741a64",
+                "url": "https://api.github.com/repos/yiisoft/cache/zipball/c2b4c40f85a5b02c7c02c797d8be811d555af089",
+                "reference": "c2b4c40f85a5b02c7c02c797d8be811d555af089",
                 "shasum": ""
             },
             "require": {
@@ -3835,7 +3909,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-08T23:46:35+00:00"
+            "time": "2020-12-16T17:03:47+00:00"
         },
         {
             "name": "yiisoft/cache-file",
@@ -4064,12 +4138,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/csrf.git",
-                "reference": "d424a6b1d1d85e513cc7bf5ab586400a8b5f1a48"
+                "reference": "789dcf252ab8d7fdbfefc1d269fb5813cffc1e87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/csrf/zipball/d424a6b1d1d85e513cc7bf5ab586400a8b5f1a48",
-                "reference": "d424a6b1d1d85e513cc7bf5ab586400a8b5f1a48",
+                "url": "https://api.github.com/repos/yiisoft/csrf/zipball/789dcf252ab8d7fdbfefc1d269fb5813cffc1e87",
+                "reference": "789dcf252ab8d7fdbfefc1d269fb5813cffc1e87",
                 "shasum": ""
             },
             "require": {
@@ -4133,7 +4207,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:44:51+00:00"
+            "time": "2020-12-16T22:20:19+00:00"
         },
         {
             "name": "yiisoft/data-response",
@@ -4511,12 +4585,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/files.git",
-                "reference": "c62d82b80518a724dce4fb4242b64d875e4d4d47"
+                "reference": "38b573dc334b64daf3f7c1b54cc4d2af9d32c541"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/files/zipball/c62d82b80518a724dce4fb4242b64d875e4d4d47",
-                "reference": "c62d82b80518a724dce4fb4242b64d875e4d4d47",
+                "url": "https://api.github.com/repos/yiisoft/files/zipball/38b573dc334b64daf3f7c1b54cc4d2af9d32c541",
+                "reference": "38b573dc334b64daf3f7c1b54cc4d2af9d32c541",
                 "shasum": ""
             },
             "require": {
@@ -4524,10 +4598,10 @@
                 "yiisoft/strings": "^1.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.4",
-                "roave/infection-static-analysis-plugin": "^1.5",
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.6",
                 "spatie/phpunit-watcher": "^1.23",
-                "vimeo/psalm": "^4.2"
+                "vimeo/psalm": "^4.3"
             },
             "default-branch": true,
             "type": "library",
@@ -4566,7 +4640,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-08T20:49:29+00:00"
+            "time": "2020-12-16T17:03:26+00:00"
         },
         {
             "name": "yiisoft/form",
@@ -4574,12 +4648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/form.git",
-                "reference": "137255900a93bd4a8a8c8c595ee8db84314fd13d"
+                "reference": "5b2117c6de255ae973ba0077033b88bd1259960b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/form/zipball/137255900a93bd4a8a8c8c595ee8db84314fd13d",
-                "reference": "137255900a93bd4a8a8c8c595ee8db84314fd13d",
+                "url": "https://api.github.com/repos/yiisoft/form/zipball/5b2117c6de255ae973ba0077033b88bd1259960b",
+                "reference": "5b2117c6de255ae973ba0077033b88bd1259960b",
                 "shasum": ""
             },
             "require": {
@@ -4636,7 +4710,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:37:18+00:00"
+            "time": "2020-12-16T17:08:09+00:00"
         },
         {
             "name": "yiisoft/friendly-exception",
@@ -5736,12 +5810,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/session.git",
-                "reference": "73470b9d2b116e4b9073b2d35c203f7e57a2ad64"
+                "reference": "05e25741cdac744a32df6614b5ea4b0f1342893a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/session/zipball/73470b9d2b116e4b9073b2d35c203f7e57a2ad64",
-                "reference": "73470b9d2b116e4b9073b2d35c203f7e57a2ad64",
+                "url": "https://api.github.com/repos/yiisoft/session/zipball/05e25741cdac744a32df6614b5ea4b0f1342893a",
+                "reference": "05e25741cdac744a32df6614b5ea4b0f1342893a",
                 "shasum": ""
             },
             "require": {
@@ -5754,10 +5828,10 @@
             },
             "require-dev": {
                 "nyholm/psr7": "^1.3",
-                "phpunit/phpunit": "^9.4",
-                "roave/infection-static-analysis-plugin": "^1.5",
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.7",
                 "spatie/phpunit-watcher": "^1.23",
-                "vimeo/psalm": "^4.2"
+                "vimeo/psalm": "^4.3"
             },
             "default-branch": true,
             "type": "library",
@@ -5801,7 +5875,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:37:12+00:00"
+            "time": "2020-12-16T22:23:36+00:00"
         },
         {
             "name": "yiisoft/strings",
@@ -6085,12 +6159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/view.git",
-                "reference": "5cd3f585c29cef066f381ac5b8036479a4e349bf"
+                "reference": "e09c163d521adc16b057a3c32352d97f9af66609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/view/zipball/5cd3f585c29cef066f381ac5b8036479a4e349bf",
-                "reference": "5cd3f585c29cef066f381ac5b8036479a4e349bf",
+                "url": "https://api.github.com/repos/yiisoft/view/zipball/e09c163d521adc16b057a3c32352d97f9af66609",
+                "reference": "e09c163d521adc16b057a3c32352d97f9af66609",
                 "shasum": ""
             },
             "require": {
@@ -6157,7 +6231,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-04T18:28:15+00:00"
+            "time": "2020-12-16T22:22:05+00:00"
         },
         {
             "name": "yiisoft/widget",
@@ -6317,12 +6391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-event.git",
-                "reference": "f79c95888d8f4bacf02da216fd42b9733b8924df"
+                "reference": "0df2284d17588ee2f704cef4d2f34eb206578be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-event/zipball/f79c95888d8f4bacf02da216fd42b9733b8924df",
-                "reference": "f79c95888d8f4bacf02da216fd42b9733b8924df",
+                "url": "https://api.github.com/repos/yiisoft/yii-event/zipball/0df2284d17588ee2f704cef4d2f34eb206578be8",
+                "reference": "0df2284d17588ee2f704cef4d2f34eb206578be8",
                 "shasum": ""
             },
             "require": {
@@ -6392,7 +6466,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:40:20+00:00"
+            "time": "2020-12-16T22:24:46+00:00"
         },
         {
             "name": "yiisoft/yii-web",
@@ -7966,16 +8040,16 @@
         },
         {
             "name": "phar-io/version",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "726c026815142e4f8677b7cb7f2249c9ffb7ecae"
+                "reference": "e4782611070e50613683d2b9a57730e9a3ba5451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/726c026815142e4f8677b7cb7f2249c9ffb7ecae",
-                "reference": "726c026815142e4f8677b7cb7f2249c9ffb7ecae",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/e4782611070e50613683d2b9a57730e9a3ba5451",
+                "reference": "e4782611070e50613683d2b9a57730e9a3ba5451",
                 "shasum": ""
             },
             "require": {
@@ -8011,9 +8085,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.0.3"
+                "source": "https://github.com/phar-io/version/tree/3.0.4"
             },
-            "time": "2020-11-30T09:21:21+00:00"
+            "time": "2020-12-13T23:18:30+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -10754,6 +10828,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "yii-extension/flash-message-bulma": 20,
+        "yii-extension/fontawesome": 20,
         "yii-extension/mailer-service": 20,
         "yii-extension/view-service": 20,
         "yiisoft/assets": 20,

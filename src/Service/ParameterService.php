@@ -37,6 +37,14 @@ final class ParameterService
         $this->parameters = $data;
     }
 
+    /**
+     * Returns a parameter defined in params.
+     *
+     * @param string $key
+     * @param mixed $default
+     *
+     * @return mixed
+     */
     public function get(string $key, $default = null)
     {
         return ArrayHelper::getValueByPath($this->parameters, $key, $default);
