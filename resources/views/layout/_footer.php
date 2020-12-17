@@ -1,4 +1,5 @@
 <div class="columns is-mobile">
+
     <div class="column has-text-left has-text-light">
         <i class="fas fa-copyright fa-inverse is-hidden-mobile"></i>
         <a class="is-hidden-mobile" href="https://www.yiiframework.com/" target="_blank" rel="noopener">
