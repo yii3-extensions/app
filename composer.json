@@ -84,9 +84,6 @@
     "config": {
         "sort-packages": true
     },
-    "bin": [
-        "bin/yii"
-    ],
     "repositories": [
         {
             "type": "composer",
