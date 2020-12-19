@@ -11,7 +11,7 @@ use Throwable;
 use Yii\Extension\Service\ViewService;
 use Yiisoft\View\Exception\ViewNotFoundException;
 
-final class NotFoundHandler implements RequestHandlerInterface
+final class NotFound implements RequestHandlerInterface
 {
     private ViewService $viewService;
 

@@ -7,9 +7,9 @@ namespace App\Action;
 use Psr\Http\Message\ResponseInterface;
 use Yii\Extension\Service\ViewService;
 
-final class AboutAction
+final class About
 {
-    public function about(ViewService $viewService): ResponseInterface
+    public function run(ViewService $viewService): ResponseInterface
     {
         return $viewService->render('site/about');
     }

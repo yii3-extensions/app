@@ -9,7 +9,7 @@ use Yiisoft\Assets\AssetBundle;
 use Yiisoft\Yii\Bulma\Asset\BulmaAsset;
 use Yiisoft\Yii\Bulma\Asset\BulmaHelpersAsset;
 
-final class AppAsset extends AssetBundle
+final class App extends AssetBundle
 {
     public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
@@ -22,7 +22,7 @@ final class AppAsset extends AssetBundle
     public array $depends = [
         BulmaAsset::class,
         BulmaHelpersAsset::class,
-        BulmaJsAsset::class,
+        BulmaJs::class,
         NpmAllAsset::class,
     ];
 }

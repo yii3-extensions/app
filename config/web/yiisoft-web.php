@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Handler\NotFoundHandler;
+use App\Handler\NotFound;
 use Yiisoft\Csrf\CsrfMiddleware;
 use Yiisoft\ErrorHandler\ErrorCatcher;
 use Yiisoft\Factory\Definitions\Reference;
@@ -25,7 +25,7 @@ return [
                         ]
                     );
             },
-            'fallbackHandler' => Reference::to(NotFoundHandler::class),
+            'fallbackHandler' => Reference::to(NotFound::class),
         ],
     ],
 ];

@@ -12,7 +12,7 @@ use App\Tests\UnitTester;
 use Yiisoft\Composer\Config\Builder;
 use Yiisoft\Di\Container;
 
-final class HelloCommandCest
+final class HelloCest
 {
     private ContainerInterface $container;
 

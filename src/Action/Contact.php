@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Form\ContactForm;
-use App\Service\ParameterService;
+use App\Form\FormContact;
+use App\Service\Parameter;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Yii\Extension\Service\MailerService;
@@ -13,11 +13,11 @@ use Yii\Extension\Service\UrlService;
 use Yii\Extension\Service\ViewService;
 use Yiisoft\Session\Flash\Flash;
 
-final class ContactAction
+final class Contact
 {
-    public function contact(
-        ParameterService $app,
-        ContactForm $form,
+    public function run(
+        Parameter $app,
+        FormContact $form,
         Flash $flash,
         MailerService $mailer,
         ServerRequestInterface $request,

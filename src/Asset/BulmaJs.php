@@ -7,7 +7,7 @@ namespace App\Asset;
 use Yiisoft\Assets\AssetBundle;
 use Yiisoft\Files\PathMatcher\PathMatcher;
 
-final class BulmaJsAsset extends AssetBundle
+final class BulmaJs extends AssetBundle
 {
     public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';

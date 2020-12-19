@@ -9,11 +9,11 @@ declare(strict_types=1);
  * @var string $content
  */
 
-use App\Asset\AppAsset;
+use App\Asset\App;
 use Yii\Extension\Widget\FlashMessage;
 
 $assetManager->register([
-    AppAsset::class
+    App::class
 ]);
 
 $this->setCssFiles($assetManager->getCssFiles());

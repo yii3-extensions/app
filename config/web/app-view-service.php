@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Service\ParameterService;
+use App\Service\Parameter;
 use Yii\Extension\Service\ViewService;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Factory\Definitions\Reference;
@@ -17,7 +17,7 @@ return [
         '__class' => ViewService::class,
         'defaultParameters()' => [
             [
-                'app' => Reference::to(ParameterService::class),
+                'app' => Reference::to(Parameter::class),
                 'assetManager' => Reference::to(AssetManager::class),
                 'url' => Reference::to(UrlGeneratorInterface::class),
                 'urlMatcher' => Reference::to(UrlMatcherInterface::class),

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use App\Service\ParameterService;
+use App\Service\Parameter;
 
 /** @var array $params */
 
 return [
-    ParameterService::class  => [
-        '__class' => ParameterService::class,
+    Parameter::class  => [
+        '__class' => Parameter::class,
         '__construct()' => [
             $params['app']
         ]
