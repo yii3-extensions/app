@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Asset;
 
-use Yii\Extension\Fontawesome\Dev\Css\NpmAllAsset;
+use Yii\Extension\Fontawesome\Dev\Js\NpmAllAsset;
 use Yiisoft\Assets\AssetBundle;
 use Yiisoft\Yii\Bulma\Asset\BulmaAsset;
 use Yiisoft\Yii\Bulma\Asset\BulmaHelpersAsset;
