@@ -3572,12 +3572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/view-service.git",
-                "reference": "e7e0faca20f0d418564be33d06c66c18082bbfe1"
+                "reference": "7035571cd82ae402506f3385e934c878ecb614ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/e7e0faca20f0d418564be33d06c66c18082bbfe1",
-                "reference": "e7e0faca20f0d418564be33d06c66c18082bbfe1",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/7035571cd82ae402506f3385e934c878ecb614ed",
+                "reference": "7035571cd82ae402506f3385e934c878ecb614ed",
                 "shasum": ""
             },
             "require": {
@@ -3623,7 +3623,7 @@
                 "issues": "https://github.com/yii-extension/view-service/issues",
                 "source": "https://github.com/yii-extension/view-service/tree/master"
             },
-            "time": "2020-12-19T14:01:45+00:00"
+            "time": "2020-12-21T18:54:46+00:00"
         },
         {
             "name": "yiisoft/aliases",
@@ -4060,12 +4060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/data-response.git",
-                "reference": "00dc802c42304664bd137a59637b169c12fc9d83"
+                "reference": "bce7cb682784b76736c31043301423c732e9faf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/data-response/zipball/00dc802c42304664bd137a59637b169c12fc9d83",
-                "reference": "00dc802c42304664bd137a59637b169c12fc9d83",
+                "url": "https://api.github.com/repos/yiisoft/data-response/zipball/bce7cb682784b76736c31043301423c732e9faf4",
+                "reference": "bce7cb682784b76736c31043301423c732e9faf4",
                 "shasum": ""
             },
             "require": {
@@ -4126,7 +4126,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:40:43+00:00"
+            "time": "2020-12-21T18:11:42+00:00"
         },
         {
             "name": "yiisoft/di",
@@ -8682,12 +8682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "d5961914bf7f90e81af509b81e51450bff419815"
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/d5961914bf7f90e81af509b81e51450bff419815",
-                "reference": "d5961914bf7f90e81af509b81e51450bff419815",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/49da07b20a780d3fca9fe12e1db27975a2910c18",
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18",
                 "shasum": ""
             },
             "conflict": {
@@ -8844,8 +8844,8 @@
                 "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
-                "shopware/core": "<=6.3.2",
-                "shopware/platform": "<=6.3.2",
+                "shopware/core": "<=6.3.4",
+                "shopware/platform": "<=6.3.4",
                 "shopware/shopware": "<5.6.9",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
                 "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
@@ -8995,7 +8995,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T15:02:56+00:00"
+            "time": "2020-12-21T18:11:20+00:00"
         },
         {
             "name": "sebastian/cli-parser",

@@ -9,20 +9,20 @@ use App\Service\Parameter;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Yii\Extension\Service\MailerService;
-use Yii\Extension\Service\UrlService;
-use Yii\Extension\Service\ViewService;
-use Yiisoft\Session\Flash\Flash;
+use Yii\Extension\Service\ServiceFlashMessage;
+use Yii\Extension\Service\ServiceUrl;
+use Yii\Extension\Service\ServiceView;
 
 final class Contact
 {
     public function run(
         Parameter $app,
         FormContact $form,
-        Flash $flash,
         MailerService $mailer,
         ServerRequestInterface $request,
-        UrlService $urlService,
-        ViewService $viewService
+        ServiceFlashMessage $serviceFlashMessage,
+        ServiceUrl $serviceUrl,
+        ServiceView $serviceView
     ): ResponseInterface {
         /** @var array $body */
         $body = $request->getParsedBody();
@@ -42,17 +42,15 @@ final class Contact
                 $request->getUploadedFiles(),
             );
 
-            $flash->add(
+            $serviceFlashMessage->run(
                 'success',
-                [
-                    'header' => 'System mailer notification.',
-                    'body' => 'Thanks to contact us, we\'ll get in touch with you as soon as possible.'
-                ],
+                'System mailer notification.',
+                'Thanks to contact us, we\'ll get in touch with you as soon as possible.',
             );
 
-            return $urlService->redirectResponse('index');
+            return $serviceUrl->run('index');
         }
 
-        return $viewService->render('contact/contact', ['form' => $form]);
+        return $serviceView->render('contact/contact', ['form' => $form]);
     }
 }
