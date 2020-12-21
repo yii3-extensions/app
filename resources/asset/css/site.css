@@ -7,7 +7,7 @@
 }
 
 .navbar.is-black .navbar-start > .navbar-item, .navbar.is-black .navbar-start .navbar-link, .navbar.is-black .navbar-end > .navbar-item, .navbar.is-black .navbar-end .navbar-link {
-    color: rgba(255, 255, 255, 0.55);
+    color: hsl(217, 71%, 53%);
 }
 
 .select select::-moz-placeholder, .textarea::-moz-placeholder, .input::-moz-placeholder {
