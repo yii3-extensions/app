@@ -6,6 +6,10 @@
     background-color: transparent !important;
 }
 
+.navbar.is-black .navbar-start > .navbar-item, .navbar.is-black .navbar-start .navbar-link, .navbar.is-black .navbar-end > .navbar-item, .navbar.is-black .navbar-end .navbar-link {
+    color: rgba(255, 255, 255, 0.55);
+}
+
 .select select::-moz-placeholder, .textarea::-moz-placeholder, .input::-moz-placeholder {
     color: hsl(0, 0%, 40%) !important;
 }
