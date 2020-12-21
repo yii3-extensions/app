@@ -3,6 +3,12 @@
 declare(strict_types=1);
 
 use App\Command\Hello;
+use App\Service\Parameter;
+use Yiisoft\Assets\AssetManager;
+use Yiisoft\Factory\Definitions\Reference;
+use Yiisoft\Form\Widget\Field;
+use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Router\UrlMatcherInterface;
 
 return [
     'app' => [
@@ -57,6 +63,18 @@ return [
             'encryption' => null,
             'username' => 'admin@example.com',
             'password' => ''
+        ]
+    ],
+
+    'yii-extension/view-services' => [
+        'defaultParameters' => [
+            'app' => Reference::to(Parameter::class),
+            'assetManager' => Reference::to(AssetManager::class),
+            'url' => Reference::to(UrlGeneratorInterface::class),
+            'urlMatcher' => Reference::to(UrlMatcherInterface::class),
+        ],
+        'viewParameters' => [
+            'field' => Reference::to(Field::class),
         ]
     ],
 
