@@ -18,8 +18,6 @@
         "yii-extension/mailer-service": "^1.0@dev",
         "yii-extension/view-service": "^1.0@dev",
         "yiisoft/assets": "^1.0@dev",
-        "yiisoft/cache": "^3.0@dev",
-        "yiisoft/cache-file": "^3.0@dev",
         "yiisoft/composer-config-plugin": "^1.0@dev",
         "yiisoft/di": "^3.0@dev",
         "yiisoft/error-handler": "^3.0@dev",
