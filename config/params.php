@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Command\Hello;
 use App\Service\Parameter;
+use Yiisoft\Arrays\Modifier\ReverseBlockMerge;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Factory\Definitions\Reference;
 use Yiisoft\Form\Widget\Field;
@@ -119,4 +120,6 @@ return [
             'hello' => Hello::class,
         ]
     ],
+
+    ReverseBlockMerge::class => new ReverseBlockMerge(),
 ];
