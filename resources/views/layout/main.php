@@ -31,11 +31,11 @@ $this->setJsFiles($assetManager->getJsFiles());
 
             <body>
 
-                <section class='hero is-fullheight is-light'>
+                <section class="hero is-fullheight is-light">
 
-                    <div class='hero-head'>
+                    <div class="hero-head">
                         <header class = <?= (isset($identity) && $identity->getId() !== null)
-                            ? 'navbar' : 'has-background-black' ?>>
+                            ? "navbar" : "has-background-black" ?>>
                             <?= $this->render('_menu', ['app' => $app, 'url' => $url, 'urlMatcher' => $urlMatcher]) ?>
                         </header>
                         <div>
@@ -43,13 +43,13 @@ $this->setJsFiles($assetManager->getJsFiles());
                         </div>
                     </div>
 
-                    <div class='hero-body is-light'>
-                        <div class='container has-text-centered'>
+                    <div class="hero-body is-light">
+                        <div class="container has-text-centered">
                             <?= $content ?>
                         </div>
                     </div>
 
-                    <div class='hero-footer has-background-black'>
+                    <div class="hero-footer has-background-black">
                         <?= $this->render('_footer') ?>
                     </div>
 
