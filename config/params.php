@@ -95,6 +95,15 @@ return [
         ],
     ],
 
+    'yiisoft/form' => [
+        'fieldConfig' => [
+            'errorOptions()' => [['class' => 'help is-danger is-italic']],
+            'errorCssClass()' => ['is-danger'],
+            'inputCssClass()' => ['input field'],
+            'labelOptions()' => [['label' => '']],
+        ]
+    ],
+
     'yiisoft/log-target-file' => [
         'fileTarget' => [
             'file' => '@runtime/logs/app.txt'

@@ -13,12 +13,6 @@ use Yiisoft\Form\Widget\Field;
 use Yiisoft\Form\Widget\Form;
 use Yiisoft\Html\Html;
 
-$fieldConfig = [
-    'inputCssClass()' => ['form-control input field'],
-    'labelOptions()' => [['label' => '']],
-    'errorOptions()' => [['class' => 'has-text-left has-text-danger is-italic']],
-];
-
 ?>
 
 <div class="column is-4 is-offset-4">
@@ -38,12 +32,12 @@ $fieldConfig = [
         )
         ->begin() ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'username') ?>
-        <?= Field::Widget($fieldConfig)->config($form, 'email') ?>
-        <?= Field::Widget($fieldConfig)->config($form, 'subject') ?>
-        <?= Field::Widget($fieldConfig)->config($form, 'body')
+        <?= $field->config($form, 'username') ?>
+        <?= $field->config($form, 'email') ?>
+        <?= $field->config($form, 'subject') ?>
+        <?= $field->config($form, 'body')
             ->textArea(['class' => 'form-control textarea', 'rows' => 2]) ?>
-        <?= Field::Widget($fieldConfig)->config($form, 'attachFiles')
+        <?= $field->config($form, 'attachFiles')
             ->inputCssClass('file-input')
             ->template(
                 '<div class="file is-small is-link has-name">
