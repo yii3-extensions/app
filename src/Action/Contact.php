@@ -19,6 +19,7 @@ final class Contact
 {
     public function run(
         Parameter $app,
+        ContactMessageSend $contactMessageSend,
         EventDispatcherInterface $eventDistpatcher,
         FormContact $form,
         MailerService $mailer,
@@ -45,8 +46,7 @@ final class Contact
                 $request->getUploadedFiles(),
             );
 
-            $event = new ContactMessageSend($serviceFlashMessage);
-            $eventDistpatcher->dispatch($event);
+            $eventDistpatcher->dispatch($contactMessageSend);
 
             return $serviceUrl->run('index');
         }

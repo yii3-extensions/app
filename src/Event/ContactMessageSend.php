@@ -13,7 +13,6 @@ final class ContactMessageSend
     public function __construct(ServiceFlashMessage $serviceFlashMessage)
     {
         $this->serviceFlashMessage = $serviceFlashMessage;
-        $this->addFlash();
     }
 
     public function addFlash(): void
