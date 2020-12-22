@@ -16,7 +16,7 @@ final class ContactMessageSend
         $this->addFlash();
     }
 
-    public function addFlash()
+    public function addFlash(): void
     {
         $this->serviceFlashMessage->run(
             'success',
