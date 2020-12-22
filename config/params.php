@@ -97,10 +97,10 @@ return [
 
     'yiisoft/form' => [
         'fieldConfig' => [
-            'errorOptions()' => [['class' => 'help is-danger is-italic']],
+            'errorOptions()' => [['class' => 'help is-danger has-text-left']],
             'errorCssClass()' => ['is-danger'],
             'successCssClass()' => ['is-success'],
-            'inputCssClass()' => ['input field'],
+            'inputCssClass()' => ['input field mb-0'],
             'labelOptions()' => [['label' => '']],
         ]
     ],
