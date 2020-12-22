@@ -99,6 +99,7 @@ return [
         'fieldConfig' => [
             'errorOptions()' => [['class' => 'help is-danger is-italic']],
             'errorCssClass()' => ['is-danger'],
+            'successCssClass()' => ['is-success'],
             'inputCssClass()' => ['input field'],
             'labelOptions()' => [['label' => '']],
         ]

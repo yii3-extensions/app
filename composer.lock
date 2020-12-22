@@ -4493,12 +4493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/form.git",
-                "reference": "5b2117c6de255ae973ba0077033b88bd1259960b"
+                "reference": "ad605151b781ccc3d5b895d20b68f7afcf6d6fc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/form/zipball/5b2117c6de255ae973ba0077033b88bd1259960b",
-                "reference": "5b2117c6de255ae973ba0077033b88bd1259960b",
+                "url": "https://api.github.com/repos/yiisoft/form/zipball/ad605151b781ccc3d5b895d20b68f7afcf6d6fc9",
+                "reference": "ad605151b781ccc3d5b895d20b68f7afcf6d6fc9",
                 "shasum": ""
             },
             "require": {
@@ -4555,7 +4555,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-16T17:08:09+00:00"
+            "time": "2020-12-22T11:04:08+00:00"
         },
         {
             "name": "yiisoft/friendly-exception",
