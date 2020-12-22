@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Action;
 
+use App\Event\ContactMessageSend;
 use App\Form\FormContact;
 use App\Service\Parameter;
+use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Yii\Extension\Service\MailerService;
@@ -17,6 +19,7 @@ final class Contact
 {
     public function run(
         Parameter $app,
+        EventDispatcherInterface $eventDistpatcher,
         FormContact $form,
         MailerService $mailer,
         ServerRequestInterface $request,
@@ -42,11 +45,8 @@ final class Contact
                 $request->getUploadedFiles(),
             );
 
-            $serviceFlashMessage->run(
-                'success',
-                'System mailer notification.',
-                'Thanks to contact us, we\'ll get in touch with you as soon as possible.',
-            );
+            $event = new ContactMessageSend($serviceFlashMessage);
+            $eventDistpatcher->dispatch($event);
 
             return $serviceUrl->run('index');
         }
