@@ -31,6 +31,7 @@ Yii application template for Yii 3 is best for rapidly creating projects.
           Action          contains action classes
           Asset           contains assets classes
           Command         contains command console classes
+          Event           contains event classes
           Form            contains form classes
           Handler         contains handlers classes
           Service         contains services classes
