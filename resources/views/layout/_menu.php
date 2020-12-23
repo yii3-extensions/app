@@ -15,8 +15,8 @@ use Yiisoft\Html\Html;
 $menuItems =  $app->get('nav.guest');
 $currentUrl = '';
 
-if ($urlMatcher->getCurrentRoute() !== null) {
-    $currentUrl = $url->generate($urlMatcher->getCurrentRoute()->getName());
+if ($urlMatcher->getCurrentUri() !== null) {
+    $currentUrl = $urlMatcher->getCurrentUri()->getPath();
 }
 
 ?>

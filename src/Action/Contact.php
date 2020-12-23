@@ -11,6 +11,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Yii\Extension\Service\ServiceMailer;
 use Yii\Extension\Service\ServiceUrl;
 use Yii\Extension\Service\ServiceView;
+use Yiisoft\Router\UrlGeneratorInterface;
 
 final class Contact
 {
@@ -20,7 +21,8 @@ final class Contact
         ServerRequestInterface $request,
         ServiceMailer $serviceMailer,
         ServiceUrl $serviceUrl,
-        ServiceView $serviceView
+        ServiceView $serviceView,
+        UrlGeneratorInterface $urlGenerator
     ): ResponseInterface {
         /** @var array $body */
         $body = $request->getParsedBody();
@@ -43,6 +45,9 @@ final class Contact
             return $serviceUrl->run('index');
         }
 
-        return $serviceView->render('contact/contact', ['form' => $form]);
+        return $serviceView->render(
+            'contact/contact',
+            ['action' => $urlGenerator->generate('contact'), 'form' => $form]
+        );
     }
 }

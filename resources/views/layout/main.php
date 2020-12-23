@@ -36,7 +36,7 @@ $this->setJsFiles($assetManager->getJsFiles());
                     <div class="hero-head">
                         <header class = <?= (isset($identity) && $identity->getId() !== null)
                             ? "navbar" : "has-background-black" ?>>
-                            <?= $this->render('_menu', ['app' => $app, 'url' => $url, 'urlMatcher' => $urlMatcher]) ?>
+                            <?= $this->render('_menu', ['app' => $app, 'urlMatcher' => $urlMatcher]) ?>
                         </header>
                         <div>
                             <?= FlashMessage::widget() ?>
