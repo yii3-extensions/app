@@ -3516,19 +3516,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/mailer-service.git",
-                "reference": "43e12a24ce93ce9a336e7dcfaa8b1996938c94a1"
+                "reference": "cbb701253abae1343164de3017cda4a2d327aa23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/mailer-service/zipball/43e12a24ce93ce9a336e7dcfaa8b1996938c94a1",
-                "reference": "43e12a24ce93ce9a336e7dcfaa8b1996938c94a1",
+                "url": "https://api.github.com/repos/yii-extension/mailer-service/zipball/cbb701253abae1343164de3017cda4a2d327aa23",
+                "reference": "cbb701253abae1343164de3017cda4a2d327aa23",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|8.0",
                 "yiisoft/aliases": "^1.1",
                 "yiisoft/mailer": "^3.0@dev",
-                "yiisoft/mailer-swiftmailer": "^3.0@dev"
+                "yiisoft/mailer-swiftmailer": "^3.0@dev",
+                "yiisoft/yii-event": "^3.0@dev"
             },
             "require-dev": {
                 "nyholm/psr7": "^1.3.0",
@@ -3537,9 +3538,7 @@
                 "vimeo/psalm": "^4.3",
                 "yiisoft/composer-config-plugin": "^1.0@dev",
                 "yiisoft/di": "^3.0@dev",
-                "yiisoft/event-dispatcher": "^3.0@dev",
-                "yiisoft/log": "^3.0@dev",
-                "yiisoft/log-target-file": "^3.0@dev"
+                "yiisoft/log": "^3.0@dev"
             },
             "default-branch": true,
             "type": "library",
@@ -3564,7 +3563,7 @@
                 "issues": "https://github.com/yii-extension/mailer-service/issues",
                 "source": "https://github.com/yii-extension/mailer-service/tree/master"
             },
-            "time": "2020-12-05T14:43:56+00:00"
+            "time": "2020-12-23T12:59:45+00:00"
         },
         {
             "name": "yii-extension/view-service",
@@ -4216,12 +4215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/error-handler.git",
-                "reference": "7f91a568315c2e049350c45669e226595f748a4b"
+                "reference": "4e6353cec8c2386e114d5a25aa9ba7d953d2e07e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/error-handler/zipball/7f91a568315c2e049350c45669e226595f748a4b",
-                "reference": "7f91a568315c2e049350c45669e226595f748a4b",
+                "url": "https://api.github.com/repos/yiisoft/error-handler/zipball/4e6353cec8c2386e114d5a25aa9ba7d953d2e07e",
+                "reference": "4e6353cec8c2386e114d5a25aa9ba7d953d2e07e",
                 "shasum": ""
             },
             "require": {
@@ -4286,7 +4285,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-03T08:39:54+00:00"
+            "time": "2020-12-22T21:16:03+00:00"
         },
         {
             "name": "yiisoft/event-dispatcher",
@@ -4493,12 +4492,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/form.git",
-                "reference": "ad605151b781ccc3d5b895d20b68f7afcf6d6fc9"
+                "reference": "cb9ae99bedac9bb3d40d7433d99459684e00b922"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/form/zipball/ad605151b781ccc3d5b895d20b68f7afcf6d6fc9",
-                "reference": "ad605151b781ccc3d5b895d20b68f7afcf6d6fc9",
+                "url": "https://api.github.com/repos/yiisoft/form/zipball/cb9ae99bedac9bb3d40d7433d99459684e00b922",
+                "reference": "cb9ae99bedac9bb3d40d7433d99459684e00b922",
                 "shasum": ""
             },
             "require": {
@@ -4555,7 +4554,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-22T11:04:08+00:00"
+            "time": "2020-12-22T19:38:35+00:00"
         },
         {
             "name": "yiisoft/friendly-exception",
@@ -6154,12 +6153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-bulma.git",
-                "reference": "a08e9510340c979fcd40e0c14a5036b5bf6af8d5"
+                "reference": "03413c6e34381de4419c8a47fe8dcb8953e08dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-bulma/zipball/a08e9510340c979fcd40e0c14a5036b5bf6af8d5",
-                "reference": "a08e9510340c979fcd40e0c14a5036b5bf6af8d5",
+                "url": "https://api.github.com/repos/yiisoft/yii-bulma/zipball/03413c6e34381de4419c8a47fe8dcb8953e08dc0",
+                "reference": "03413c6e34381de4419c8a47fe8dcb8953e08dc0",
                 "shasum": ""
             },
             "require": {
@@ -6186,13 +6185,9 @@
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 },
-                "installer-types": [
-                    "npm-asset"
-                ],
-                "installer-paths": {
-                    "./node_modules/{$name}": [
-                        "type:npm-asset"
-                    ]
+                "config-plugin": {
+                    "params": "config/params.php",
+                    "web": "config/web/*.php"
                 }
             },
             "autoload": {
@@ -6228,7 +6223,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-18T09:47:54+00:00"
+            "time": "2020-12-23T09:46:06+00:00"
         },
         {
             "name": "yiisoft/yii-event",

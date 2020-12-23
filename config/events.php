@@ -2,8 +2,12 @@
 
 declare(strict_types=1);
 
-use App\Event\ContactMessageSend;
+use App\Event\EventMessageSent;
+use App\Event\EventMessageNotSent;
+use Yii\Extension\Service\Event\MessageSent;
+use Yii\Extension\Service\Event\MessageNotSent;
 
 return [
-    ContactMessageSend::class => [[ContactMessageSend::class, 'addFlash']],
+    MessageSent::class => [[EventMessageSent::class, 'addFlash']],
+    MessageNotSent::class => [[EventMessageNotSent::class, 'addFlash']],
 ];
