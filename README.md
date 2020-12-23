@@ -24,9 +24,8 @@ Yii application template for Yii 3 is best for rapidly creating projects.
 ## Directory structure
 
       config/             contains application configurations
-      resources/layout    contains layout files for the web application
       resources/mail      contains layout and view files for mailer
-      resources/view      contains view files for the web application
+      resources/view      contains view and layout files for the web application
       src/                application directory
           Action          contains action classes
           Asset           contains assets classes
