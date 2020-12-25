@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace App\Tests\Unit;
 
 use App\Tests\UnitTester;
-use App\Event\EventMessageNotSent;
+use App\Event\MessageNotSentHandler;
 use Yii\Extension\Service\ServiceFlashMessage;
 use Yii\Extension\Service\Event\MessageNotSent;
 use Yiisoft\Session\Session;
 use Yiisoft\Session\Flash\Flash;
 
-final class EventMessageSentCest
+final class MessageNotSentHandlerCest
 {
     public function testExecute(UnitTester $I): void
     {
@@ -31,8 +31,8 @@ final class EventMessageSentCest
         $flash = new Flash($session);
         $serviceFlashMessage = new ServiceFlashMessage($flash);
 
-        $listener = new EventMessageNotSent();
-        $event = new MessageNotSent('testMe');
+        $listener = new MessageNotSentHandler();
+        $event = new MessageNotSent('danger', 'System mailer notification.', 'testMe', true);
 
         $listener->addFlash($event, $serviceFlashMessage);
 

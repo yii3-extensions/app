@@ -118,7 +118,7 @@ return [
         'fileMailer' => [
             'fileMailerStorage' => '@runtime/mail'
         ],
-        'writeToFiles' => true
+        'writeToFiles' => false,
     ],
 
     'yiisoft/view' => [

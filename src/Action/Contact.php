@@ -29,18 +29,20 @@ final class Contact
         $method = $request->getMethod();
 
         if (($method === 'POST') && $form->load($body) && $form->validate()) {
-            $serviceMailer->run(
-                (string) $app->get('emailFrom'),
-                $form->getEmail(),
-                $form->getSubject(),
-                '@mail',
-                [ 'html' => 'contact'],
-                [
-                    'username' => $form->getUsername(),
-                    'body' => $form->getBody(),
-                ],
-                $request->getUploadedFiles(),
-            );
+            $serviceMailer
+                ->headerFlashMessage("Thanks to contact us, we'll get in touch with you as soon as possible.")
+                ->run(
+                    (string) $app->get('emailFrom'),
+                    $form->getEmail(),
+                    $form->getSubject(),
+                    '@mail',
+                    [ 'html' => 'contact'],
+                    [
+                        'username' => $form->getUsername(),
+                        'body' => $form->getBody(),
+                    ],
+                    $request->getUploadedFiles(),
+                );
 
             return $serviceUrl->run('index');
         }
