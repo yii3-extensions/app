@@ -13,7 +13,7 @@ final class App extends AssetBundle
 {
     public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
-    public ?string $sourcePath = '@resources/asset/css';
+    public ?string $sourcePath = '@storage/asset/css';
 
     public array $css = [
         'site.css'

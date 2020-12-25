@@ -2,4 +2,8 @@
 
 declare(strict_types=1);
 
-return [];
+use Yiisoft\Arrays\Modifier\ReverseBlockMerge;
+
+return [
+    ReverseBlockMerge::class => new ReverseBlockMerge(),
+];

@@ -1,6 +1,13 @@
 <?php
 
 use Yiisoft\Html\Html;
+use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Router\UrlMatcherInterface;
+
+/**
+ * @var UrlGeneratorInterface $urlGenerator
+ * @var UrlMatcherInterface $urlMatcher
+ */
 
 $this->setTitle('404');
 
@@ -23,6 +30,6 @@ $this->setTitle('404');
 
 <hr class="mb-2">
 
-<a class ="button is-danger mt-5" href="<?= $url->generate('index') ?>">
+<a class ="button is-danger mt-5" href="<?= $urlGenerator->generate('index') ?>">
     Go Back Home
 </a>

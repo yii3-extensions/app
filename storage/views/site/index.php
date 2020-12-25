@@ -2,13 +2,15 @@
 
 declare(strict_types=1);
 
+use Yii\Extension\Service\ServiceParameter;
+
 /**
- * @var \App\ApplicationParameters $app
+ * @var ServiceParameter $serviceParameter
  */
 
 $this->params['breadcrumbs'] = '/';
 
-$this->setTitle($app->get('name'));
+$this->setTitle($serviceParameter->get('name'));
 
 ?>
 

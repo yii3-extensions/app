@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use App\Service\Parameter;
+use Yii\Extension\Service\ServiceParameter;
 
 /** @var array $params */
 
 return [
-    Parameter::class  => [
-        '__class' => Parameter::class,
+    ServiceParameter::class  => [
+        '__class' => ServiceParameter::class,
         '__construct()' => [
             $params['app']
         ]

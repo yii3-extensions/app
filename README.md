@@ -15,7 +15,7 @@
 
 <p align="center">
     <a href="https://github.com/yii-extension/app-bulma" target="_blank">
-        <img src="docs\images\home.png" >
+        <img src="https://lh3.googleusercontent.com/0NUwRte-ZTFEICMVHaJy5goeSubb06ocqSHeU0e3OyaC6OQLM04pgTCirb7OZH8HDvAhZjEU6psRiiB-LBHvKE9GAVwQNL0Cw6OiJBodr4vud31ZzAPWR2fUszMTsCRQlu-Ppctsqw=w2400" >
     </a>
 </p>
 
@@ -30,10 +30,7 @@ Yii application template for Yii 3 is best for rapidly creating projects.
           Action          contains action classes
           Asset           contains assets classes
           Command         contains command console classes
-          Event           contains event classes
-          Form            contains form classes
           Handler         contains handlers classes
-          Service         contains services classes
 
 ## Installation
 
