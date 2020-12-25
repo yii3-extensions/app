@@ -13,12 +13,9 @@ final class PageErrorCest
         $I->amOnPage('/error');
     }
 
-    /**
-     * @depends App\Tests\Acceptance\PageIndexCest:indexPage
-     */
-    public function aboutPage(AcceptanceTester $I): void
+    public function errorPage(AcceptanceTester $I): void
     {
-        $I->wantTo('see about page.');
+        $I->wantTo('see error page.');
         $I->see('404');
         $I->see('The page /error not found.');
         $I->see('The above error occurred while the Web server was processing your request.');
