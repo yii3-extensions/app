@@ -70,6 +70,26 @@
             "providers": "config/providers.php",
             "routes": "config/routes.php"
         },
+        "config-plugin-alternatives": {
+            "tests": {
+                "params-test": "config/tests/*",
+                "params": [
+                    "$params-test",
+                    "config/params.php"
+                ],
+                "common": [
+                    "config/common/*.php"
+                ],
+                "web": [
+                    "$common",
+                    "config/web/*.php"
+                ],
+                "console": [
+                    "$common",
+                    "config/console/*.php"
+                ]
+            }
+        },
         "installer-types": [
             "npm-asset"
         ],

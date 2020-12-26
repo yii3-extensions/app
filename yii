@@ -14,9 +14,17 @@ if (!is_file($autoload)) {
 
 require_once $autoload;
 
-$container = $container = new Container(
-    require Builder::path('console'),
-    require Builder::path('providers'),
+$console = 'console';
+$providers = 'providers';
+
+if (getenv('Alternatives') !== false) {
+    $console = getenv('Alternatives') . '/console';
+    $providers = getenv('Alternatives') . '/providers';
+}
+
+$container = new Container(
+    require Builder::path($console),
+    require Builder::path($providers),
 );
 
 $params = require Builder::path('params');
@@ -26,8 +34,10 @@ $loader = new ContainerCommandLoader(
     $params['yiisoft/yii-console']['commands']
 );
 
+
 $app = new Application();
 
 $app->setCommandLoader($loader);
 
-$app -> run();
+$app->run();
+
