@@ -47,8 +47,8 @@ $errorHandler = new ErrorHandler(new NullLogger(), new HtmlRenderer());
 $errorHandler->register();
 
 $container = new Container(
-    require Builder::path('web'),
-    require Builder::path('providers')
+    require Builder::path('tests/web'),
+    require Builder::path('tests/providers')
 );
 
 /**
