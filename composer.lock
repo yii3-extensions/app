@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce5256900f66f83aa11d42f17921b20b",
+    "content-hash": "cc84e1ed4142b51e85a05449122646bd",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -2927,17 +2927,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/flash-message-bulma.git",
-                "reference": "4256d8bb934aaa3382288a6a0d758785b9a87ab0"
+                "reference": "818c08bfec3cd1aee16f1d1e3da6ec29b03fc4c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/flash-message-bulma/zipball/4256d8bb934aaa3382288a6a0d758785b9a87ab0",
-                "reference": "4256d8bb934aaa3382288a6a0d758785b9a87ab0",
+                "url": "https://api.github.com/repos/yii-extension/flash-message-bulma/zipball/818c08bfec3cd1aee16f1d1e3da6ec29b03fc4c4",
+                "reference": "818c08bfec3cd1aee16f1d1e3da6ec29b03fc4c4",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|8.0",
-                "yiisoft/session": "^3.0@dev",
+                "yiisoft/session": "^1.0",
                 "yiisoft/yii-bulma": "^1.0@dev"
             },
             "require-dev": {
@@ -2980,7 +2980,7 @@
                 "issues": "https://github.com/yii-extension/flash-message-bulma/issues",
                 "source": "https://github.com/yii-extension/flash-message-bulma/tree/main"
             },
-            "time": "2020-12-14T15:17:51+00:00"
+            "time": "2020-12-27T12:40:02+00:00"
         },
         {
             "name": "yii-extension/fontawesome",
@@ -3101,12 +3101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/view-service.git",
-                "reference": "7035571cd82ae402506f3385e934c878ecb614ed"
+                "reference": "88271b8029f5a2efe7d4b3e8ddcbbdd7f744bd1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/7035571cd82ae402506f3385e934c878ecb614ed",
-                "reference": "7035571cd82ae402506f3385e934c878ecb614ed",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/88271b8029f5a2efe7d4b3e8ddcbbdd7f744bd1c",
+                "reference": "88271b8029f5a2efe7d4b3e8ddcbbdd7f744bd1c",
                 "shasum": ""
             },
             "require": {
@@ -3115,7 +3115,7 @@
                 "yiisoft/csrf": "^3.0@dev",
                 "yiisoft/data-response": "^3.0@dev",
                 "yiisoft/router": "^3.0@dev",
-                "yiisoft/session": "^3.0@dev",
+                "yiisoft/session": "^1.0",
                 "yiisoft/view": "^3.0@dev"
             },
             "require-dev": {
@@ -3152,7 +3152,7 @@
                 "issues": "https://github.com/yii-extension/view-service/issues",
                 "source": "https://github.com/yii-extension/view-service/tree/master"
             },
-            "time": "2020-12-21T18:54:46+00:00"
+            "time": "2020-12-27T12:35:48+00:00"
         },
         {
             "name": "yiisoft/aliases",
@@ -3513,12 +3513,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/csrf.git",
-                "reference": "789dcf252ab8d7fdbfefc1d269fb5813cffc1e87"
+                "reference": "5af321a9a13be2e5b9837c4ab2fd04bfe61489c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/csrf/zipball/789dcf252ab8d7fdbfefc1d269fb5813cffc1e87",
-                "reference": "789dcf252ab8d7fdbfefc1d269fb5813cffc1e87",
+                "url": "https://api.github.com/repos/yiisoft/csrf/zipball/5af321a9a13be2e5b9837c4ab2fd04bfe61489c3",
+                "reference": "5af321a9a13be2e5b9837c4ab2fd04bfe61489c3",
                 "shasum": ""
             },
             "require": {
@@ -3530,7 +3530,7 @@
                 "psr/http-server-middleware": "^1.0",
                 "yiisoft/http": "^1.0",
                 "yiisoft/security": "^1.0",
-                "yiisoft/session": "^3.0@dev"
+                "yiisoft/session": "^1.0"
             },
             "require-dev": {
                 "nyholm/psr7": "^1.3",
@@ -3582,7 +3582,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-16T22:20:19+00:00"
+            "time": "2020-12-26T22:06:23+00:00"
         },
         {
             "name": "yiisoft/data-response",
@@ -4946,16 +4946,16 @@
         },
         {
             "name": "yiisoft/session",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/session.git",
-                "reference": "03dad50946f1950467eeac29094947928d018c86"
+                "reference": "c09f5035b974d59f3e0e6f58f99f66957de2d029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/session/zipball/03dad50946f1950467eeac29094947928d018c86",
-                "reference": "03dad50946f1950467eeac29094947928d018c86",
+                "url": "https://api.github.com/repos/yiisoft/session/zipball/c09f5035b974d59f3e0e6f58f99f66957de2d029",
+                "reference": "c09f5035b974d59f3e0e6f58f99f66957de2d029",
                 "shasum": ""
             },
             "require": {
@@ -4969,16 +4969,12 @@
             "require-dev": {
                 "nyholm/psr7": "^1.3",
                 "phpunit/phpunit": "^9.5",
-                "roave/infection-static-analysis-plugin": "^1.7",
+                "roave/infection-static-analysis-plugin": "^1.6",
                 "spatie/phpunit-watcher": "^1.23",
                 "vimeo/psalm": "^4.3"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                },
                 "config-plugin": {
                     "web": "config/web.php",
                     "params": "config/params.php"
@@ -4993,9 +4989,12 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "_____",
+            "description": "A session service, PSR-15 session middleware, and a flash message service which helps use one-time messages.",
             "homepage": "https://www.yiiframework.com/",
             "keywords": [
+                "flash",
+                "middleware",
+                "psr-15",
                 "session"
             ],
             "support": {
@@ -5015,7 +5014,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-26T16:58:35+00:00"
+            "time": "2020-12-26T22:02:24+00:00"
         },
         {
             "name": "yiisoft/strings",
@@ -6241,6 +6240,58 @@
                 "source": "https://github.com/Codeception/module-asserts/tree/1.3.1"
             },
             "time": "2020-10-21T16:48:15+00:00"
+        },
+        {
+            "name": "codeception/module-db",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/module-db.git",
+                "reference": "8c8076cd05d4db95798acd7dba2a56578210982c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeception/module-db/zipball/8c8076cd05d4db95798acd7dba2a56578210982c",
+                "reference": "8c8076cd05d4db95798acd7dba2a56578210982c",
+                "shasum": ""
+            },
+            "require": {
+                "codeception/codeception": "*@dev",
+                "php": ">=5.6.0 <9.0"
+            },
+            "conflict": {
+                "codeception/codeception": "<4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Bodnarchuk"
+                },
+                {
+                    "name": "Gintautas Miselis"
+                }
+            ],
+            "description": "DB module for Codeception",
+            "homepage": "http://codeception.com/",
+            "keywords": [
+                "codeception",
+                "database-testing",
+                "db-testing"
+            ],
+            "support": {
+                "issues": "https://github.com/Codeception/module-db/issues",
+                "source": "https://github.com/Codeception/module-db/tree/1.1.0"
+            },
+            "time": "2020-12-20T13:37:07+00:00"
         },
         {
             "name": "codeception/module-phpbrowser",
