@@ -6,12 +6,14 @@ use App\Asset\App;
 use Yii\Extension\Widget\FlashMessage;
 use Yii\Extension\Service\ServiceParameter;
 use Yiisoft\Assets\AssetManager;
+use Yiisoft\Csrf\CsrfTokenInterface;
+use Yiisoft\Html\Html;
 use Yiisoft\Router\UrlMatcherInterface;
 
 /**
  * @var AssetManager $assetManager
- * @var string $csrf
  * @var string $content
+ * @var CsrfTokenInterface $csrf
  * @var ServiceParameter $serviceParameter
  * @var UrlMatcherInterface $urlMatcher
  */
@@ -27,7 +29,7 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <html lang = <?= $serviceParameter->get('app.language') ?>>
+    <html lang="<?= Html::encode($locale->language()) ?>">
 
         <?= $this->render('_head', ['csrf' => $csrf, 'serviceParameter' => $serviceParameter]) ?>
 

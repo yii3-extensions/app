@@ -42,10 +42,10 @@ final class HelloCest
 
         $commandCreate->setInputs(['yes']);
 
-        $I->assertEquals(1, $commandCreate->execute([]));
+        $I->assertEquals(0, $commandCreate->execute([]));
 
         $output = $commandCreate->getDisplay(true);
 
-        $I->assertStringContainsString('Hello Command', $output);
+        $I->assertStringContainsString('Hello!', $output);
     }
 }

@@ -6,15 +6,16 @@ use App\Command\Hello;
 use Yii\Extension\Service\ServiceParameter;
 use Yiisoft\Arrays\Modifier\ReverseBlockMerge;
 use Yiisoft\Assets\AssetManager;
+use Yiisoft\Csrf\CsrfTokenInterface;
 use Yiisoft\Factory\Definitions\Reference;
+use Yiisoft\I18n\Locale;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Router\UrlMatcherInterface;
 
 return [
     'app' => [
         'charset' => 'UTF-8',
-        'emailFrom' => 'tester@example.com',
-        'language' => 'en',
+        'locale' => 'en',
         'logo' => '/images/yii-logo.jpg',
 
         /** config widget nav */
@@ -54,13 +55,7 @@ return [
     ],
 
     'yii-extension/view-services' => [
-        'defaultParameters' => [
-            'assetManager' => Reference::to(AssetManager::class),
-            'serviceParameter' => Reference::to(ServiceParameter::class),
-            'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
-            'urlMatcher' => Reference::to(UrlMatcherInterface::class),
-        ],
-        'viewParameters' => [],
+        'layoutFile' => '@storage/layout/main',
     ],
 
     'yiisoft/aliases' => [
@@ -83,7 +78,22 @@ return [
         ],
     ],
 
+    'yiisoft/translator' => [
+        'path' => '@storage/locale',
+        'defaultCategoryName' => 'app',
+        'locale' => 'en',
+        'fallbackLocale' => 'es',
+    ],
+
     'yiisoft/view' => [
+        'defaultParameters' => [
+            'assetManager' => Reference::to(AssetManager::class),
+            'csrf' => Reference::to(CsrfTokenInterface::class),
+            'locale' => Reference::to(Locale::class),
+            'serviceParameter' => Reference::to(ServiceParameter::class),
+            'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
+            'urlMatcher' => Reference::to(UrlMatcherInterface::class),
+        ],
         'basePath' => '@views',
     ],
 

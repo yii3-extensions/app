@@ -15,7 +15,7 @@
 
 <p align="center">
     <a href="https://github.com/yii-extension/app-bulma" target="_blank">
-        <img src="https://lh3.googleusercontent.com/0NUwRte-ZTFEICMVHaJy5goeSubb06ocqSHeU0e3OyaC6OQLM04pgTCirb7OZH8HDvAhZjEU6psRiiB-LBHvKE9GAVwQNL0Cw6OiJBodr4vud31ZzAPWR2fUszMTsCRQlu-Ppctsqw=w2400" >
+        <img src="https://lh3.googleusercontent.com/0NUwRte-ZTFEICMVHaJy5goeSubb06ocqSHeU0e3OyaC6OQLM04pgTCirb7OZH8HDvAhZjEU6psRiiB-LBHvKE9GAVwQNL0Cw6OiJBodr4vud31ZzAPWR2fUszMTsCRQlu-Ppctsqw=w2400">
     </a>
 </p>
 
@@ -24,8 +24,8 @@ Yii application template for Yii 3 is best for rapidly creating projects.
 ## Directory structure
 
       config/             contains application configurations
-      resources/mail      contains layout and view files for mailer
-      resources/view      contains view and layout files for the web application
+      storage/view        contains layout files for the web application
+      storage/view        contains view files for the web application
       src/                application directory
           Action          contains action classes
           Asset           contains assets classes
@@ -65,7 +65,7 @@ http://localhost:8080
 ## Run command console
 
 ```shell
-./yii
+vendor/bin/yii
 ```
 
 ## Codeception testing

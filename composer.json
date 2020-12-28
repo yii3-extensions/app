@@ -21,10 +21,14 @@
         "yiisoft/composer-config-plugin": "^1.0@dev",
         "yiisoft/di": "^3.0@dev",
         "yiisoft/error-handler": "^3.0@dev",
+        "yiisoft/i18n": "^1.0.0",
         "yiisoft/log": "^3.0@dev",
         "yiisoft/log-target-file": "^3.0@dev",
         "yiisoft/router-fastroute": "^3.0@dev",
+        "yiisoft/translator-formatter-intl": "^3.0@dev",
+        "yiisoft/translator-message-php": "^3.0@dev",
         "yiisoft/yii-bulma": "^1.0@dev",
+        "yiisoft/yii-console": "^3.0@dev",
         "yiisoft/yii-event": "^3.0@dev",
         "yiisoft/yii-web": "^3.0@dev"
     },
@@ -69,6 +73,14 @@
             ],
             "events": "config/events.php",
             "providers": "config/providers.php",
+            "providers-web": [
+                "$providers",
+                "config/providers-web.php"
+            ],
+            "providers-console": [
+                "$providers",
+                "config/providers-console.php"
+            ],
             "routes": "config/routes.php"
         },
         "config-plugin-alternatives": {
