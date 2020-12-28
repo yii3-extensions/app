@@ -16,8 +16,8 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-20.04
-          - windows-2019
+          - ubuntu-latest
+          - windows-latest
 
         php:
           - "7.4"
@@ -53,11 +53,11 @@ jobs:
 
       - name: Install template yiisoft/app with composer create project php 7.4
         if: matrix.php == '7.4'
-        run: composer create-project --prefer-dist --no-interaction --no-progress --stability=dev yii-extension/app app --ansi
+        run: composer create-project --prefer-dist --no-interaction --no-progress --stability=dev yii-extension/app-bulma app --ansi
 
       - name: Install template yiisoft/app with composer create project php 8.0
         if: matrix.php == '8.0'
-        run: composer create-project --prefer-dist --no-interaction --no-progress --ignore-platform-reqs --stability=dev yii-extension/app app --ansi
+        run: composer create-project --prefer-dist --no-interaction --no-progress --ignore-platform-reqs --stability=dev yii-extension/app-bulma app --ansi
 
       - name: Run tests with codeception
         run: |
