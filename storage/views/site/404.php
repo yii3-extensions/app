@@ -30,6 +30,6 @@ $this->setTitle('404');
 
 <hr class="mb-2">
 
-<a class ="button is-danger mt-5" href="<?= $urlGenerator->generate('index') ?>">
+<a class ="button is-danger mt-5" href="<?= $urlGenerator->generate('site/index') ?>">
     Go Back Home
 </a>
