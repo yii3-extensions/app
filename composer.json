@@ -72,6 +72,14 @@
                 "config/console/*.php"
             ],
             "events": "config/events.php",
+            "events-web": [
+                "$events",
+                "config/events-web.php"
+            ],
+            "events-console": [
+                "$events",
+                "config/events-console.php"
+            ],
             "providers": "config/providers.php",
             "providers-web": [
                 "$providers",
@@ -82,26 +90,6 @@
                 "config/providers-console.php"
             ],
             "routes": "config/routes.php"
-        },
-        "config-plugin-alternatives": {
-            "tests": {
-                "params-test": "config/tests/*",
-                "params": [
-                    "$params-test",
-                    "config/params.php"
-                ],
-                "common": [
-                    "config/common/*.php"
-                ],
-                "web": [
-                    "$common",
-                    "config/web/*.php"
-                ],
-                "console": [
-                    "$common",
-                    "config/console/*.php"
-                ]
-            }
         },
         "installer-types": [
             "npm-asset"

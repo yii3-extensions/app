@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2e4ca62d66ae234f7e7b6d29c6fb987",
+    "content-hash": "d258225c3d773baec0e9bd77af4d9cbf",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -3186,12 +3186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/view-service.git",
-                "reference": "feb6b959d9c9c337675aee65ed6c16dec3318ca7"
+                "reference": "22c79a56261a6bd17f84acd2d2284b58bf905c25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/feb6b959d9c9c337675aee65ed6c16dec3318ca7",
-                "reference": "feb6b959d9c9c337675aee65ed6c16dec3318ca7",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/22c79a56261a6bd17f84acd2d2284b58bf905c25",
+                "reference": "22c79a56261a6bd17f84acd2d2284b58bf905c25",
                 "shasum": ""
             },
             "require": {
@@ -3243,7 +3243,7 @@
                 "issues": "https://github.com/yii-extension/view-service/issues",
                 "source": "https://github.com/yii-extension/view-service/tree/master"
             },
-            "time": "2020-12-29T01:35:47+00:00"
+            "time": "2020-12-29T08:20:51+00:00"
         },
         {
             "name": "yiisoft/aliases",

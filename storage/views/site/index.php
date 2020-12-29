@@ -14,5 +14,5 @@ $this->setTitle($serviceParameter->get('name'));
 
 ?>
 
-<h1 class="title">Hello World</h1>
-<p class="subtitle">My first website with <strong>Yii 3.0</strong>!</p>
+<h1 class="title"><?= $translator->translate('Hello World') ?></h1>
+<p class="subtitle"><?= $translator->translate('My first website with') ?> <strong>Yii 3.0!</strong></p>

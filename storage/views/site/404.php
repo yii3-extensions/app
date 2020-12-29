@@ -18,18 +18,21 @@ $this->setTitle('404');
 </h1>
 
 <p class="has-text-danger">
-    The page
+    <?= $translator->translate('The page') ?>
     <strong><?= Html::encode($urlMatcher->getCurrentUri()->getPath()) ?></strong>
-    not found.
+    <?= $translator->translate('not found') . '.' ?>
 </p>
 
 <p class="has-text-grey">
-    The above error occurred while the Web server was processing your request.<br/>
-    Please contact us if you think this is a server error. Thank you.
+    <?= $translator->translate(
+        'The above error occurred while the Web server was processing your request'
+    ) . '.' ?>
+    <br/>
+    <?= $translator->translate('Please contact us if you think this is a server error. Thank you') . '.' ?>
 </p>
 
 <hr class="mb-2">
 
 <a class ="button is-danger mt-5" href="<?= $urlGenerator->generate('site/index') ?>">
-    Go Back Home
+    <?= $translator->translate('Go Back Home') ?>
 </a>

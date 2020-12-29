@@ -31,7 +31,7 @@ $this->setJsFiles($assetManager->getJsFiles());
     <!DOCTYPE html>
     <html lang="<?= Html::encode($locale->language()) ?>">
 
-        <?= $this->render('_head', ['csrf' => $csrf, 'serviceParameter' => $serviceParameter]) ?>
+        <?= $this->render('_head', ['csrfToken' => $csrfToken, 'serviceParameter' => $serviceParameter]) ?>
 
         <?php $this->beginBody() ?>
 

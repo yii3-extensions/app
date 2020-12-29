@@ -9,8 +9,7 @@ use Yii\Extension\Service\ServiceView;
 
 final class Index
 {
-    public function run(ServiceView $serviceView): ResponseInterface
-    {
+    public function run(ServiceView $serviceView): ResponseInterface {
         return $serviceView->render('site/index');
     }
 }

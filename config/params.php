@@ -11,6 +11,7 @@ use Yiisoft\Factory\Definitions\Reference;
 use Yiisoft\I18n\Locale;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Router\UrlMatcherInterface;
+use Yiisoft\Translator\Translator;
 
 return [
     'app' => [
@@ -55,8 +56,11 @@ return [
     ],
 
     'yii-extension/view-services' => [
-        'defaultParameters' => [
-            'csrf' => Reference::to(CsrfTokenInterface::class),
+        'parameters' => [
+            'csrfToken' => Reference::to(CsrfTokenInterface::class),
+            'locale' => Reference::to(Locale::class),
+            'serviceParameter' => Reference::to(ServiceParameter::class),
+            'translator' => Reference::to(translator::class),
         ],
         'layoutFile' => '@storage/layout/main',
     ],
@@ -91,8 +95,6 @@ return [
     'yiisoft/view' => [
         'defaultParameters' => [
             'assetManager' => Reference::to(AssetManager::class),
-            'locale' => Reference::to(Locale::class),
-            'serviceParameter' => Reference::to(ServiceParameter::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
             'urlMatcher' => Reference::to(UrlMatcherInterface::class),
         ],
