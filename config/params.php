@@ -56,6 +56,9 @@ return [
 
     'yii-extension/view-services' => [
         'layoutFile' => '@storage/layout/main',
+        'layoutParameters' => [
+            'csrf' => Reference::to(CsrfTokenInterface::class),
+        ],
     ],
 
     'yiisoft/aliases' => [
@@ -88,7 +91,6 @@ return [
     'yiisoft/view' => [
         'defaultParameters' => [
             'assetManager' => Reference::to(AssetManager::class),
-            'csrf' => Reference::to(CsrfTokenInterface::class),
             'locale' => Reference::to(Locale::class),
             'serviceParameter' => Reference::to(ServiceParameter::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
