@@ -3186,12 +3186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii-extension/view-service.git",
-                "reference": "a5f01a528db980812816dc3a02ff7f905c0d9046"
+                "reference": "feb6b959d9c9c337675aee65ed6c16dec3318ca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/a5f01a528db980812816dc3a02ff7f905c0d9046",
-                "reference": "a5f01a528db980812816dc3a02ff7f905c0d9046",
+                "url": "https://api.github.com/repos/yii-extension/view-service/zipball/feb6b959d9c9c337675aee65ed6c16dec3318ca7",
+                "reference": "feb6b959d9c9c337675aee65ed6c16dec3318ca7",
                 "shasum": ""
             },
             "require": {
@@ -3243,7 +3243,7 @@
                 "issues": "https://github.com/yii-extension/view-service/issues",
                 "source": "https://github.com/yii-extension/view-service/tree/master"
             },
-            "time": "2020-12-28T23:25:48+00:00"
+            "time": "2020-12-29T01:35:47+00:00"
         },
         {
             "name": "yiisoft/aliases",
