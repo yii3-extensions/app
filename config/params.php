@@ -55,10 +55,10 @@ return [
     ],
 
     'yii-extension/view-services' => [
-        'layoutFile' => '@storage/layout/main',
-        'layoutParameters' => [
+        'defaultParameters' => [
             'csrf' => Reference::to(CsrfTokenInterface::class),
         ],
+        'layoutFile' => '@storage/layout/main',
     ],
 
     'yiisoft/aliases' => [
