@@ -6,7 +6,7 @@ namespace Config;
 
 use function array_merge;
 
-final class Config
+final class WebConfig
 {
     public function get(): array
     {

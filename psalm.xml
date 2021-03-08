@@ -9,8 +9,10 @@
     <projectFiles>
         <directory name="src" />
         <ignoreFiles>
+            <file name="src/ApplicationRunner.php" />
             <directory name="vendor" />
             <directory name="config" />
+            <directory name="src/Asset" />
         </ignoreFiles>
     </projectFiles>
 </psalm>

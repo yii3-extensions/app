@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-use Config\Config;
+use Config\WebConfig;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -41,9 +41,9 @@ final class ApplicationRunner
         $errorHandler = new ErrorHandler(new NullLogger(), new HtmlRenderer());
         $this->registerErrorHandler($errorHandler);
 
-        $config = new Config();
+        $webConfig = new WebConfig();
 
-        $container = new Container($config->get());
+        $container = new Container($webConfig->get());
 
         WidgetFactory::initialize($container);
 
