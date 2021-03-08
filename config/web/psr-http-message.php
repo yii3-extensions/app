@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App\Config\Web;
+
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\ResponseFactoryInterface;

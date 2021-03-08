@@ -10,7 +10,7 @@ use Yii\Extension\Service\ServiceParameter;
 
 $this->params['breadcrumbs'] = '/';
 
-$this->setTitle($serviceParameter->get('name'));
+$this->setTitle('My App');
 
 ?>
 

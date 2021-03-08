@@ -29,9 +29,9 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <html lang="<?= Html::encode($locale->language()) ?>">
+    <html lang="en-US">
 
-        <?= $this->render('_head', ['csrfToken' => $csrfToken, 'serviceParameter' => $serviceParameter]) ?>
+        <?= $this->render('_head', ['csrf' => $csrf]) ?>
 
         <?php $this->beginBody() ?>
 
@@ -44,7 +44,7 @@ $this->setJsFiles($assetManager->getJsFiles());
                             ? "navbar" : "has-background-black" ?>>
                             <?= $this->render(
                                 '_menu',
-                                ['urlMatcher' => $urlMatcher, 'serviceParameter' => $serviceParameter]
+                                ['urlMatcher' => $urlMatcher]
                             ) ?>
                         </header>
                         <div>

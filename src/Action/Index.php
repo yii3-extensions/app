@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace App\Action;
 
 use Psr\Http\Message\ResponseInterface;
-use Yii\Extension\Service\ServiceView;
+use Yiisoft\Translator\TranslatorInterface;
+use Yiisoft\Yii\View\ViewRenderer;
 
 final class Index
 {
-    public function run(ServiceView $serviceView): ResponseInterface {
-        return $serviceView->render('site/index');
+    public function run(ViewRenderer $viewRenderer, TranslatorInterface $translator): ResponseInterface
+    {
+        return $viewRenderer->render('site/index', ['translator' => $translator]);
     }
 }

@@ -15,7 +15,7 @@ use Yiisoft\Router\UrlMatcherInterface;
  * @var UrlMatcherInterface $urlMatcher
  */
 
-$menuItems =  $serviceParameter->get('nav.guest');
+$menuItems =  [];
 $currentUrl = '';
 
 if ($urlMatcher->getCurrentUri() !== null) {
@@ -24,7 +24,7 @@ if ($urlMatcher->getCurrentUri() !== null) {
 
 ?>
 
-<?= NavBar::widget($serviceParameter->get('navBar.config'))->begin() ?>
+<?= NavBar::widget()->begin() ?>
 
     <?= Nav::widget()
         ->currentPath($currentUrl)
