@@ -43,7 +43,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src",
-            "Config\\": "config"
+            "Config\\": "Config"
         }
     },
     "autoload-dev": {
