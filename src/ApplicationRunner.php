@@ -45,12 +45,12 @@ final class ApplicationRunner
 
         $container = new Container($config->get());
 
+        WidgetFactory::initialize($container);
+
         // Register error handler with real container-configured dependencies.
         $this->registerErrorHandler($container->get(ErrorHandler::class), $errorHandler);
 
         $container = $container->get(ContainerInterface::class);
-
-        WidgetFactory::initialize($container);
 
         if ($this->debug) {
             //$container->get(ListenerConfigurationChecker::class)->check($config->get('events-web'));
