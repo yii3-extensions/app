@@ -24,7 +24,7 @@ final class BulmaJs extends AssetBundle
         $pathMatcher = new PathMatcher();
 
         $this->publishOptions = [
-            'filter' => $pathMatcher->only('file.js', 'message.js', 'navbar.js'),
+            'filter' => $pathMatcher->only('**file.js', '**message.js', '**navbar.js'),
         ];
     }
 }

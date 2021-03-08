@@ -15,8 +15,14 @@ use Yiisoft\Router\UrlMatcherInterface;
  * @var UrlMatcherInterface $urlMatcher
  */
 
-$menuItems =  [];
+$config = [
+    'brandLabel()' => ['My Project'],
+    'brandImage()' => ['/images/yii-logo.jpg'],
+    'itemsOptions()' => [['class' => 'navbar-end']],
+    'options()' => [['class' => 'is-black']],
+];
 $currentUrl = '';
+$menuItems =  [];
 
 if ($urlMatcher->getCurrentUri() !== null) {
     $currentUrl = $urlMatcher->getCurrentUri()->getPath();
@@ -24,7 +30,7 @@ if ($urlMatcher->getCurrentUri() !== null) {
 
 ?>
 
-<?= NavBar::widget()->begin() ?>
+<?= NavBar::widget($config)->begin() ?>
 
     <?= Nav::widget()
         ->currentPath($currentUrl)
