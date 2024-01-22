@@ -12,7 +12,7 @@ use Yiisoft\View\WebView;
  * @var WebView $this
  */
 echo Footer::widget()
-    ->class('footer bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900')
+    ->class('footer bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900')
     ->content(
         Div::widget()
             ->class('mx-auto w-full container p-2 sm:p-4')

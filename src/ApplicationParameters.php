@@ -281,11 +281,14 @@ final class ApplicationParameters
             ->class('inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600')
             ->dataCollapseToggle('navbar-default')
             ->icon(true)
-            ->iconFilePath($this->aliases->get('@fontawesome-free/svgs/solid/bars.svg'))
-            ->iconTag('svg')
             ->id(null)
-            ->toggleClass('sr-only')
-            ->toggleContent('Open main menu');
+            ->toggleContent(
+                Span::widget()->class('sr-only')->content('Open main menu'),
+                Svg::widget()
+                    ->fill('currentColor')
+                    ->filePath($this->aliases->get('@fontawesome-free/svgs/solid/bars.svg'))
+                    ->height(24)
+            );
     }
 
     private function getLinkIconDefinitions(): array
