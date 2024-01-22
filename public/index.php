@@ -12,7 +12,7 @@ if (isset($_ENV['YII_ENV'])) {
     defined('YII_ENV') or define('YII_ENV', 'prod');
 }
 
-if (getenv('YII_C3')) {
+if (getenv('YII_ENV') === 'tests') {
     $c3 = dirname(__DIR__) . '/c3.php';
     if (file_exists($c3)) {
         require_once $c3;
@@ -38,8 +38,8 @@ if (PHP_SAPI === 'cli-server') {
 // Run HTTP application runner
 $runner = new HttpApplicationRunner(
     rootPath: dirname(__DIR__),
-    debug: true,
-    checkEvents: true,
+    debug: (bool) $_ENV['YII_DEBUG'],
+    checkEvents: (bool) $_ENV['YII_DEBUG'],
     environment: $_ENV['YII_ENV'],
 );
 $runner->run();
