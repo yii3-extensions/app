@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Definitions\DynamicReference;
-use Yiisoft\Translator\Extractor\ContentParser;
 use Yiisoft\Translator\Message\Php\MessageSource;
 use Yiisoft\TranslatorExtractor\CategorySource;
 use Yiisoft\TranslatorExtractor\Extractor;
@@ -30,7 +29,7 @@ return [
                     ],
                 ]),
             ],
-            '->t'
+            '->t',
         ],
     ],
 ];

@@ -7,9 +7,9 @@ use Yiisoft\Yii\Runner\Http\HttpApplicationRunner;
 require_once dirname(__DIR__) . '/autoload.php';
 
 if (isset($_ENV['YII_ENV'])) {
-    defined('YII_ENV') or define('YII_ENV', $_ENV['YII_ENV']);
+    defined('YII_ENV') || define('YII_ENV', $_ENV['YII_ENV']);
 } else {
-    defined('YII_ENV') or define('YII_ENV', 'prod');
+    defined('YII_ENV') || define('YII_ENV', 'prod');
 }
 
 if (getenv('YII_C3')) {
