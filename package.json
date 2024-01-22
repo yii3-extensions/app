@@ -1,0 +1,17 @@
+{
+    "name": "yii3-extensions-app",
+    "version": "0.1.0",
+    "description": "Yii application template",
+    "keywords": [
+        "yii3",
+        "application",
+        "template"
+    ],
+    "author": "Wilmer Arambula <terabytesoftw@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@composer-asset/yii3-extensions--asset-flowbite": "file:./vendor/foxy/composer-asset/yii3-extensions/asset-flowbite",
+        "@composer-asset/yii3-extensions--asset-fontawesome-free": "file:./vendor/foxy/composer-asset/yii3-extensions/asset-fontawesome-free",
+        "flag-icons": "^7.1.0"
+    }
+}

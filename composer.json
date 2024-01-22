@@ -1,49 +1,77 @@
 {
-    "name": "yii-extension/app-bulma",
+    "name": "yiisoft/app",
     "type": "project",
-    "description": "Yii 3 application template with bulma css framework",
+    "description": "Yii 3 application template",
     "keywords": [
         "yii3",
-        "app",
-        "bulma"
+        "app"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4|8.0",
-        "nyholm/psr7": "^1.3.0",
-        "symfony/console": "^5.0",
-        "yii-extension/flash-message-bulma": "^1.0@dev",
-        "yii-extension/fontawesome": "^1.0@dev",
-        "yiisoft/assets": "^1.0@dev",
-        "yiisoft/di": "^3.0@dev",
-        "yiisoft/error-handler": "^3.0@dev",
-        "yiisoft/i18n": "^1.0.0",
-        "yiisoft/log": "^1.0.0",
-        "yiisoft/log-target-file": "^1.0.0",
-        "yiisoft/router-fastroute": "^3.0@dev",
-        "yiisoft/translator-formatter-intl": "^3.0@dev",
-        "yiisoft/translator-message-php": "^3.0@dev",
-        "yiisoft/yii-bulma": "^1.0@dev",
-        "yiisoft/yii-console": "^3.0@dev",
-        "yiisoft/yii-event": "^3.0@dev",
-        "yiisoft/yii-view": "^3.0@dev",
-        "yiisoft/yii-web": "^3.0@dev"
+        "php": "^8.1",
+        "ext-intl": "*",
+        "httpsoft/http-message": "^1.1",
+        "php-forge/awesome-component": "dev-main",
+        "php-forge/foxy": "dev-main as 0.1",
+        "php-forge/html": "dev-main",
+        "psr/container": "^2.0",
+        "psr/http-message": "^1.1|^2.0",
+        "psr/http-server-handler": "^1.0",
+        "symfony/console": "^6.0",
+        "vlucas/phpdotenv": "^5.3",
+        "yii3-extensions/asset-flowbite":"dev-main",
+        "yii3-extensions/asset-fontawesome-free":"^0.1-dev",
+        "yiisoft/assets": "^4.0",
+        "yiisoft/cache": "^3.0",
+        "yiisoft/cache-file": "^3.0",
+        "yiisoft/config": "^1.1",
+        "yiisoft/csrf": "^2.0",
+        "yiisoft/data-response": "^2.0",
+        "yiisoft/definitions": "^3.0",
+        "yiisoft/di": "^1.2",
+        "yiisoft/error-handler": "^3.0",
+        "yiisoft/factory": "^1.0",
+        "yiisoft/files": "^2.0",
+        "yiisoft/http": "^1.2",
+        "yiisoft/i18n": "^1.1",
+        "yiisoft/log": "^2.0",
+        "yiisoft/log-target-file": "^3.0",
+        "yiisoft/router": "^3.0",
+        "yiisoft/router-fastroute": "^3.0",
+        "yiisoft/translator": "^3.0",
+        "yiisoft/translator-extractor": "^2.0",
+        "yiisoft/translator-message-php": "^1.1",
+        "yiisoft/view": "^8.0",
+        "yiisoft/yii-console": "^2.0",
+        "yiisoft/yii-debug": "dev-master|dev-php80",
+        "yiisoft/yii-event": "^2.1",
+        "yiisoft/yii-http": "^1.0",
+        "yiisoft/yii-middleware": "^1.0",
+        "yiisoft/yii-runner-console": "^2.0",
+        "yiisoft/yii-runner-http": "^2.0",
+        "yiisoft/yii-view": "^6.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master",
-        "codeception/codeception": "^4.1.18",
-        "codeception/c3": "^2.6.0",
-        "codeception/module-asserts": "@dev",
-        "codeception/module-db": "^1.0",
-        "codeception/module-phpbrowser": "@dev",
+        "codeception/c3": "^2.7",
+        "codeception/codeception": "^5.0",
+        "codeception/module-asserts": "^3.0",
+        "codeception/module-cli": "^2.0",
+        "codeception/module-phpbrowser": "^3.0",
         "phpunit/phpunit": "^9.5",
-        "vimeo/psalm": "^4.4"
+        "rector/rector": "^0.19.0",
+        "roave/infection-static-analysis-plugin": "^1.25",
+        "roave/security-advisories": "dev-master",
+        "spatie/phpunit-watcher": "^1.23",
+        "symplify/easy-coding-standard": "^12.1",
+        "vimeo/psalm": "^5.20",
+        "yiisoft/yii-debug-api": "3.0.x-dev",
+        "yiisoft/yii-debug-viewer": "^3.0@dev",
+        "yiisoft/yii-testing": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src",
-            "Config\\": "config"
+            "App\\": "src"
         }
     },
     "autoload-dev": {
@@ -53,24 +81,37 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "0.1-dev"
         },
-        "installer-types": [
-            "npm-asset"
+        "config-plugin-file": "configuration.php"
+    },
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "./yii serve"
         ],
-        "installer-paths": {
-            "./node_modules/{$name}": [
-                "type:npm-asset"
-            ]
-        }
+        "test": "codecept run",
+        "test-watch": "phpunit-watcher watch",
+        "post-install-cmd": [
+            "App\\Installer::postUpdate",
+            "App\\Installer::copyEnvFile"
+        ],
+        "post-update-cmd": [
+            "App\\Installer::postUpdate",
+            "App\\Installer::copyEnvFile"
+        ],
+        "post-create-project-cmd": [
+            "App\\Installer::copyEnvFile"
+        ]
     },
     "config": {
+        "allow-plugins": {
+            "codeception/c3": true,
+            "composer/installers": true,
+            "infection/extension-installer": true,
+            "php-forge/foxy": true,
+            "yiisoft/config": true
+        },
         "sort-packages": true
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    }
 }

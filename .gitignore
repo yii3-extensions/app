@@ -27,7 +27,7 @@ composer.phar
 
 # phpunit itself is not needed
 phpunit.phar
-phpunit.result.cache
+.phpunit.result.cache
 
 # local phpunit config
 /phpunit.xml
@@ -36,5 +36,8 @@ phpunit.result.cache
 /node_modules
 .env
 
-#codeception
+# Codeception
 c3.php
+
+# Composer
+composer.lock
