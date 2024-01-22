@@ -3,14 +3,11 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Csrf\CsrfTokenInterface;
 use Yiisoft\Definitions\Reference;
 use Yiisoft\I18n\Locale;
-use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Session\Flash\FlashInterface;
-use Yiisoft\Translator\TranslatorInterface;
 
 return [
     'app' => [
