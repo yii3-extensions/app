@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/app",
+    "name": "yii3-extensions/app",
     "type": "project",
     "description": "Yii 3 application template",
     "keywords": [
