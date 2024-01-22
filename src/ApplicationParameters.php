@@ -53,6 +53,7 @@ final class ApplicationParameters
     public function getIconGithub(): ElementInterface
     {
         return A::widget($this->getLinkIconDefinitions())
+            ->class('md:block hidden')
             ->content(
                 Svg::widget($this->getSvgDefinitions())
                     ->filePath($this->aliases->get('@fontawesome-free/svgs/brands/github.svg'))
@@ -64,6 +65,7 @@ final class ApplicationParameters
     public function getIconSlack(): ElementInterface
     {
         return A::widget($this->getLinkIconDefinitions())
+            ->class('md:block hidden')
             ->content(
                 Svg::widget($this->getSvgDefinitions())
                     ->filePath($this->aliases->get('@fontawesome-free/svgs/brands/slack.svg'))
@@ -77,6 +79,7 @@ final class ApplicationParameters
     public function getIconFacebook(): ElementInterface
     {
         return A::widget($this->getLinkIconDefinitions())
+            ->class('md:block hidden')
             ->content(
                 Svg::widget($this->getSvgDefinitions())
                     ->filePath($this->aliases->get('@fontawesome-free/svgs/brands/facebook.svg'))
