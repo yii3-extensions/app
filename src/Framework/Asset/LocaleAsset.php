@@ -14,15 +14,15 @@ final class LocaleAsset extends AssetBundle
 {
     public string|null $basePath = '@assets';
     public string|null $baseUrl = '@assetsUrl';
-    public string|null $sourcePath = '@npm/flag-icons/';
-    public array $css = ['css/flag-icons.css'];
+    public string|null $sourcePath = '@npm/flag-icons';
+    public array $css = ['/css/flag-icons.css'];
 
     public function __construct()
     {
         $pathMatcher = new PathMatcher();
 
         $this->publishOptions = [
-            'filter' => $pathMatcher->only('flag-icons.css', 'flags/**/*'),
+            'filter' => $pathMatcher->only('**/css/flag-icons.css', 'flags/**/*'),
         ];
     }
 }
