@@ -12,7 +12,7 @@ if (isset($_ENV['YII_ENV'])) {
     defined('YII_ENV') or define('YII_ENV', 'prod');
 }
 
-if (getenv('YII_ENV') === 'tests') {
+if (getenv('YII_C3')) {
     $c3 = dirname(__DIR__) . '/c3.php';
     if (file_exists($c3)) {
         require_once $c3;
