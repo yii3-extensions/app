@@ -38,8 +38,8 @@ if (PHP_SAPI === 'cli-server') {
 // Run HTTP application runner
 $runner = new HttpApplicationRunner(
     rootPath: dirname(__DIR__),
-    debug: (bool) $_ENV['YII_DEBUG'],
-    checkEvents: (bool) $_ENV['YII_DEBUG'],
+    debug: true,
+    checkEvents: true,
     environment: $_ENV['YII_ENV'],
 );
 $runner->run();
