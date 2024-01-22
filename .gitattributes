@@ -25,3 +25,11 @@
 # https://about.gitlab.com/2015/02/10/gitlab-reduced-merge-conflicts-by-90-percent-with-changelog-placeholders/
 /CHANGELOG.md		merge=union
 
+# Exclude files from the archive
+/.gitattributes                 export-ignore
+/.github                        export-ignore
+/.gitignore                     export-ignore
+/.styleci.yml                   export-ignore
+/codeception.yml                export-ignore
+/docs                           export-ignore
+/tests                          export-ignore
