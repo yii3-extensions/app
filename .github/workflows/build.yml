@@ -23,8 +23,9 @@ name: build
 
 jobs:
   build:
-    uses: yiisoft/actions/.github/workflows/codeception.yml@master
+    uses: php-forge/actions/.github/workflows/codeception.yml@main
     with:
+      debug: true
       extensions: fileinfo, intl
       os: >-
         ['ubuntu-latest']

@@ -23,7 +23,7 @@ name: static-analysis
 
 jobs:
   build:
-    uses: yiisoft/actions/.github/workflows/psalm.yml@master
+    uses: php-forge/actions/.github/workflows/psalm.yml@main
     with:
       extensions: fileinfo, intl
       os: >-
