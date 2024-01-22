@@ -32,19 +32,18 @@ $this->addJsVars($assetManager->getJsVars());
         <?= $this->render('_head') ?>
         <?php $this->beginBody() ?>
             <?= Body::widget()
-                ->class('content flex flex-col h-[100vh] min-h-[100vh] bg-gray-100 dark:bg-gray-500 theme-loading')
-                ->content(
-                    Header::widget()->content($this->render('component/menu')),
-                    Div::widget()
-                        ->class('flex-grow flex flex-col justify-center')
-                        ->content(
-                            Div::widget()
-                                ->class('h-full flex flex-col justify-center')
-                                ->content($content)
-                        ),
-                    $this->render('_footer')
-                )
-?>
+                    ->class('content flex flex-col h-[100vh] min-h-[100vh] bg-gray-100 dark:bg-gray-500 theme-loading')
+                    ->content(
+                        Header::widget()->content($this->render('component/menu')),
+                        Div::widget()
+                            ->class('flex-grow flex flex-col justify-center')
+                            ->content(
+                                Div::widget()
+                                    ->class('h-full flex flex-col justify-center')
+                                    ->content($content)
+                            ),
+                        $this->render('_footer')
+                    ) ?>
         <?php $this->endBody() ?>
     <?= Html::end() ?>
 <?php $this->endPage();
