@@ -25,7 +25,6 @@ jobs:
   build:
     uses: php-forge/actions/.github/workflows/codeception.yml@main
     with:
-      debug: true
       extensions: fileinfo, intl
       os: >-
         ['ubuntu-latest']
