@@ -7,12 +7,10 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="src" />
-        <ignoreFiles>
-            <file name="src/ApplicationRunner.php" />
-            <directory name="vendor" />
-            <directory name="config" />
-            <directory name="src/Asset" />
-        </ignoreFiles>
+        <directory name="src"/>
+        <file name="public/index.php"/>
+        <file name="yii"/>
+        <file name="autoload.php"/>
     </projectFiles>
 </psalm>
+
