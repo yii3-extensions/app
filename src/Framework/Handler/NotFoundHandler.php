@@ -19,15 +19,16 @@ final class NotFoundHandler implements RequestHandlerInterface
         private readonly CurrentRoute $currentRoute,
         private readonly ViewRenderer $viewRenderer,
         private readonly string $viewPath = __DIR__ . '/view',
-    )
-    {
-    }
+    ) {}
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         return $this->viewRenderer
             ->withViewPath($this->viewPath)
-            ->render('404', ['urlGenerator' => $this->urlGenerator, 'currentRoute' => $this->currentRoute])
+            ->render('404', [
+                'urlGenerator' => $this->urlGenerator,
+                'currentRoute' => $this->currentRoute,
+            ])
             ->withStatus(Status::NOT_FOUND);
     }
 }

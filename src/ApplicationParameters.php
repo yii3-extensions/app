@@ -14,6 +14,7 @@ use PHPForge\Html\Span;
 use PHPForge\Html\Svg;
 use PHPForge\Widget\ElementInterface;
 use Yiisoft\Aliases\Aliases;
+use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Translator\TranslatorInterface;
 
@@ -21,6 +22,7 @@ final class ApplicationParameters
 {
     public function __construct(
         public readonly Aliases $aliases,
+        public readonly CurrentRoute $currentRoute,
         public readonly TranslatorInterface $translator,
         public readonly UrlGeneratorInterface $urlGenerator,
         public readonly string $charset = 'UTF-8',
@@ -29,8 +31,7 @@ final class ApplicationParameters
         public readonly string $copyright = 'YiiFramework™.',
         public readonly string $description = 'Application Web for Flowbite',
         public readonly string $name = 'Web Application'
-    ) {
-    }
+    ) {}
 
     public function getCredits(): ElementInterface
     {
@@ -135,7 +136,7 @@ final class ApplicationParameters
     {
         return [
             'brandImage()' => [
-                Img::widget()->alt($this->copyright)->class('h-6 mr-3 sm:h-9')->src($this->brandImage)->width(200)
+                Img::widget()->alt($this->copyright)->class('h-6 mr-3 sm:h-9')->src($this->brandImage)->width(200),
             ],
             'brandLink()' => [$this->brandLink],
             'brandLinkClass()' => ['flex items-center'],
@@ -153,37 +154,51 @@ final class ApplicationParameters
                 Item::create()
                     ->iconClass('fi fi-de fis me-2')
                     ->label($this->t('site.selector-language.german'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'de']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'de',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'de-DE' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-us fis me-2')
                     ->label($this->t('site.selector-language.english'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'en']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'en',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'en' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-es fis me-2')
                     ->label($this->t('site.selector-language.spanish'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'es']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'es',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'es-ES' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-fr fis me-2')
                     ->label($this->t('site.selector-language.french'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'fr']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'fr',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'fr-FR' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-br fis me-2')
                     ->label($this->t('site.selector-language.portuguese'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'pt']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'pt',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'pt-BR' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-ru fis me-2')
                     ->label($this->t('site.selector-language.russian'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'ru']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'ru',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'ru-RU' ? $this->getActiveClassDropdown() : ''),
                 Item::create()
                     ->iconClass('fi fi-cn fis me-2')
                     ->label($this->t('site.selector-language.chinese'))
-                    ->link($this->urlGenerator->generateFromCurrent(['_language' => 'zh']))
+                    ->link($this->urlGenerator->generateFromCurrent([
+                        '_language' => 'zh',
+                    ]))
                     ->linkClass($this->translator->getLocale() === 'zh-CN' ? $this->getActiveClassDropdown() : ''),
             )
             ->linkClass('block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white')
@@ -209,12 +224,17 @@ final class ApplicationParameters
             ->title('Click to change the theme');
     }
 
+    /**
+     * @psalm-return Item[]
+     */
     public function itemsMenu(): array
     {
         $arguments = [];
 
         if ($this->translator->getLocale() === 'en') {
-            $arguments = ['_language' => 'en'];
+            $arguments = [
+                '_language' => 'en',
+            ];
         }
 
         return [

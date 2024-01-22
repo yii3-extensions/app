@@ -37,7 +37,6 @@ return [
             'app' => Reference::to(ApplicationParameters::class),
             'assetManager' => Reference::to(AssetManager::class),
             'csrfToken' => Reference::to(CsrfTokenInterface::class),
-            'currentRoute' => Reference::to(CurrentRoute::class),
             'flash' => Reference::to(FlashInterface::class),
             'locale' => Reference::to(Locale::class),
         ],

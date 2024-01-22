@@ -44,7 +44,7 @@ $this->addJsVars($assetManager->getJsVars());
                         ),
                     $this->render('_footer')
                 )
-            ?>
+?>
         <?php $this->endBody() ?>
     <?= Html::end() ?>
 <?php $this->endPage();

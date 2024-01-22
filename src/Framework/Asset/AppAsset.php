@@ -23,7 +23,7 @@ final class AppAsset extends AssetBundle
         Flowbite::class,
         FontAwesomeBrand::class,
         LocaleAsset::class,
-        ThemeAsset::class
+        ThemeAsset::class,
     ];
 
     public function __construct()

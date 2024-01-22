@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use App\ApplicationParameters;
 use PHPForge\Html\A;
-use PHPForge\Html\Button;
 use PHPForge\Html\Div;
 use PHPForge\Html\H;
 use PHPForge\Html\Helper\Encode;

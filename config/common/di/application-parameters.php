@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\ApplicationParameters;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Definitions\Reference;
+use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Translator\TranslatorInterface;
 
@@ -16,6 +17,7 @@ return [
         '__construct()' => [
             'aliases' => Reference::to(Aliases::class),
             'charset' => $params['app']['charset'],
+            'currentRoute' => Reference::to(CurrentRoute::class),
             'name' => $params['app']['name'],
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
             'translator' => Reference::to(TranslatorInterface::class),

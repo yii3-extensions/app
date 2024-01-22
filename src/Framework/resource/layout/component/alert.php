@@ -7,9 +7,7 @@ use PHPForge\Component\Cookbook\Flowbite\CookbookAlert;
 use PHPForge\Html\Div;
 use Yiisoft\Session\Flash\FlashInterface;
 
-/**
- * @var FlashInterface $flash
- */
+/** @var FlashInterface $flash */
 $flashMessages = $flash->getAll();
 $html = [];
 
