@@ -20,7 +20,7 @@ echo Footer::widget()
                 Div::widget()
                     ->class('sm:flex sm:items-center sm:justify-between')
                     ->content(
-                        $app->getCredits(),
+                        Div::widget()->class('text-center')->content($app->getCredits()),
                         Div::widget()
                             ->class('flex mt-4 space-x-6 items-center justify-center sm:mt-0 p-2')
                             ->content(
