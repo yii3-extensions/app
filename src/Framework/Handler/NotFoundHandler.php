@@ -19,8 +19,7 @@ final class NotFoundHandler implements RequestHandlerInterface
         private readonly CurrentRoute $currentRoute,
         private readonly ViewRenderer $viewRenderer,
         private readonly string $viewPath = __DIR__ . '/view',
-    ) {
-    }
+    ) {}
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {

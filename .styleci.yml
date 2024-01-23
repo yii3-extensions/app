@@ -17,6 +17,7 @@ enabled:
   - combine_nested_dirname
   - declare_strict_types
   - dir_constant
+  - empty_loop_body_braces
   - fully_qualified_strict_types
   - function_to_constant
   - hash_to_slash_comment
@@ -37,7 +38,6 @@ enabled:
   - no_short_bool_cast
   - no_superfluous_elseif
   - no_unneeded_control_parentheses
-  - no_unneeded_curly_braces
   - no_unneeded_final_method
   - no_unset_cast
   - no_unused_imports
