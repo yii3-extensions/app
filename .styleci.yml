@@ -17,9 +17,11 @@ enabled:
   - combine_nested_dirname
   - declare_strict_types
   - dir_constant
+  - empty_loop_body_braces
   - fully_qualified_strict_types
   - function_to_constant
   - hash_to_slash_comment
+  - integer_literal_case
   - is_null
   - logical_operators
   - magic_constant_casing
@@ -77,9 +79,8 @@ enabled:
   - trailing_comma_in_multiline_array
   - unalign_double_arrow
   - unalign_equals
-  - empty_loop_body_braces
-  - integer_literal_case
   - union_type_without_spaces
 
 disabled:
   - function_declaration
+  - psr12_braces
