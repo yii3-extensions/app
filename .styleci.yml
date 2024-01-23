@@ -81,5 +81,5 @@ enabled:
   - union_type_without_spaces
 
 disabled:
-  - allman_braces
+  - psr12_braces
   - function_declaration
