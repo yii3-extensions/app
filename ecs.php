@@ -22,6 +22,7 @@ return ECSConfig::configure()
             __DIR__ . '/tests',
         ],
     )
+    ->withPhpCsFixerSets(perCS20: true)
     ->withPreparedSets(
         arrays: true,
         cleanCode: true,
