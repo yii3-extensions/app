@@ -17,6 +17,7 @@ enabled:
   - combine_nested_dirname
   - declare_strict_types
   - dir_constant
+  - empty_loop_body_braces
   - fully_qualified_strict_types
   - function_to_constant
   - hash_to_slash_comment
@@ -81,5 +82,5 @@ enabled:
   - union_type_without_spaces
 
 disabled:
-  - psr12_braces
   - function_declaration
+  - psr12_braces
