@@ -80,6 +80,5 @@ enabled:
   - union_type_without_spaces
 
 disabled:
-  - empty_loop_body_braces
   - function_declaration
   - no_unneeded_curly_braces
