@@ -31,7 +31,8 @@ final class ApplicationParameters
         public readonly string $copyright = 'YiiFramework™.',
         public readonly string $description = 'Application Web for Flowbite',
         public readonly string $name = 'Web Application'
-    ) {}
+    ) {
+    }
 
     public function getCredits(): ElementInterface
     {
