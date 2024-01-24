@@ -3644,16 +3644,16 @@
         },
         {
             "name": "yii3-extensions/asset-fontawesome-free",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yii3-extensions/asset-fontawesome-free.git",
-                "reference": "2944c55d42d0f4912b512491b3611c8c75e97aef"
+                "reference": "af42eafdc343e109174a60690e6ad51b6486cf80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii3-extensions/asset-fontawesome-free/zipball/2944c55d42d0f4912b512491b3611c8c75e97aef",
-                "reference": "2944c55d42d0f4912b512491b3611c8c75e97aef",
+                "url": "https://api.github.com/repos/yii3-extensions/asset-fontawesome-free/zipball/af42eafdc343e109174a60690e6ad51b6486cf80",
+                "reference": "af42eafdc343e109174a60690e6ad51b6486cf80",
                 "shasum": ""
             },
             "require": {
@@ -3673,11 +3673,11 @@
             },
             "type": "library",
             "extra": {
-                "config-plugin-options": {
-                    "source-directory": "config"
-                },
                 "config-plugin": {
                     "params": "yiisoft-aliases.php"
+                },
+                "config-plugin-options": {
+                    "source-directory": "config"
                 }
             },
             "autoload": {
@@ -3698,9 +3698,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yii3-extensions/asset-fontawesome-free/issues",
-                "source": "https://github.com/yii3-extensions/asset-fontawesome-free/tree/0.1.0"
+                "source": "https://github.com/yii3-extensions/asset-fontawesome-free/tree/0.1.1"
             },
-            "time": "2024-01-21T16:28:37+00:00"
+            "time": "2024-01-23T18:07:19+00:00"
         },
         {
             "name": "yiisoft/aliases",
