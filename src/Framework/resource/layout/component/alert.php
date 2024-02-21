@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPForge\Component\Alert;
 use PHPForge\Component\Cookbook\Flowbite\CookbookAlert;
-use PHPForge\Html\Div;
+use PHPForge\Html\Group\Div;
 use Yiisoft\Session\Flash\FlashInterface;
 
 /** @var FlashInterface $flash */

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use App\ApplicationParameters;
 use PHPForge\Html\Layout\Head;
-use PHPForge\Html\Layout\Meta;
-use PHPForge\Html\Layout\Title;
+use PHPForge\Html\Metadata\Meta;
+use PHPForge\Html\Metadata\Title;
 use Yiisoft\Csrf\CsrfTokenInterface;
 use Yiisoft\View\WebView;
 
@@ -21,7 +21,6 @@ use Yiisoft\View\WebView;
     <?= Meta::widget()->charset($app->charset) ?>
     <?= Meta::widget()->name('viewport')->content('width=device-width, initial-scale=1') ?>
     <?= Meta::widget()->name('description')->content($app->description) ?>
-
     <?= Title::widget()->content($this->getTitle()) ?>
 
     <?php $this->head() ?>
