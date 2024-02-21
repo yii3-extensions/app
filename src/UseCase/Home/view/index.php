@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use App\ApplicationParameters;
 use PHPForge\Html\Group\Div;
-use PHPForge\Html\H;
 use PHPForge\Html\Helper\Encode;
+use PHPForge\Html\Semantic\H;
 use Yiisoft\View\WebView;
 
 /**

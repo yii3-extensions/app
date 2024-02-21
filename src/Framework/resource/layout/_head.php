@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Html\Layout\Head;
+use PHPForge\Html\Document\Head;
 use PHPForge\Html\Metadata\Meta;
 use PHPForge\Html\Metadata\Title;
 use Yiisoft\Csrf\CsrfTokenInterface;
