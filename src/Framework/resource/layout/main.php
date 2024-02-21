@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\ApplicationParameters;
 use App\Framework\Asset\AppAsset;
-use PHPForge\Html\Div;
+use PHPForge\Html\Group\Div;
 use PHPForge\Html\Layout\Body;
 use PHPForge\Html\Layout\Header;
 use PHPForge\Html\Layout\Html;

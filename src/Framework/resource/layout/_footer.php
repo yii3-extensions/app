@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Html\Div;
+use PHPForge\Html\Group\Div;
 use PHPForge\Html\Layout\Footer;
 use Yiisoft\View\WebView;
 
