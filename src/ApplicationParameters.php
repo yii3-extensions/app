@@ -6,12 +6,12 @@ namespace App;
 
 use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
-use PHPForge\Html\A;
 use PHPForge\Html\Button;
 use PHPForge\Html\ButtonToggle;
 use PHPForge\Html\Img;
-use PHPForge\Html\Span;
 use PHPForge\Html\Svg;
+use PHPForge\Html\Textual\A;
+use PHPForge\Html\Textual\Span;
 use PHPForge\Widget\ElementInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Router\CurrentRoute;
