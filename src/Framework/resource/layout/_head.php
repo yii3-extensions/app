@@ -25,4 +25,3 @@ use Yiisoft\View\WebView;
 
     <?php $this->head() ?>
 <?= Head::end();
-
