@@ -6,9 +6,9 @@ namespace App;
 
 use PHPForge\Component\Dropdown;
 use PHPForge\Component\Item;
-use PHPForge\Html\Button;
-use PHPForge\Html\ButtonToggle;
-use PHPForge\Html\Img;
+use PHPForge\Component\Toggle;
+use PHPForge\Html\FormControl\Button;
+use PHPForge\Html\Multimedia\Img;
 use PHPForge\Html\Svg;
 use PHPForge\Html\Textual\A;
 use PHPForge\Html\Textual\Span;
@@ -259,7 +259,7 @@ final class ApplicationParameters
 
     private function dropdownToggle(): ElementInterface
     {
-        return ButtonToggle::widget()
+        return Toggle::widget()
             ->class('text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800')
             ->dataDropdownToggle('selector-language')
             ->id('selector-language-toggle')
@@ -272,7 +272,7 @@ final class ApplicationParameters
 
     private function menuToggle(): ElementInterface
     {
-        return ButtonToggle::widget()
+        return Toggle::widget()
             ->ariaExpanded('false')
             ->class('inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600')
             ->dataCollapseToggle('navbar-default')

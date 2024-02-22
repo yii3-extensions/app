@@ -1042,17 +1042,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/awesome-component.git",
-                "reference": "5639d87051628fd6b5aa4fd3d0e0d64223f63d38"
+                "reference": "ad2e12c608b9c9a147103ba91de60a239937d83f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/5639d87051628fd6b5aa4fd3d0e0d64223f63d38",
-                "reference": "5639d87051628fd6b5aa4fd3d0e0d64223f63d38",
+                "url": "https://api.github.com/repos/php-forge/awesome-component/zipball/ad2e12c608b9c9a147103ba91de60a239937d83f",
+                "reference": "ad2e12c608b9c9a147103ba91de60a239937d83f",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
-                "php-forge/awesome-widget": "^0.1",
+                "php-forge/awesome-widget": "0.1.2",
                 "php-forge/html": "dev-main"
             },
             "require-dev": {
@@ -1090,7 +1090,7 @@
                 "issues": "https://github.com/php-forge/awesome-component/issues",
                 "source": "https://github.com/php-forge/awesome-component/tree/main"
             },
-            "time": "2024-02-21T14:02:09+00:00"
+            "time": "2024-02-22T11:40:06+00:00"
         },
         {
             "name": "php-forge/awesome-widget",
@@ -1219,12 +1219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/html.git",
-                "reference": "32ef00184cf447212217db11056602e731a11ef3"
+                "reference": "658c94ea4dfcff30f41927cf31ed427dfdbbae1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/html/zipball/32ef00184cf447212217db11056602e731a11ef3",
-                "reference": "32ef00184cf447212217db11056602e731a11ef3",
+                "url": "https://api.github.com/repos/php-forge/html/zipball/658c94ea4dfcff30f41927cf31ed427dfdbbae1f",
+                "reference": "658c94ea4dfcff30f41927cf31ed427dfdbbae1f",
                 "shasum": ""
             },
             "require": {
@@ -1271,7 +1271,7 @@
                 "issues": "https://github.com/php-forge/html/issues",
                 "source": "https://github.com/php-forge/html/tree/main"
             },
-            "time": "2024-02-21T13:54:27+00:00"
+            "time": "2024-02-22T11:34:41+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6100,16 +6100,16 @@
         },
         {
             "name": "yiisoft/validator",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/validator.git",
-                "reference": "40a1bdefb9cb506ec147ee1fafab3bcd79776afd"
+                "reference": "0537aa9db790527d1ee759400026964b3b8bd251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/validator/zipball/40a1bdefb9cb506ec147ee1fafab3bcd79776afd",
-                "reference": "40a1bdefb9cb506ec147ee1fafab3bcd79776afd",
+                "url": "https://api.github.com/repos/yiisoft/validator/zipball/0537aa9db790527d1ee759400026964b3b8bd251",
+                "reference": "0537aa9db790527d1ee759400026964b3b8bd251",
                 "shasum": ""
             },
             "require": {
@@ -6127,13 +6127,14 @@
                 "maglnet/composer-require-checker": "^4.3",
                 "phpbench/phpbench": "^1.2",
                 "phpunit/phpunit": "^9.5",
-                "rector/rector": "^0.15.0",
+                "rector/rector": "^1.0",
                 "roave/infection-static-analysis-plugin": "^1.25",
                 "spatie/phpunit-watcher": "^1.23",
-                "vimeo/psalm": "^4.30|^5.0",
+                "vimeo/psalm": "^4.30|^5.22",
                 "yiisoft/di": "^1.2",
                 "yiisoft/test-support": "^3.0",
-                "yiisoft/translator-message-php": "^1.1"
+                "yiisoft/translator-message-php": "^1.1",
+                "yiisoft/yii-debug": "dev-master|dev-php80"
             },
             "suggest": {
                 "ext-intl": "Allows using IDN validation for emails",
@@ -6185,7 +6186,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2023-04-06T06:19:52+00:00"
+            "time": "2024-02-21T19:31:37+00:00"
         },
         {
             "name": "yiisoft/var-dumper",
