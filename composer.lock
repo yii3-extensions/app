@@ -1215,16 +1215,16 @@
         },
         {
             "name": "php-forge/html",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/html.git",
-                "reference": "1cbbbcc2195ae0591b7297ee6d336b754c9e4a1d"
+                "reference": "b2734053a1e87b6d792b186fa435ef5bc05500a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/html/zipball/1cbbbcc2195ae0591b7297ee6d336b754c9e4a1d",
-                "reference": "1cbbbcc2195ae0591b7297ee6d336b754c9e4a1d",
+                "url": "https://api.github.com/repos/php-forge/html/zipball/b2734053a1e87b6d792b186fa435ef5bc05500a7",
+                "reference": "b2734053a1e87b6d792b186fa435ef5bc05500a7",
                 "shasum": ""
             },
             "require": {
@@ -1265,9 +1265,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-forge/html/issues",
-                "source": "https://github.com/php-forge/html/tree/0.1.0"
+                "source": "https://github.com/php-forge/html/tree/0.1.1"
             },
-            "time": "2024-02-23T19:24:59+00:00"
+            "time": "2024-02-25T13:57:15+00:00"
         },
         {
             "name": "phpoption/phpoption",
