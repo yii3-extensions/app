@@ -18,7 +18,7 @@
         "psr/http-server-handler": "^1.0",
         "symfony/console": "^6.0",
         "ui-awesome/html":"^0.1",
-        "ui-awesome/html-component": "1.0.x-dev as 0.1",
+        "ui-awesome/html-component": "^0.1",
         "ui-awesome/html-helper": "^0.1",
         "ui-awesome/html-interop":"^0.1",
         "vlucas/phpdotenv": "^5.6",
