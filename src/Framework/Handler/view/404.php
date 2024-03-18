@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Helper\Encode;
-use PHPForge\Html\Multimedia\Img;
-use PHPForge\Html\Semantic\H;
-use PHPForge\Html\Textual\A;
+use UIAwesome\Html\{Group\Div, Helper\Encode, Multimedia\Img, Semantic\H, Textual\A};
 use Yiisoft\View\WebView;
 
 /**

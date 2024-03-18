@@ -3,19 +3,22 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Component\Menu;
-use PHPForge\Component\NavBar;
+use UIAwesome\Html\{Component\Cookbook\FlowbiteNavBar, Component\Menu, Component\NavBar, Multimedia\Img};
 use Yiisoft\View\WebView;
 
 /**
  * @var ApplicationParameters $app
  * @var WebView $this
  */
-echo NavBar::widget($app->getNavBarDefinitions())
-    ->containerSuffix($this->render('alert'))
+echo NavBar::widget(FlowbiteNavBar::definitions())
+    ->brandImage(
+        Img::widget()->alt($app->copyright)->class('h-6 mr-3 sm:h-9')->src($app->brandImage)->width(200)
+    )
+    ->brandLink($app->brandLink)
     ->menu(
-        Menu::widget($app->getMenuDefinitions())
+        Menu::widget()
             ->currentPath($app->currentRoute->getUri()?->getPath() ?? '')
             ->id('navbar-default')
             ->items(...$app->itemsMenu())
     );
+echo $this->render('alert');

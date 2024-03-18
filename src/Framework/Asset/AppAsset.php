@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace App\Framework\Asset;
 
-use Yii\Asset\Css\FontAwesomeBrand;
-use Yii\Asset\Flowbite;
-use Yiisoft\Assets\AssetBundle;
-use Yiisoft\Files\PathMatcher\PathMatcher;
+use Yii\Asset\{Css\FontAwesomeBrand, Flowbite};
+use Yiisoft\{Assets\AssetBundle, Files\PathMatcher\PathMatcher};
 
 /**
  * Asset bundle for the application in development mode, mainly used for publishing assets.

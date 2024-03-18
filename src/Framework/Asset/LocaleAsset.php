@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace App\Framework\Asset;
 
-use Yiisoft\Assets\AssetBundle;
-use Yiisoft\Files\PathMatcher\PathMatcher;
+use Yiisoft\{Assets\AssetBundle, Files\PathMatcher\PathMatcher};
 
 /**
  * Asset bundle for locale urls.

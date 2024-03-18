@@ -24,7 +24,6 @@ return ECSConfig::configure()
     )
     ->withPhpCsFixerSets(perCS20: true)
     ->withPreparedSets(
-        arrays: true,
         cleanCode: true,
         comments:true,
         docblocks: true,

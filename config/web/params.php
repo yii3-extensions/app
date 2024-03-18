@@ -14,19 +14,4 @@ return [
         Locale::class,
         Router::class,
     ],
-
-    'locale' => [
-        'locales' => [
-            'de' => 'de-DE',
-            'en' => 'en-US',
-            'es' => 'es-ES',
-            'fr' => 'fr-FR',
-            'pt' => 'pt-BR',
-            'ru' => 'ru-RU',
-            'zh' => 'zh-CN',
-        ],
-        'ignoredRequests' => [
-            '/debug**',
-        ],
-    ],
 ];

@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace App\Framework\Handler;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\RequestHandlerInterface;
-use Yiisoft\Http\Status;
-use Yiisoft\Router\CurrentRoute;
-use Yiisoft\Router\UrlGeneratorInterface;
-use Yiisoft\Yii\View\ViewRenderer;
+use Psr\Http\{Message\ResponseInterface, Message\ServerRequestInterface, Server\RequestHandlerInterface};
+use Yiisoft\{Http\Status, Router\CurrentRoute, Router\UrlGeneratorInterface, Yii\View\ViewRenderer};
 
 final class NotFoundHandler implements RequestHandlerInterface
 {
