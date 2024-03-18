@@ -12,15 +12,19 @@
         "php": "^8.1",
         "ext-intl": "*",
         "httpsoft/http-message": "^1.1",
-        "php-forge/awesome-component": "dev-main",
         "php-forge/foxy": "^0.1",
-        "php-forge/html": "^0.1",
         "psr/container": "^2.0",
         "psr/http-message": "^1.1|^2.0",
         "psr/http-server-handler": "^1.0",
         "symfony/console": "^6.0",
-        "vlucas/phpdotenv": "^5.3",
+        "ui-awesome/html":"^0.1",
+        "ui-awesome/html-component": "1.0.x-dev as 0.1",
+        "ui-awesome/html-helper": "^0.1",
+        "ui-awesome/html-interop":"^0.1",
+        "vlucas/phpdotenv": "^5.6",
+        "yii3-extensions/asset-flowbite":"^0.1",
         "yii3-extensions/asset-fontawesome-free":"^0.1",
+        "yiisoft/aliases": "^3.0",
         "yiisoft/assets": "^4.0",
         "yiisoft/cache": "^3.0",
         "yiisoft/cache-file": "^3.0",
@@ -56,10 +60,10 @@
         "codeception/module-asserts": "^3.0",
         "codeception/module-cli": "^2.0",
         "codeception/module-phpbrowser": "^3.0",
+        "maglnet/composer-require-checker": "^4.7",
         "rector/rector": "^1.0.1",
         "symplify/easy-coding-standard": "^12.1",
-        "vimeo/psalm": "^5.20",
-        "yii3-extensions/asset-flowbite":"^0.1"
+        "vimeo/psalm": "^5.20"
     },
     "autoload": {
         "psr-4": {
@@ -78,12 +82,11 @@
         "config-plugin-file": "configuration.php"
     },
     "scripts": {
-        "serve": [
-            "Composer\\Config::disableProcessTimeout",
-            "./yii serve"
+        "check-dependencies": "composer-require-checker",
+        "ecs": "ecs check",
+        "post-create-project-cmd": [
+            "App\\Installer::copyEnvFile"
         ],
-        "test": "codecept run",
-        "test-watch": "phpunit-watcher watch",
         "post-install-cmd": [
             "App\\Installer::postUpdate",
             "App\\Installer::copyEnvFile"
@@ -92,9 +95,12 @@
             "App\\Installer::postUpdate",
             "App\\Installer::copyEnvFile"
         ],
-        "post-create-project-cmd": [
-            "App\\Installer::copyEnvFile"
-        ]
+        "psalm": "psalm",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "./yii serve"
+        ],
+        "test": "codecept run"
     },
     "config": {
         "allow-plugins": {

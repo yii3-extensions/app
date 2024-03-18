@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace App\Framework\EventHandler;
 
-use Yiisoft\Translator\TranslatorInterface;
-use Yiisoft\View\WebView;
-use Yiisoft\Yii\Middleware\Event\SetLocaleEvent;
+use Yiisoft\{Translator\TranslatorInterface, View\WebView, Yii\Middleware\Event\SetLocaleEvent};
 
 final class SetLocaleEventHandler
 {

@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Semantic\Footer;
+use UIAwesome\Html\{Component\Cookbook\FlowbiteToggleTheme, Component\Toggle, Group\Div, Semantic\Footer};
 use Yiisoft\View\WebView;
 
 /**
@@ -20,17 +19,13 @@ echo Footer::widget()
                 Div::widget()
                     ->class('sm:flex sm:items-center sm:justify-between')
                     ->content(
-                        Div::widget()->class('text-center')->content($app->getCredits()),
+                        Div::widget()->class('text-center')->content($app->credits()),
                         Div::widget()
                             ->class('flex mt-4 space-x-6 items-center justify-center sm:mt-0 p-2')
                             ->content(
-                                $app->getIconGithub(),
-                                $app->getIconSlack(),
-                                $app->getIconFacebook(),
-                                $app->getIconTwitter(),
-                                $app->getIconTelegram(),
-                                $app->getToggleTheme(),
-                                $app->getSelectorLanguage(),
+                                $this->render('component/footer-icons'),
+                                Toggle::widget(FlowbiteToggleTheme::definitions())->id('theme-toggle'),
+                                $this->render('component/selector-language')
                             )
                     )
             )

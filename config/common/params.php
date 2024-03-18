@@ -16,6 +16,30 @@ return [
         'name' => 'My Project',
     ],
 
+    'locale' => [
+        'languages' => [
+            'de' => 'Deutsch',
+            'en' => 'English',
+            'es' => 'Español',
+            'fr' => 'Français',
+            'pt' => 'Português',
+            'ru' => 'Русский',
+            'zh' => '中文',
+        ],
+        'locales' => [
+            'de' => 'de-DE',
+            'en' => 'en-US',
+            'es' => 'es-ES',
+            'fr' => 'fr-FR',
+            'pt' => 'pt-BR',
+            'ru' => 'ru-RU',
+            'zh' => 'zh-CN',
+        ],
+        'ignoredRequests' => [
+            '/debug**',
+        ],
+    ],
+
     'yiisoft/aliases' => [
         'aliases' => require __DIR__ . '/aliases.php',
     ],

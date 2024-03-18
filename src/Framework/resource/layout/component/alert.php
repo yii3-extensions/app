@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use PHPForge\Component\Alert;
-use PHPForge\Component\Cookbook\Flowbite\CookbookAlert;
-use PHPForge\Html\Group\Div;
+use UIAwesome\Html\{Component\Alert, Component\Cookbook\FlowbiteAlertDismiss, Group\Div};
 use Yiisoft\Session\Flash\FlashInterface;
+
+use function in_array;
 
 /** @var FlashInterface $flash */
 $flashMessages = $flash->getAll();
@@ -21,7 +21,7 @@ foreach ($flashMessages as $type => $messages) {
             $body = $message['body'] ?? '';
 
             if ($body !== '') {
-                $html[] = Alert::widget(CookbookAlert::dismissing($type))->content($body);
+                $html[] = Alert::widget(FlowbiteAlertDismiss::definitions($type))->content($body);
             }
         }
     }

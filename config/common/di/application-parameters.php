@@ -16,9 +16,11 @@ return [
         'class' => ApplicationParameters::class,
         '__construct()' => [
             'aliases' => Reference::to(Aliases::class),
-            'charset' => $params['app']['charset'],
+            'charset' => $params['app']['charset'] ?? 'UTF-8',
             'currentRoute' => Reference::to(CurrentRoute::class),
-            'name' => $params['app']['name'],
+            'name' => $params['app']['name'] ?? 'My Project',
+            'languages' => $params['locale']['languages'] ?? [],
+            'locales' => $params['locale']['locales'] ?? [],
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
             'translator' => Reference::to(TranslatorInterface::class),
         ],

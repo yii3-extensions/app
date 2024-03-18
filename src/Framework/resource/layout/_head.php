@@ -3,11 +3,8 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use PHPForge\Html\Document\Head;
-use PHPForge\Html\Metadata\Meta;
-use PHPForge\Html\Metadata\Title;
-use Yiisoft\Csrf\CsrfTokenInterface;
-use Yiisoft\View\WebView;
+use UIAwesome\Html\{Document\Head, Metadata\Meta, Metadata\Title};
+use Yiisoft\{Csrf\CsrfTokenInterface, View\WebView};
 
 /**
  * @var CsrfTokenInterface $csrfToken

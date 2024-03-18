@@ -2,14 +2,9 @@
 
 declare(strict_types=1);
 
-use App\ApplicationParameters;
-use App\Framework\Asset\AppAsset;
-use PHPForge\Html\Document\Body;
-use PHPForge\Html\Document\Html;
-use PHPForge\Html\Group\Div;
-use PHPForge\Html\Semantic\Header;
-use Yiisoft\Assets\AssetManager;
-use Yiisoft\View\WebView;
+use App\{ApplicationParameters, Framework\Asset\AppAsset};
+use UIAwesome\Html\{Document\Body, Document\Html, Group\Div, Semantic\Header};
+use Yiisoft\{Assets\AssetManager, View\WebView};
 
 /**
  * @var ApplicationParameters $app
