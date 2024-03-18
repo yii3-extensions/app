@@ -7,9 +7,7 @@ use UIAwesome\Html\Component\Cookbook\FlowbiteDropdownLanguage;
 use UIAwesome\Html\Component\Dropdown;
 use UIAwesome\Html\Component\Item;
 
-/**
- * @var ApplicationParameters $app
- */
+/** @var ApplicationParameters $app */
 $items = [];
 
 foreach ($app->locales as $key => $value) {

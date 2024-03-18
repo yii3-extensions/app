@@ -5,9 +5,7 @@ declare(strict_types=1);
 use App\ApplicationParameters;
 use UIAwesome\Html\{Graphic\Svg, Textual\A};
 
-/**
- * @var ApplicationParameters $app
- */
+/** @var ApplicationParameters $app */
 $linkIconDefinitions = [
     'class()' => ['text-gray-700 hover:text-gray-900 dark:hover:text-white dark:text-gray-400'],
     'rel()' => ['noopener'],
