@@ -3315,16 +3315,16 @@
         },
         {
             "name": "ui-awesome/html-component",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ui-awesome/html-component.git",
-                "reference": "23760b8ed55431c2426cc81f671150a01b2dea96"
+                "reference": "c16b02d424578707cba5c615f3aeedee14c60ade"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-component/zipball/23760b8ed55431c2426cc81f671150a01b2dea96",
-                "reference": "23760b8ed55431c2426cc81f671150a01b2dea96",
+                "url": "https://api.github.com/repos/ui-awesome/html-component/zipball/c16b02d424578707cba5c615f3aeedee14c60ade",
+                "reference": "c16b02d424578707cba5c615f3aeedee14c60ade",
                 "shasum": ""
             },
             "require": {
@@ -3371,9 +3371,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html-component/issues",
-                "source": "https://github.com/ui-awesome/html-component/tree/0.1.1"
+                "source": "https://github.com/ui-awesome/html-component/tree/0.1.2"
             },
-            "time": "2024-03-17T13:15:46+00:00"
+            "time": "2024-03-18T15:26:36+00:00"
         },
         {
             "name": "ui-awesome/html-concern",
