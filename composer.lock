@@ -3201,16 +3201,16 @@
         },
         {
             "name": "ui-awesome/html",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ui-awesome/html.git",
-                "reference": "ac97adc24e6ff90a24cb339538da1ef6cfa94bd7"
+                "reference": "efecac6d970d4ddc227593a6d3410900cb64076a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html/zipball/ac97adc24e6ff90a24cb339538da1ef6cfa94bd7",
-                "reference": "ac97adc24e6ff90a24cb339538da1ef6cfa94bd7",
+                "url": "https://api.github.com/repos/ui-awesome/html/zipball/efecac6d970d4ddc227593a6d3410900cb64076a",
+                "reference": "efecac6d970d4ddc227593a6d3410900cb64076a",
                 "shasum": ""
             },
             "require": {
@@ -3254,9 +3254,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html/issues",
-                "source": "https://github.com/ui-awesome/html/tree/0.1.2"
+                "source": "https://github.com/ui-awesome/html/tree/0.1.3"
             },
-            "time": "2024-03-15T14:12:02+00:00"
+            "time": "2024-03-19T13:39:28+00:00"
         },
         {
             "name": "ui-awesome/html-attribute",
