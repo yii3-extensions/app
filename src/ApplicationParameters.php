@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-use UIAwesome\Html\{Component\Item, Interop\RenderInterface, Textual\A, Textual\Span};
+use UIAwesome\Html\{Component\Flowbite\Item, Interop\RenderInterface, Textual\A, Textual\Span};
 use Yiisoft\{Aliases\Aliases, Router\CurrentRoute, Router\UrlGeneratorInterface, Translator\TranslatorInterface};
 
 final class ApplicationParameters
