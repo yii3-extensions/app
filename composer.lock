@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c38d0f320dda436187755903ae422164",
+    "content-hash": "c25f4ad9973d3c296447e978ec84835d",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -1038,16 +1038,16 @@
         },
         {
             "name": "php-forge/awesome-widget",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-forge/awesome-widget.git",
-                "reference": "6adad53008957eab125d61a711cf07f4398bd7af"
+                "reference": "75edc59d617ec14fae8b3835ba6f1ae062a1da4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-forge/awesome-widget/zipball/6adad53008957eab125d61a711cf07f4398bd7af",
-                "reference": "6adad53008957eab125d61a711cf07f4398bd7af",
+                "url": "https://api.github.com/repos/php-forge/awesome-widget/zipball/75edc59d617ec14fae8b3835ba6f1ae062a1da4d",
+                "reference": "75edc59d617ec14fae8b3835ba6f1ae062a1da4d",
                 "shasum": ""
             },
             "require": {
@@ -1064,7 +1064,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.1-dev"
+                    "dev-main": "1.0-dev"
                 }
             },
             "autoload": {
@@ -1083,9 +1083,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-forge/awesome-widget/issues",
-                "source": "https://github.com/php-forge/awesome-widget/tree/0.1.2"
+                "source": "https://github.com/php-forge/awesome-widget/tree/0.1.3"
             },
-            "time": "2024-02-07T20:27:16+00:00"
+            "time": "2024-03-26T13:20:21+00:00"
         },
         {
             "name": "php-forge/foxy",
@@ -3311,26 +3311,24 @@
             "time": "2024-03-16T09:33:02+00:00"
         },
         {
-            "name": "ui-awesome/html-component",
-            "version": "0.2.0",
+            "name": "ui-awesome/html-component-flowbite",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ui-awesome/html-component.git",
-                "reference": "54a684b0e352a5ae1fad98868e8fbe93f7b1f894"
+                "url": "https://github.com/ui-awesome/html-component-flowbite.git",
+                "reference": "b4e8cf869642158dca9324eda792bad4d88b6471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-component/zipball/54a684b0e352a5ae1fad98868e8fbe93f7b1f894",
-                "reference": "54a684b0e352a5ae1fad98868e8fbe93f7b1f894",
+                "url": "https://api.github.com/repos/ui-awesome/html-component-flowbite/zipball/b4e8cf869642158dca9324eda792bad4d88b6471",
+                "reference": "b4e8cf869642158dca9324eda792bad4d88b6471",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
                 "php-forge/awesome-widget": "^0.1",
-                "ui-awesome/html-attribute": "^0.1",
-                "ui-awesome/html-concern": "^0.1",
+                "ui-awesome/html-core-component": "^1.0@dev",
                 "ui-awesome/html-helper": "^0.1",
-                "ui-awesome/html-interop": "^0.1",
                 "ui-awesome/html-svg": "^0.1"
             },
             "require-dev": {
@@ -3339,38 +3337,37 @@
                 "phpunit/phpunit": "^10.5",
                 "roave/infection-static-analysis-plugin": "^1.34",
                 "symplify/easy-coding-standard": "^12.1",
+                "ui-awesome/html": "^0.2",
                 "vimeo/psalm": "^5.20"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.0-dev"
+                    "dev-main": "1.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "UIAwesome\\Html\\Component\\": "src"
+                    "UIAwesome\\Html\\Component\\Flowbite\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "mit"
             ],
-            "description": "UI Awesome HTML Component for PHP.",
+            "description": "UI Awesome HTML Component Flowbite for PHP.",
             "keywords": [
-                "bootstrap5",
-                "bulma",
                 "flowbite",
                 "html-component",
                 "php",
-                "tailwind",
                 "ui-awesome"
             ],
             "support": {
-                "issues": "https://github.com/ui-awesome/html-component/issues",
-                "source": "https://github.com/ui-awesome/html-component/tree/0.2.0"
+                "issues": "https://github.com/ui-awesome/html-component-flowbite/issues",
+                "source": "https://github.com/ui-awesome/html-component-flowbite/tree/main"
             },
-            "time": "2024-03-22T19:38:40+00:00"
+            "time": "2024-03-26T15:28:41+00:00"
         },
         {
             "name": "ui-awesome/html-concern",
@@ -3428,17 +3425,77 @@
             "time": "2024-03-14T19:19:14+00:00"
         },
         {
-            "name": "ui-awesome/html-helper",
-            "version": "0.1.1",
+            "name": "ui-awesome/html-core-component",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ui-awesome/html-helper.git",
-                "reference": "0bb63452b7944cac6685b493a3006b7c2cba55cf"
+                "url": "https://github.com/ui-awesome/html-core-component.git",
+                "reference": "eb1f7124cbef1a4e20aecf04c97d55727b2e8c7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-helper/zipball/0bb63452b7944cac6685b493a3006b7c2cba55cf",
-                "reference": "0bb63452b7944cac6685b493a3006b7c2cba55cf",
+                "url": "https://api.github.com/repos/ui-awesome/html-core-component/zipball/eb1f7124cbef1a4e20aecf04c97d55727b2e8c7e",
+                "reference": "eb1f7124cbef1a4e20aecf04c97d55727b2e8c7e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "php-forge/awesome-widget": "^0.1",
+                "ui-awesome/html-attribute": "^0.1",
+                "ui-awesome/html-concern": "^0.1",
+                "ui-awesome/html-helper": "^0.1",
+                "ui-awesome/html-interop": "^0.1",
+                "ui-awesome/html-svg": "^0.1"
+            },
+            "require-dev": {
+                "maglnet/composer-require-checker": "^4.7",
+                "php-forge/support": "^0.1",
+                "phpunit/phpunit": "^10.5",
+                "roave/infection-static-analysis-plugin": "^1.34",
+                "symplify/easy-coding-standard": "^12.1",
+                "vimeo/psalm": "^5.20"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UIAwesome\\Html\\Core\\Component\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "description": "UI Awesome HTML Core Component for PHP.",
+            "keywords": [
+                "core-component",
+                "html",
+                "php",
+                "ui-awesome"
+            ],
+            "support": {
+                "issues": "https://github.com/ui-awesome/html-core-component/issues",
+                "source": "https://github.com/ui-awesome/html-core-component/tree/main"
+            },
+            "time": "2024-03-24T11:40:46+00:00"
+        },
+        {
+            "name": "ui-awesome/html-helper",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ui-awesome/html-helper.git",
+                "reference": "cbb34dfb0251d98e17a5809f4fc275a22a01b5ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ui-awesome/html-helper/zipball/cbb34dfb0251d98e17a5809f4fc275a22a01b5ff",
+                "reference": "cbb34dfb0251d98e17a5809f4fc275a22a01b5ff",
                 "shasum": ""
             },
             "require": {
@@ -3479,9 +3536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html-helper/issues",
-                "source": "https://github.com/ui-awesome/html-helper/tree/0.1.1"
+                "source": "https://github.com/ui-awesome/html-helper/tree/0.1.2"
             },
-            "time": "2024-03-09T11:35:17+00:00"
+            "time": "2024-03-25T22:26:36+00:00"
         },
         {
             "name": "ui-awesome/html-interop",
@@ -9316,16 +9373,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.64",
+            "version": "1.10.65",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "fb9f270daffedcb5ff46275dcafe92538b1bc4bb"
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fb9f270daffedcb5ff46275dcafe92538b1bc4bb",
-                "reference": "fb9f270daffedcb5ff46275dcafe92538b1bc4bb",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3c657d057a0b7ecae19cb12db446bbc99d8839c6",
+                "reference": "3c657d057a0b7ecae19cb12db446bbc99d8839c6",
                 "shasum": ""
             },
             "require": {
@@ -9374,7 +9431,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-21T09:57:47+00:00"
+            "time": "2024-03-23T10:30:26+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -10401,16 +10458,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "6.0.1",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "43c751b41d74f96cbbd4e07b7aec9675651e2951"
+                "reference": "8074dbcd93529b357029f5cc5058fd3e43666984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/43c751b41d74f96cbbd4e07b7aec9675651e2951",
-                "reference": "43c751b41d74f96cbbd4e07b7aec9675651e2951",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/8074dbcd93529b357029f5cc5058fd3e43666984",
+                "reference": "8074dbcd93529b357029f5cc5058fd3e43666984",
                 "shasum": ""
             },
             "require": {
@@ -10425,7 +10482,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "6.0-dev"
+                    "dev-main": "6.1-dev"
                 }
             },
             "autoload": {
@@ -10453,7 +10510,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
-                "source": "https://github.com/sebastianbergmann/environment/tree/6.0.1"
+                "source": "https://github.com/sebastianbergmann/environment/tree/6.1.0"
             },
             "funding": [
                 {
@@ -10461,7 +10518,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-11T05:39:26+00:00"
+            "time": "2024-03-23T08:47:14+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -11773,7 +11830,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ui-awesome/html-component-flowbite": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

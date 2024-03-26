@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use UIAwesome\Html\{Component\Alert, Component\Cookbook\FlowbiteAlertDismiss, Group\Div};
+use UIAwesome\Html\{Component\Flowbite\Alert, Group\Div};
 use Yiisoft\Session\Flash\FlashInterface;
 
 use function in_array;
@@ -21,7 +21,7 @@ foreach ($flashMessages as $type => $messages) {
             $body = $message['body'] ?? '';
 
             if ($body !== '') {
-                $html[] = Alert::widget(FlowbiteAlertDismiss::definitions($type))->content($body);
+                $html[] = Alert::widget()->definition('dismissible', $type)->content($body);
             }
         }
     }

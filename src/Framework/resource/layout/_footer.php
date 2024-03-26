@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use UIAwesome\Html\{Component\Cookbook\FlowbiteToggleTheme, Component\Toggle, Group\Div, Semantic\Footer};
+use UIAwesome\Html\{Component\Flowbite\Toggle, Group\Div, Semantic\Footer};
 use Yiisoft\View\WebView;
 
 /**
@@ -24,7 +24,7 @@ echo Footer::widget()
                             ->class('flex mt-4 space-x-6 items-center justify-center sm:mt-0 p-2')
                             ->content(
                                 $this->render('component/footer-icons'),
-                                Toggle::widget(FlowbiteToggleTheme::definitions())->id('theme-toggle'),
+                                Toggle::widget()->definition('selector-theme')->id('theme-toggle'),
                                 $this->render('component/selector-language')
                             )
                     )

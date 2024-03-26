@@ -3,9 +3,7 @@
 declare(strict_types=1);
 
 use App\ApplicationParameters;
-use UIAwesome\Html\Component\Cookbook\FlowbiteDropdownLanguage;
-use UIAwesome\Html\Component\Dropdown;
-use UIAwesome\Html\Component\Item;
+use UIAwesome\Html\Component\Flowbite\{Dropdown, Item};
 
 /** @var ApplicationParameters $app */
 $items = [];
@@ -24,6 +22,4 @@ foreach ($app->locales as $key => $value) {
         ->active($app->translator->getLocale() === ($key === 'en' ? 'en' : $value));
 }
 
-echo Dropdown::widget(FlowbiteDropdownLanguage::definitions())
-    ->id('selector-language')
-    ->items(...$items);
+echo Dropdown::widget()->definition('language', 'blue')->id('selector-language')->items(...$items);
