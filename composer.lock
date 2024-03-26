@@ -3429,16 +3429,16 @@
         },
         {
             "name": "ui-awesome/html-helper",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ui-awesome/html-helper.git",
-                "reference": "0bb63452b7944cac6685b493a3006b7c2cba55cf"
+                "reference": "cbb34dfb0251d98e17a5809f4fc275a22a01b5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ui-awesome/html-helper/zipball/0bb63452b7944cac6685b493a3006b7c2cba55cf",
-                "reference": "0bb63452b7944cac6685b493a3006b7c2cba55cf",
+                "url": "https://api.github.com/repos/ui-awesome/html-helper/zipball/cbb34dfb0251d98e17a5809f4fc275a22a01b5ff",
+                "reference": "cbb34dfb0251d98e17a5809f4fc275a22a01b5ff",
                 "shasum": ""
             },
             "require": {
@@ -3479,9 +3479,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ui-awesome/html-helper/issues",
-                "source": "https://github.com/ui-awesome/html-helper/tree/0.1.1"
+                "source": "https://github.com/ui-awesome/html-helper/tree/0.1.2"
             },
-            "time": "2024-03-09T11:35:17+00:00"
+            "time": "2024-03-25T22:26:36+00:00"
         },
         {
             "name": "ui-awesome/html-interop",
